@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://citso.eu/sitemap.xml

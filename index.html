@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CITSO — Sécurité souveraine de l’Active Directory</title>
+<meta name="description" content="CITSO, suite française et 100 % sur site pour auditer, corriger avec retour arrière et protéger votre Active Directory. En bêta privée : programme pilote ouvert.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0E1B2C; --navy2:#16283E; --line:#2C4058;
+  --paper:#F3F4F1; --card:#FBFBF8; --mist:#E6E9E4;
+  --ink:#14202E; --body:#3F4B57; --muted:#66717C;
+  --teal:#1F6F8B; --rust:#B5541B; --rust-l:#E58A55; --rust-bg:#F3DACB;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'IBM Plex Sans',Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px}
+a{color:inherit}
+.mono{font-family:'JetBrains Mono','Courier New',monospace}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:10;background:rgba(14,27,44,.96);color:var(--paper);backdrop-filter:blur(6px)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:20px;text-decoration:none}
+.badge{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;letter-spacing:1px;background:var(--rust-l);color:var(--navy);padding:3px 8px;border-radius:999px}
+nav a{color:#C9D4DF;text-decoration:none;margin-left:22px;font-size:15px}
+nav a:hover{color:#fff}
+.btn{display:inline-block;background:var(--rust);color:#FBF6F1;text-decoration:none;font-weight:600;padding:13px 22px;border-radius:10px}
+.btn:hover{background:#9C4715}
+.btn.ghost{background:transparent;border:1px solid #3A5470;color:var(--paper)}
+.hero{background:var(--navy);color:var(--paper);padding:88px 0 96px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--rust-l)}
+.hero h1{font-size:clamp(34px,5vw,56px);line-height:1.08;margin:14px 0 18px}
+.hero p.lead{font-size:20px;color:#C9D4DF;max-width:620px}
+.hero .ctas{margin-top:30px;display:flex;gap:12px;flex-wrap:wrap}
+.beta-note{margin-top:22px;font-size:14px;color:#A9B8C6}
+section{padding:80px 0}
+section.alt{background:var(--mist)}
+h2{font-size:clamp(28px,3.4vw,38px);line-height:1.15;margin:10px 0 14px;color:var(--navy)}
+.intro{color:var(--body);max-width:720px;font-size:18px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}
+.card{background:var(--card);border:1px solid #D9DDD6;border-radius:14px;padding:26px}
+.card h3{font-size:20px;margin:10px 0 8px;color:var(--navy)}
+.card p{color:var(--body);font-size:16px}
+.ico{width:40px;height:40px}
+.cycle{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:36px;counter-reset:s}
+.step{background:var(--card);border-radius:12px;padding:22px 18px;border-top:6px solid var(--teal)}
+.step.r{border-top-color:var(--rust)}
+.step b{display:block;font-size:18px;color:var(--navy);margin-bottom:6px}
+.step b::before{counter-increment:s;content:counter(s) ". ";color:var(--muted)}
+.step p{font-size:15px;color:var(--body)}
+.roadmap{margin-top:36px;display:grid;gap:14px}
+.rm{display:grid;grid-template-columns:200px 1fr;gap:20px;align-items:start;background:var(--card);border:1px solid #D9DDD6;border-radius:14px;padding:22px 24px}
+.tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;letter-spacing:1px;padding:5px 10px;border-radius:999px}
+.t-beta{background:#D6E8EE;color:#164E62}
+.t-dev{background:var(--rust-bg);color:#8A3D12}
+.t-plan{background:#E1E5DF;color:var(--body)}
+.rm h3{font-size:19px;color:var(--navy);margin-bottom:4px}
+.rm p{color:var(--body);font-size:16px}
+.sov{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.sov ul{list-style:none;margin-top:18px}
+.sov li{padding:12px 0 12px 32px;position:relative;border-bottom:1px solid #D9DDD6;color:var(--body)}
+.sov li::before{content:"";position:absolute;left:4px;top:19px;width:12px;height:12px;border-radius:50%;background:var(--teal)}
+.diagram{background:var(--card);border:2px solid var(--teal);border-radius:18px;padding:22px}
+.diagram .lbl{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--teal);letter-spacing:1px}
+.nodes{display:flex;align-items:center;gap:8px;margin:16px 0}
+.node{flex:1;text-align:center;background:var(--mist);border-radius:10px;padding:14px 8px;font-size:14px;font-weight:600}
+.node.c{background:var(--rust);color:#FBF6F1}
+.arrow{color:var(--muted);font-size:20px}
+.cloud{margin-top:10px;border:2px dashed #9AA6B0;border-radius:12px;padding:12px;text-align:center;color:var(--muted);font-size:14px}
+.pilot{background:var(--navy);color:var(--paper)}
+.pilot h2{color:var(--paper)}
+.pilot .intro{color:#C9D4DF}
+.pilot .card{background:var(--navy2);border-color:var(--line)}
+.pilot .card h3{color:var(--paper)}
+.pilot .card p{color:#C9D4DF}
+.contact{text-align:center}
+.contact .intro{margin:0 auto 26px}
+footer{background:#0A1420;color:#A9B8C6;font-size:14px;padding:40px 0}
+footer h4{color:var(--paper);font-size:15px;margin-bottom:8px}
+footer .cols{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+footer p{margin-bottom:4px}
+@media (max-width:900px){
+  .hero .wrap,.sov,footer .cols{grid-template-columns:1fr}
+  .hero svg{max-width:260px;margin:0 auto;display:block}
+  .grid3{grid-template-columns:1fr}
+  .cycle{grid-template-columns:1fr 1fr}
+  .rm{grid-template-columns:1fr;gap:10px}
+  nav{display:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#">
+      <svg width="28" height="28" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#1A3049"/><circle cx="20" cy="20" r="13" fill="#1F6F8B"/><circle cx="20" cy="20" r="6" fill="#E58A55"/></svg>
+      CITSO <span class="badge">BÊTA</span>
+    </a>
+    <nav>
+      <a href="#solution">Solution</a>
+      <a href="#feuille-de-route">Feuille de route</a>
+      <a href="#souverainete">Souveraineté</a>
+      <a href="#pilote">Programme pilote</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Sécurité Active Directory · souveraine</p>
+      <h1>Reprenez le contrôle de votre Active Directory</h1>
+      <p class="lead">CITSO audite votre annuaire, priorise les risques et vous aide à les corriger avec un retour arrière systématique. Le tout installé chez vous, sans cloud.</p>
+      <div class="ctas">
+        <a class="btn" href="#pilote">Rejoindre le programme pilote</a>
+        <a class="btn ghost" href="#solution">Découvrir la solution</a>
+      </div>
+      <p class="beta-note">CITSO est en bêta privée. Nous ouvrons un programme pilote à un nombre limité d’organisations.</p>
+    </div>
+    <svg viewBox="0 0 400 400" role="img" aria-label="Anneaux concentriques : votre AD au centre, protégé par l’audit, la correction et la preuve">
+      <circle cx="200" cy="200" r="190" fill="#13243A" stroke="#3A5470" stroke-width="2"/>
+      <circle cx="200" cy="200" r="140" fill="#1A3049" stroke="#3A5470" stroke-width="2"/>
+      <circle cx="200" cy="200" r="92" fill="#1F6F8B" stroke="#3A5470" stroke-width="2"/>
+      <circle cx="200" cy="200" r="46" fill="#E58A55"/>
+      <text x="200" y="206" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700" fill="#0E1B2C">AD</text>
+      <text x="200" y="135" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" fill="#F3F4F1">Audit</text>
+      <text x="200" y="85" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" fill="#C9D4DF">Correction</text>
+      <text x="200" y="36" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" fill="#A9B8C6">Preuve</text>
+    </svg>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Le constat</p>
+    <h2>Si votre Active Directory tombe, tout tombe</h2>
+    <p class="intro">L’Active Directory décide qui peut ouvrir quoi : postes, serveurs, messagerie, applications. Un attaquant qui en prend le contrôle prend le contrôle de toute l’entreprise. Pourtant, il est rarement corrigé.</p>
+    <div class="grid3">
+      <div class="card">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="#1F6F8B" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <h3>Des années de dette</h3>
+        <p>Des réglages hérités de 10 ou 20 ans, des comptes oubliés, des droits empilés.</p>
+      </div>
+      <div class="card">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="#B5541B" stroke-width="2" aria-hidden="true"><path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17v.5"/></svg>
+        <h3>La peur de casser</h3>
+        <p>Toucher à l’annuaire, c’est risquer de bloquer la production. Alors les corrections sont reportées.</p>
+      </div>
+      <div class="card">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="#1F6F8B" stroke-width="2" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="M15 15l5 5"/></svg>
+        <h3>Des outils qui listent</h3>
+        <p>Les audits ponctuels donnent des listes de défauts, pas un chemin sûr pour les corriger.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="solution">
+  <div class="wrap">
+    <p class="eyebrow">La solution</p>
+    <h2>Un cycle complet, pas une simple liste</h2>
+    <p class="intro">CITSO accompagne votre annuaire du constat jusqu’à la preuve, et recommence à chaque nouvel audit.</p>
+    <div class="cycle">
+      <div class="step"><b>Auditer</b><p>Contrôles alignés sur les référentiels ANSSI, CIS, MITRE ATT&amp;CK et NIS2, en lecture seule.</p></div>
+      <div class="step"><b>Prioriser</b><p>Un score lisible, les chemins d’attaque vers vos comptes d’administration, un ordre de correction.</p></div>
+      <div class="step r"><b>Corriger</b><p>Sous verrou, uniquement avec votre accord écrit, domaine par domaine.</p></div>
+      <div class="step r"><b>Revenir</b><p>Chaque correction a son retour arrière ; les actions irréversibles sont bloquées par défaut.</p></div>
+      <div class="step"><b>Prouver</b><p>Rapports Word et PDF, export vers votre SIEM, journal infalsifiable de chaque action.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="feuille-de-route">
+  <div class="wrap">
+    <p class="eyebrow">Feuille de route</p>
+    <h2>Où en est CITSO</h2>
+    <p class="intro">Nous préférons être clairs sur ce qui est prêt et ce qui arrive.</p>
+    <div class="roadmap">
+      <div class="rm"><span><span class="tag t-beta">EN BÊTA</span></span><div><h3>Audit et priorisation</h3><p>Contrôles de la forêt et de chaque domaine, score de 0 à 100 avec niveau de maturité, chemins d’attaque, rapports et export SIEM.</p></div></div>
+      <div class="rm"><span><span class="tag t-dev">EN DÉVELOPPEMENT</span></span><div><h3>Correction gouvernée</h3><p>Corrections appariées à leur retour arrière, verrou, consentement signé par domaine et journal de preuve. Proposée en accompagnement pendant le pilote.</p></div></div>
+      <div class="rm"><span><span class="tag t-plan">PRÉVU</span></span><div><h3>Forêt d’administration et reprise après crise</h3><p>Administrer l’annuaire depuis un environnement séparé et préparer la reconstruction de l’AD le jour où tout tombe.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="souverainete">
+  <div class="wrap sov">
+    <div>
+      <p class="eyebrow">Souveraineté</p>
+      <h2>Tout reste chez vous</h2>
+      <ul>
+        <li>Appliance virtuelle installée dans votre réseau, sans aucune dépendance au cloud.</li>
+        <li>CITSO n’est jamais membre des domaines qu’il administre.</li>
+        <li>Connexions chiffrées, comptes d’accès gardés dans un coffre.</li>
+        <li>Éditeur français, code maîtrisé de bout en bout.</li>
+      </ul>
+    </div>
+    <div class="diagram" role="img" aria-label="Schéma : vos équipes, CITSO et vos contrôleurs de domaine dans votre réseau, sans connexion au cloud">
+      <span class="lbl">VOTRE RÉSEAU</span>
+      <div class="nodes">
+        <div class="node">Vos équipes</div><span class="arrow">→</span>
+        <div class="node c">CITSO</div><span class="arrow">→</span>
+        <div class="node">Vos contrôleurs</div>
+      </div>
+      <div class="cloud">Cloud, Internet : aucune connexion, aucune donnée ne sort</div>
+    </div>
+  </div>
+</section>
+
+<section class="pilot" id="pilote">
+  <div class="wrap">
+    <p class="eyebrow">Programme pilote</p>
+    <h2>Construisons CITSO avec vous</h2>
+    <p class="intro">Nous recherchons un nombre limité d’organisations pour éprouver CITSO en conditions réelles.</p>
+    <div class="grid3">
+      <div class="card"><h3>Cabinets d’audit et ESN</h3><p>Industrialisez vos audits Active Directory et livrez des plans de correction priorisés.</p></div>
+      <div class="card"><h3>ETI et entités NIS2</h3><p>Un état des lieux chiffré de votre annuaire et un accompagnement pour le corriger sans risque.</p></div>
+      <div class="card"><h3>MSSP et SOC</h3><p>Ajoutez l’audit et la correction gouvernée de l’AD à vos services managés.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h2>Parlons de votre Active Directory</h2>
+    <p class="intro">Un premier échange de 30 minutes pour comprendre votre contexte et voir si le programme pilote vous convient.</p>
+    <a class="btn" href="mailto:contact@citso.eu?subject=Programme%20pilote%20CITSO">Écrire à l’équipe CITSO</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap cols">
+    <div>
+      <h4>CITSO</h4>
+      <p>Sécurité souveraine de l’Active Directory.</p>
+      <p>© 2026 CITSO. Tous droits réservés.</p>
+    </div>
+    <div id="mentions-legales">
+      <h4>Mentions légales</h4>
+      <p>Éditeur : CITSO — société en cours d’immatriculation.</p>
+      <p>Siège : en cours d’immatriculation · RCS / SIREN : en cours d’immatriculation</p>
+      <p>Directeur de la publication : Julien Peyri</p>
+      <p>Hébergeur : GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis</p>
+      <p>Contact : contact@citso.eu</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
