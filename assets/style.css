@@ -178,3 +178,6 @@ a{color:#a03a37}
 :root{--ice:#eef0f3}
 .etape,.offre{border:1px solid #d9dde3;border-top:3px solid #8a3030;border-radius:6px}
 .etape .num{background:#8a3030}
+
+.hero p.pilote{font-size:15px;color:#c9d3de;margin:-6px 0 26px}.hero p.pilote span{display:inline-block;background:#8a3030;color:#fff;font-weight:600;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:3px;margin-right:10px}
+.prose ol li{margin:8px 0}
