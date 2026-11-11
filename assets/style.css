@@ -341,3 +341,6 @@ header{position:relative;z-index:100}.ue{position:relative;z-index:90}.lang ul{z
 .dom b{display:block;color:#fff;font-family:'Manrope',sans-serif;font-weight:700;font-size:18px;margin-bottom:4px}
 .dom small{color:#8f99a6;font-size:14px}
 @media (max-width:1000px){.appli .corps{grid-template-columns:1fr}.col-etapes,.col-recap{border:0}.dom8{grid-template-columns:1fr 1fr}.pas3{gap:24px}}
+
+/* logo ltr */
+.logo{direction:ltr;unicode-bidi:isolate}
