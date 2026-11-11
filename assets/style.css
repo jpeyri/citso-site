@@ -169,3 +169,12 @@ section.dark,.cta,footer{background:#141518}
 a{color:#a03a37}
 
 .tabref table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;font-size:15px}.tabref th{background:#121418;color:#fff;text-align:left;padding:12px 14px;font-weight:600}.tabref td{padding:12px 14px;border-top:1px solid #e3e8ee;vertical-align:top;line-height:1.5}.tabref td span{color:#5a6878;font-size:13px}.tabref tr:nth-child(even) td{background:#fafbfc}.etape ul.pr{margin:8px 0 0 18px;padding:0}.etape ul.pr li{margin:6px 0;font-size:15px}.offre p{margin:12px 0}.offre ul li{margin:8px 0}
+
+/* encart charte Citadelle */
+.encart{position:relative;background:#f1f2f4;border:1px solid #d5d8de;border-left:5px solid #8a3030;border-radius:4px;padding:18px 22px 18px 64px;color:#1b1d21;box-shadow:none}
+.encart:before{content:"";position:absolute;left:20px;top:50%;width:28px;height:26px;margin-top:-13px;background:url(logo-citadelle.png) center/contain no-repeat}
+.encart a{color:#8a3030;font-weight:600}
+/* cartes charte Citadelle : gris neutre, filet rouge */
+:root{--ice:#eef0f3}
+.etape,.offre{border:1px solid #d9dde3;border-top:3px solid #8a3030;border-radius:6px}
+.etape .num{background:#8a3030}
