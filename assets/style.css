@@ -148,3 +148,4 @@ header .wrap{gap:18px}.outils{margin-left:18px}
 html[dir=rtl] body,html[dir=rtl] h1,html[dir=rtl] h2,html[dir=rtl] h3{font-family:'IBM Plex Sans Arabic','IBM Plex Sans',Arial,sans-serif;letter-spacing:0}
 .stat b,.tl .pt b{font-variant-numeric:tabular-nums;font-weight:600}
 .logo{letter-spacing:.06em}
+html[dir=rtl] svg{direction:ltr}html[dir=rtl] svg text{direction:ltr;unicode-bidi:plaintext}
