@@ -167,3 +167,5 @@ header,.ue{background:#0b0c0e}
 .logo img{height:36px}
 section.dark,.cta,footer{background:#141518}
 a{color:#a03a37}
+
+.tabref table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;font-size:15px}.tabref th{background:#121418;color:#fff;text-align:left;padding:12px 14px;font-weight:600}.tabref td{padding:12px 14px;border-top:1px solid #e3e8ee;vertical-align:top;line-height:1.5}.tabref td span{color:#5a6878;font-size:13px}.tabref tr:nth-child(even) td{background:#fafbfc}.etape ul.pr{margin:8px 0 0 18px;padding:0}.etape ul.pr li{margin:6px 0;font-size:15px}.offre p{margin:12px 0}.offre ul li{margin:8px 0}
