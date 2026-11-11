@@ -103,3 +103,14 @@ nav a.actif{color:#fff;border-bottom:2px solid var(--copper)}
 footer a{color:#c9d3de;margin-left:18px;text-decoration:none}
 .logo{text-decoration:none}
 @media (max-width:900px){.grid2,.grid3{grid-template-columns:1fr}}
+
+header .wrap{gap:18px}.outils{margin-left:18px}
+.lang{position:relative;color:#fff;font-size:15px}
+.lang summary{list-style:none;cursor:pointer;border:1px solid #4a5d75;border-radius:6px;padding:5px 10px;color:#e6ebf0}
+.lang summary::-webkit-details-marker{display:none}
+.lang ul{position:absolute;right:0;top:38px;background:#fff;border-radius:10px;box-shadow:0 12px 30px rgba(0,0,0,.25);list-style:none;padding:8px 0;min-width:190px;z-index:20}
+.lang li a,.lang li span{display:block;padding:7px 16px;color:#1b2533;text-decoration:none;font-size:15px}
+.lang li a:hover{background:#e9eef4}.lang li span{color:#8a95a3}.lang li em{font-size:12px;font-style:normal;color:#b0b8c2}
+.lang a[aria-current]{font-weight:700;color:#e07a1f}
+.ue{background:#0a1522;color:#c9d3de;font-size:14px}.ue .wrap{display:flex;align-items:center;gap:10px;height:34px}
+.eu{width:20px;height:20px;flex:0 0 auto}
