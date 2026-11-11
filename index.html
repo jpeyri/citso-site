@@ -1,167 +1,141 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CITSO — la sécurité Active Directory qui ne devine jamais</title>
-<meta name="description" content="CITSO : suite française de sécurité Active Directory, souveraine, en lecture seule. Auditer, voir, surveiller, corriger, avec des preuves.">
-<link rel="stylesheet" href="assets/style.css?v=4">
-</head>
-<body>
-<header><div class="wrap"><a href="index.html" class="logo">CIT<span>SO</span></a><nav><a href="index.html" class="actif">Accueil</a><a href="solution.html">La solution</a><a href="confiance.html">Philosophie et preuves</a><a href="offres.html">Offres</a><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a></nav><div class="outils"><details class="lang"><summary>FR <span aria-hidden="true">▾</span></summary><ul><li><a href="index.html" lang="fr" aria-current="true">Français</a></li><li><span lang="en">English <em>bientôt</em></span></li><li><span lang="es">Español <em>bientôt</em></span></li><li><span lang="de">Deutsch <em>bientôt</em></span></li><li><span lang="pl">Polski <em>bientôt</em></span></li><li><span lang="sl">Slovenščina <em>bientôt</em></span></li><li><span lang="ru">Русский <em>bientôt</em></span></li><li><span lang="ar">العربية <em>bientôt</em></span></li><li><span lang="sv">Svenska <em>bientôt</em></span></li><li><span lang="no">Norsk <em>bientôt</em></span></li><li><span lang="fi">Suomi <em>bientôt</em></span></li><li><span lang="et">Eesti <em>bientôt</em></span></li><li><span lang="lt">Lietuvių <em>bientôt</em></span></li></ul></details></div></div></header><div class="ue"><div class="wrap"><svg class="fr" width="14" height="10" viewBox="0 0 3 2" aria-hidden="true"><rect width="1" height="2" fill="#002395"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ed2939"/></svg><svg class="eu" width="16" height="16" viewBox="-12 -12 24 24" aria-hidden="true"><path transform="translate(-0.00 -9.00) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(4.50 -7.79) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(7.79 -4.50) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(9.00 -0.00) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(7.79 4.50) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(4.50 7.79) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(-0.00 9.00) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(-4.50 7.79) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(-7.79 4.50) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(-9.00 -0.00) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(-7.79 -4.50) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(-4.50 -7.79) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/></svg><span>Conçu en France · Born and raised in the European Union</span></div></div>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CITSO — la forteresse de votre Active Directory</title><meta name="description" content="CITSO audite, sécurise et bâtit la forteresse de votre Active Directory : Red Forest isolée, surveillance du Tier 0, reprise après crise. Solution française, hors ligne."><link rel="stylesheet" href="assets/style.css?v=5"></head><body>
+<header><div class="wrap"><a href="index.html" class="logo">CIT<span>SO</span></a><nav><a href="index.html" class="actif">Accueil</a><a href="solution.html">La solution</a><a href="confiance.html">Philosophie et preuves</a><a href="offres.html">Offres</a><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a></nav><div class="outils"><details class="lang"><summary>FR <span aria-hidden="true">▾</span></summary><ul><li><a href="offres.html" lang="fr" aria-current="true">Français</a></li><li><span lang="en">English <em>bientôt</em></span></li><li><span lang="es">Español <em>bientôt</em></span></li><li><span lang="de">Deutsch <em>bientôt</em></span></li><li><span lang="pl">Polski <em>bientôt</em></span></li><li><span lang="sl">Slovenščina <em>bientôt</em></span></li><li><span lang="ru">Русский <em>bientôt</em></span></li><li><span lang="ar">العربية <em>bientôt</em></span></li><li><span lang="sv">Svenska <em>bientôt</em></span></li><li><span lang="no">Norsk <em>bientôt</em></span></li><li><span lang="fi">Suomi <em>bientôt</em></span></li><li><span lang="et">Eesti <em>bientôt</em></span></li><li><span lang="lt">Lietuvių <em>bientôt</em></span></li></ul></details></div></div></header><div class="ue"><div class="wrap"><svg class="fr" width="14" height="10" viewBox="0 0 3 2" aria-hidden="true"><rect width="1" height="2" fill="#002395"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ed2939"/></svg><svg class="eu" width="16" height="16" viewBox="-12 -12 24 24" aria-hidden="true"><path transform="translate(-0.00 -9.00) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(4.50 -7.79) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(7.79 -4.50) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(9.00 -0.00) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(7.79 4.50) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(4.50 7.79) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(-0.00 9.00) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(-4.50 7.79) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(-7.79 4.50) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(-9.00 -0.00) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(-7.79 -4.50) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(-4.50 -7.79) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/></svg><span>Conçu en France · Born and raised in the European Union</span></div></div>
+
 
 <section class="hero"><div class="wrap">
 <div>
-<div class="kicker">Sécurité Active Directory souveraine</div>
-<h1>La sécurité AD qui <em>ne devine jamais</em></h1>
-<p>Auditer, voir, surveiller, corriger. En lecture seule, sur vos serveurs, avec une preuve derrière chaque verdict.</p>
-<a class="btn" href="contact.html">Demander une démonstration</a><a class="btn ghost" href="confiance.html">Notre philosophie</a>
+<div class="kicker">Auditer · Sécuriser · Bâtir la forteresse · Reprendre la main</div>
+<h1>Nous bâtissons la <em>forteresse</em> de votre Active Directory</h1>
+<p>On audite. On sécurise. Et surtout, on bâtit une forteresse qui protège votre Active Directory des attaques et votre entreprise des crises de sécurité : vos comptes les plus puissants à l'abri dans une forêt isolée, une surveillance permanente, et la capacité de vous relever de n'importe quelle crise de sécurité. Chaque étape est guidée par un assistant.</p>
+<a class="btn" href="contact.html">Demander une démonstration</a><a class="btn ghost" href="solution.html">Voir la forteresse</a>
 </div>
-<svg viewBox="0 0 560 450" role="img" aria-label="Illustration : à gauche la Red Forest, forêt d'administration isolée où réside CITSO ; à droite la forêt de production. Une approbation à sens unique : la production fait confiance à la Red Forest, jamais l'inverse. Dans la production, un chemin d'attaque part d'une délégation dans un domaine enfant et remonte vers le Tier 0 ; CITSO le détecte.">
- <defs>
-  <pattern id="h" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#1f3550"/><rect width="4" height="10" fill="#2c425e"/></pattern>
-  <marker id="fl" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#fff"/></marker>
-  <marker id="fc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#e07a1f"/></marker>
- </defs>
- <rect x="8" y="8" width="170" height="434" rx="14" fill="#3a0f17" stroke="#c21c2c" stroke-width="2.5"/>
- <text x="22" y="36" fill="#ff8a95" font-size="15" font-weight="bold" font-family="Calibri,Arial">Red Forest</text>
- <text x="22" y="54" fill="#f0c8cd" font-size="12" font-family="Calibri,Arial">forêt d'administration</text>
- <text x="22" y="69" fill="#f0c8cd" font-size="12" font-family="Calibri,Arial">isolée, jamais jointe</text>
- <rect x="22" y="86" width="142" height="72" rx="9" fill="#e07a1f"/>
- <text x="34" y="114" fill="#fff" font-size="16" font-weight="bold" font-family="Calibri,Arial">CITSO</text>
- <text x="34" y="134" fill="#fff" font-size="12" font-family="Calibri,Arial">audit · surveillance</text>
- <text x="34" y="149" fill="#fff" font-size="12" font-family="Calibri,Arial">reprise</text>
- <rect x="22" y="168" width="142" height="54" rx="9" fill="#5a1a24"/>
- <text x="34" y="190" fill="#fff" font-size="12" font-weight="bold" font-family="Calibri,Arial">Comptes Tier 0</text>
- <text x="34" y="207" fill="#f0c8cd" font-size="12" font-family="Calibri,Arial">admins, JIT, 2 personnes</text>
- <rect x="22" y="232" width="142" height="44" rx="9" fill="#5a1a24"/>
- <text x="34" y="259" fill="#fff" font-size="12" font-weight="bold" font-family="Calibri,Arial">PKI racine hors ligne</text>
- <rect x="22" y="286" width="142" height="56" rx="9" fill="#5a1a24"/>
- <text x="34" y="308" fill="#fff" font-size="12" font-weight="bold" font-family="Calibri,Arial">Safe Harbor</text>
- <text x="34" y="325" fill="#f0c8cd" font-size="12" font-family="Calibri,Arial">DC de reprise isolés</text>
- <text x="22" y="372" fill="#f0c8cd" font-size="11.5" font-family="Calibri,Arial">Aucun flux entrant</text>
- <text x="22" y="388" fill="#f0c8cd" font-size="11.5" font-family="Calibri,Arial">depuis la production</text>
- <rect x="206" y="8" width="346" height="434" rx="14" fill="#16283f" stroke="#2c425e"/>
- <text x="220" y="36" fill="#c9d3de" font-size="14" font-family="Calibri,Arial">forêt de production corp.exemple</text>
- <rect x="220" y="50" width="318" height="168" rx="10" fill="#1f3550" stroke="#c21c2c" stroke-width="2"/>
- <text x="232" y="72" fill="#fff" font-size="13" font-family="Calibri,Arial">corp.exemple · domaine racine</text>
- <rect x="232" y="84" width="140" height="120" rx="8" fill="#c21c2c" class="cell"/>
- <text x="246" y="112" fill="#fff" font-size="15" font-weight="bold" font-family="Calibri,Arial">Tier 0</text>
- <text x="246" y="131" fill="#ffe3e6" font-size="12" font-family="Calibri,Arial">Enterprise Admins</text>
- <text x="246" y="147" fill="#ffe3e6" font-size="12" font-family="Calibri,Arial">Domain Admins · DC</text>
- <path d="M334 190 L334 174 L342 182 L350 170 L358 182 L366 174 L366 190 Z" fill="#ffcc00"/>
- <rect x="382" y="84" width="142" height="56" rx="8" fill="#d9a21b" class="cell" style="animation-delay:1s"/>
- <rect x="382" y="148" width="66" height="56" rx="8" fill="#2e7d8c"/>
- <rect x="456" y="148" width="68" height="56" rx="8" fill="#2c425e" stroke="#9aa6b4" stroke-dasharray="4 4"/>
- <rect x="220" y="232" width="152" height="196" rx="10" fill="#1f3550" stroke="#e07a1f" stroke-width="2"/>
- <text x="232" y="254" fill="#fff" font-size="12.5" font-family="Calibri,Arial">paris · domaine enfant</text>
- <rect x="232" y="266" width="128" height="88" rx="8" fill="#e07a1f" class="cell" style="animation-delay:2s"/>
- <text x="242" y="288" fill="#fff" font-size="12" font-weight="bold" font-family="Calibri,Arial">point d'entrée</text>
- <text x="242" y="304" fill="#fff" font-size="12" font-family="Calibri,Arial">délégation</text>
- <text x="242" y="320" fill="#fff" font-size="12" font-family="Calibri,Arial">non contrainte</text>
- <rect x="232" y="362" width="60" height="54" rx="8" fill="#2e7d8c"/><rect x="300" y="362" width="60" height="54" rx="8" fill="#d9a21b"/>
- <rect x="386" y="232" width="152" height="196" rx="10" fill="url(#h)" stroke="#9aa6b4" stroke-dasharray="5 5"/>
- <text x="398" y="254" fill="#c9d3de" font-size="12.5" font-family="Calibri,Arial">filiale · domaine enfant</text>
- <text x="398" y="330" fill="#c9d3de" font-size="12" font-family="Calibri,Arial">jamais audité :</text>
- <text x="398" y="346" fill="#c9d3de" font-size="12" font-family="Calibri,Arial">jamais vert</text>
- <path class="draw" d="M330 340 C 372 300, 360 240, 312 202" stroke="#fff" stroke-width="2.5" fill="none" marker-end="url(#fl)"/>
- <circle cx="330" cy="340" r="6" fill="#fff"/>
- <path d="M170 120 L 226 120" stroke="#e07a1f" stroke-width="3" fill="none" marker-end="url(#fc)"/>
- <text x="180" y="112" fill="#e07a1f" font-size="10.5" font-weight="bold" font-family="Calibri,Arial">admin</text>
- <text x="176" y="236" fill="#c9d3de" font-size="10" font-family="Calibri,Arial" transform="rotate(-90 190 236)">approbation à sens unique</text>
-</svg>
+<svg viewBox="0 0 600 500" role="img" aria-label="La forteresse CITSO. Au centre le donjon : la Red Forest, avec CITSO et les comptes Tier 0. Autour : la surveillance du Tier 0, le rempart de la sécurisation, puis les frontières qui isolent les zones. À l'extérieur : des contrôleurs de domaine distants, un Safe Harbour pour reprendre la main, des sauvegardes scellées. Les attaques sont arrêtées aux frontières.">
+<defs><marker id="fx" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#c21c2c"/></marker>
+<pattern id="pierre" width="24" height="12" patternUnits="userSpaceOnUse"><rect width="24" height="12" fill="#2c425e"/><path d="M0 0H24M0 6H24M12 0V6M0 6V12M24 6V12" stroke="#1f3550" stroke-width="1"/></pattern></defs>
+<g font-family="Calibri,Arial">
+<circle cx="300" cy="245" r="200" fill="#16283f" stroke="#e07a1f" stroke-width="3" stroke-dasharray="10 6"/>
+<rect x="232" y="35" width="136" height="22" rx="11" fill="#0e1b2c"/><text x="300" y="51" fill="#e07a1f" font-size="12.5" font-weight="bold" text-anchor="middle">FRONTIÈRES</text>
+<circle cx="300" cy="245" r="156" fill="none" stroke="url(#pierre)" stroke-width="26"/>
+<text x="300" y="104" fill="#e6ebf0" font-size="12" font-weight="bold" text-anchor="middle">REMPART · sécurisation</text>
+<circle cx="300" cy="245" r="110" fill="#1f3550" stroke="#d9a21b" stroke-width="3"/>
+<text x="300" y="152" fill="#d9a21b" font-size="12" font-weight="bold" text-anchor="middle">SURVEILLANCE du Tier 0</text>
+<rect x="230" y="172" width="140" height="128" rx="8" fill="#3a0f17" stroke="#c21c2c" stroke-width="2.5"/>
+<path d="M230 172 v-14 h16 v8 h16 v-8 h16 v8 h16 v-8 h16 v8 h16 v-8 h16 v8 h12 v-8 h16 v14 z" fill="#3a0f17" stroke="#c21c2c" stroke-width="2"/>
+<text x="300" y="197" fill="#ff8a95" font-size="14" font-weight="bold" text-anchor="middle">RED FOREST</text>
+<text x="300" y="214" fill="#f0c8cd" font-size="11.5" text-anchor="middle">le donjon</text>
+<rect x="246" y="224" width="108" height="26" rx="5" fill="#e07a1f"/><text x="300" y="242" fill="#fff" font-size="13" font-weight="bold" text-anchor="middle">CITSO</text>
+<text x="300" y="270" fill="#fff" font-size="11.5" text-anchor="middle">comptes Tier 0</text>
+<text x="300" y="286" fill="#f0c8cd" font-size="11" text-anchor="middle">PKI hors ligne</text>
+<path d="M590 60 L 470 120" stroke="#c21c2c" stroke-width="3" marker-end="url(#fx)"/><text x="500" y="70" fill="#ff8a95" font-size="12" font-weight="bold">attaque</text>
+<path d="M596 250 L 512 250" stroke="#c21c2c" stroke-width="3" marker-end="url(#fx)"/><text x="530" y="240" fill="#ff8a95" font-size="12" font-weight="bold">attaque</text>
+<g stroke="#ff8a95" stroke-width="3"><path d="M456 116 l12 12 M468 116 l-12 12"/><path d="M500 244 l12 12 M512 244 l-12 12"/></g>
+<g><rect x="8" y="40" width="96" height="58" rx="9" fill="#2c425e" stroke="#9aa6b4"/><text x="56" y="63" fill="#fff" font-size="12" font-weight="bold" text-anchor="middle">DC distant</text><text x="56" y="81" fill="#c9d3de" font-size="11" text-anchor="middle">site A</text></g>
+<g><rect x="8" y="140" width="96" height="58" rx="9" fill="#2c425e" stroke="#9aa6b4"/><text x="56" y="163" fill="#fff" font-size="12" font-weight="bold" text-anchor="middle">DC distant</text><text x="56" y="181" fill="#c9d3de" font-size="11" text-anchor="middle">site B</text></g>
+<path d="M104 69 C 140 80, 160 120, 168 150" stroke="#9aa6b4" stroke-width="2" stroke-dasharray="4 5" fill="none"/>
+<path d="M104 169 C 130 175, 140 185, 150 195" stroke="#9aa6b4" stroke-width="2" stroke-dasharray="4 5" fill="none"/>
+<g><rect x="8" y="400" width="150" height="62" rx="9" fill="#5a6878"/><rect x="20" y="414" width="18" height="14" rx="2" fill="none" stroke="#fff" stroke-width="2"/><path d="M23 414 v-5 a6 6 0 0 1 12 0 v5" fill="none" stroke="#fff" stroke-width="2"/><text x="46" y="424" fill="#fff" font-size="12" font-weight="bold">SAUVEGARDES</text><text x="46" y="440" fill="#fff" font-size="12" font-weight="bold">SCELLÉES</text><text x="20" y="455" fill="#e6ebf0" font-size="10.5">chiffrées, empreinte vérifiée</text></g>
+<g><rect x="442" y="400" width="150" height="62" rx="9" fill="#0b8a8f"/><text x="517" y="424" fill="#fff" font-size="13" font-weight="bold" text-anchor="middle">SAFE HARBOUR</text><text x="517" y="442" fill="#e6f6f7" font-size="11" text-anchor="middle">reprendre la main</text></g>
+<path d="M340 300 C 390 360, 420 390, 448 404" stroke="#0b8a8f" stroke-width="2.5" stroke-dasharray="5 5" fill="none"/>
+<path d="M260 300 C 210 360, 180 390, 158 412" stroke="#9aa6b4" stroke-width="2.5" stroke-dasharray="5 5" fill="none"/>
+<text x="300" y="490" fill="#c9d3de" font-size="11.5" text-anchor="middle">La production fait confiance à la Red Forest, jamais l'inverse.</text>
+</g></svg>
 </div></section>
 
-<section id="philosophie"><div class="wrap">
-<div class="kicker">Philosophie</div>
-<h2 style="font-size:40px">Quatre engagements, sans exception</h2>
-<p class="lead">Un outil de sécurité doit être plus exigeant envers lui-même que l'attaquant. CITSO repose sur quatre principes vérifiables.</p>
-<div class="grid4">
- <div class="card"><svg viewBox="0 0 54 54"><circle cx="27" cy="27" r="26" fill="#0e1b2c"/><path d="M14 27s5-9 13-9 13 9 13 9-5 9-13 9-13-9-13-9z" fill="none" stroke="#fff" stroke-width="2.5"/><circle cx="27" cy="27" r="4" fill="#e07a1f"/></svg><h3>Lecture seule</h3><p>CITSO lit l'annuaire et n'y écrit jamais. Toute correction passe par un circuit verrouillé, avec approbation et retour arrière.</p></div>
- <div class="card"><svg viewBox="0 0 54 54"><circle cx="27" cy="27" r="26" fill="#e07a1f"/><path d="M17 28l7 7 13-15" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/><path d="M40 14L14 40" stroke="#0e1b2c" stroke-width="3"/></svg><h3>Jamais de vert sans preuve</h3><p>Ce qui n'a pas été vérifié reste « non évalué ». Un niveau de maturité n'est atteint que si tous ses points ont été prouvés.</p></div>
- <div class="card"><svg viewBox="0 0 54 54"><circle cx="27" cy="27" r="26" fill="#0e1b2c"/><rect x="17" y="24" width="20" height="15" rx="2" fill="#fff"/><path d="M21 24v-5a6 6 0 0112 0v5" fill="none" stroke="#fff" stroke-width="2.5"/></svg><h3>Souverain et hors ligne</h3><p>Sur vos serveurs, sans nuage, sans télémétrie. Les rapports s'ouvrent hors ligne, sans aucune requête réseau.</p></div>
- <div class="card"><svg viewBox="0 0 54 54"><circle cx="27" cy="27" r="26" fill="#0e1b2c"/><path d="M27 12l12 5v9c0 8-5 13-12 16-7-3-12-8-12-16v-9z" fill="none" stroke="#fff" stroke-width="2.5"/><path d="M21 27l4 4 8-8" fill="none" stroke="#e07a1f" stroke-width="3"/></svg><h3>Prouvable</h3><p>Code scellé à l'octet, contrôles ancrés sur des référentiels publics (ANSSI, CIS, MITRE ATT&amp;CK). Chaque verdict porte sa preuve.</p></div>
-</div>
-</div></section>
-
-<section class="dark"><div class="wrap split">
-<div>
-<div class="kicker">Le faux vert, ennemi n°1</div>
-<h2 style="font-size:38px;margin-bottom:18px">Un faux vert est pire qu'un rouge</h2>
-<p class="lead">Beaucoup d'outils affichent « conforme » là où ils n'ont simplement rien pu lire. CITSO distingue toujours ce qui est conforme, en défaut, non évalué ou non évaluable, et le dit.</p>
-<div class="legend"><span><i style="background:#c21c2c"></i>critique</span><span><i style="background:#e07a1f"></i>élevé</span><span><i style="background:#d9a21b"></i>moyen</span><span><i style="background:#2e7d8c"></i>conforme, prouvé</span><span><i class="hatch"></i>non évalué</span></div>
-</div>
-<div class="tiles" aria-label="Mosaïque de contrôles : couleurs de gravité, conformes prouvés et non évalués hachurés">
-<div style="background:#c21c2c"></div><div style="background:#2e7d8c"></div><div class="hatch"></div><div style="background:#2e7d8c"></div><div style="background:#d9a21b"></div><div style="background:#2e7d8c"></div><div style="background:#e07a1f"></div><div class="hatch"></div>
-<div style="background:#2e7d8c"></div><div class="hatch"></div><div style="background:#2e7d8c"></div><div style="background:#c21c2c"></div><div style="background:#2e7d8c"></div><div class="hatch"></div><div style="background:#2e7d8c"></div><div style="background:#d9a21b"></div>
-<div style="background:#e07a1f"></div><div style="background:#2e7d8c"></div><div style="background:#2e7d8c"></div><div class="hatch"></div><div style="background:#2e7d8c"></div><div style="background:#e07a1f"></div><div style="background:#2e7d8c"></div><div style="background:#2e7d8c"></div>
-<div class="hatch"></div><div style="background:#2e7d8c"></div><div style="background:#d9a21b"></div><div style="background:#2e7d8c"></div><div class="hatch"></div><div style="background:#2e7d8c"></div><div style="background:#c21c2c"></div><div style="background:#2e7d8c"></div>
-</div>
-</div></section>
-
-<section id="carte"><div class="wrap">
-<div class="kicker">Voir</div>
-<h2 style="font-size:40px">La carte de votre AD, et ce qu'il reste à faire</h2>
-<div class="feat">
- <div class="shot"><img src="assets/carte-console.png" alt="Console CITSO : carte d'un domaine Active Directory, unités d'organisation colorées selon la gravité des constats (données d'exemple)"></div>
- <ul><li>De la forêt jusqu'à l'objet, en un clic</li><li>Quatre calques : constats ouverts, avancement du plan, chemins vers le Tier 0, zones non auditées</li><li>Le plus grave trouvé en deux clics</li><li>Dans la console et dans le rapport remis au client</li></ul>
-</div>
-<div class="feat rev">
- <ul><li>Appartenances, droits dangereux, délégations, sessions</li><li>Le plus court chemin vers les administrateurs du domaine</li><li>Les points de passage où couper pour fermer le plus de chemins</li></ul>
- <div class="shot"><img src="assets/graphe.png" alt="Console CITSO : graphe des chemins d'attaque vers le Tier 0"></div>
-</div>
-</div></section>
-
-<section id="maturite" style="background:#f6f8fb"><div class="wrap split">
-<div>
-<div class="kicker">Mesurer</div>
-<h2 style="font-size:38px;margin-bottom:18px">Une maturité qui se mérite</h2>
-<p class="lead">Les niveaux suivent les points de contrôle Active Directory publiés par l'ANSSI. Un niveau n'est atteint que lorsque tous ses points sont évalués et conformes : un point non vérifié le laisse « non démontré ».</p>
-<p class="note">Source : points de contrôle Active Directory, CERT-FR / ANSSI.</p>
-</div>
-<div>
-<div class="stairs" aria-label="Escalier des cinq niveaux de maturité">
- <div style="height:30%;background:#2e7d8c">1</div><div style="height:45%;background:#2e7d8c">2</div><div style="height:60%;background:repeating-linear-gradient(45deg,#9aa6b4 0 6px,#b8c2cd 6px 12px);color:#0e1b2c">3</div><div style="height:78%;background:#c9d3de;color:#0e1b2c">4</div><div style="height:96%;background:#c9d3de;color:#0e1b2c">5</div>
-</div>
-<div class="legend" style="color:#33404f"><span><i style="background:#2e7d8c"></i>atteint et prouvé</span><span><i class="hatch" style="background:repeating-linear-gradient(45deg,#9aa6b4 0 4px,#b8c2cd 4px 8px)"></i>non démontré</span><span><i style="background:#c9d3de"></i>à venir</span></div>
+<section><div class="wrap">
+<div class="kicker">Trois étapes, un objectif</div>
+<h2 style="font-size:36px;max-width:960px">Votre Active Directory est le cœur de votre système d'information. CITSO en fait une forteresse.</h2>
+<div class="grid3" style="margin-top:44px">
+<div class="etape"><span class="num">1</span><b>Auditer</b>Près de 400 contrôles, la carte de votre annuaire et les chemins qu'un attaquant suivrait jusqu'à vos administrateurs. Chaque constat est prouvé et nomme les objets en cause.</div>
+<div class="etape"><span class="num">2</span><b>Sécuriser</b>Un plan de corrections priorisé, appliqué par vagues, chaque geste approuvé et réversible. Le reste à faire est suivi, campagne après campagne, jusqu'à preuve de correction.</div>
+<div class="etape" style="background:#0e1b2c;color:#e6ebf0"><span class="num" style="background:#e07a1f">3</span><b style="color:#fff">Bâtir la forteresse</b>Vos comptes Tier 0 dans une forêt d'administration isolée, la Red Forest. Surveillance permanente avec alerte en secondes. Un Safe Harbor pour reprendre la main : en cas d'attaque, CITSO isole d'abord, rien n'est détruit.</div>
 </div>
 </div></section>
 
 <section class="dark"><div class="wrap">
-<div class="kicker">Surveiller</div>
-<h2 style="font-size:38px">Le Tier 0 sous surveillance, en direct</h2>
-<p class="lead">Ajout à un groupe privilégié, délégation, comptes de service gérés, GPO liée aux contrôleurs : chaque changement sensible déclenche une alerte.</p>
-<div class="tl"><div class="pt"><b>0 s</b>changement dans l'annuaire</div><div class="ln"></div><div class="pt"><b>5 s</b>alerte critique (mesuré au lab)</div></div>
-<p class="note" style="color:#9aa6b4">Lecture des journaux avec un compte ordinaire ; une alerte n'est jamais perdue tant qu'elle n'a pas été exportée.</p>
+<div class="kicker">La forteresse</div>
+<h2 style="font-size:38px;margin-bottom:10px">Six défenses, et la capacité de se relever de n'importe quelle crise</h2>
+<p class="lead" style="margin-bottom:36px">Une attaque ne doit jamais atteindre vos comptes les plus puissants. Et si le pire arrive, vous gardez de quoi reprendre la main.</p>
+<div class="grid3">
+<div class="etape" style="background:#3a0f17;color:#f0c8cd"><b style="color:#ff8a95">Red Forest, le donjon</b>Vos comptes Tier 0 et CITSO vivent dans une forêt d'administration isolée, jamais jointe à la production. La production lui fait confiance, jamais l'inverse.</div>
+<div class="etape" style="background:#1f3550;color:#c9d3de"><b style="color:#e07a1f">Frontières</b>Des zones d'administration étanches, des groupes restreints, des approbations à sens unique avec authentification sélective et filtrage SID : ce qui est dehors reste dehors.</div>
+<div class="etape" style="background:#1f3550;color:#c9d3de"><b style="color:#d9a21b">Surveillance du Tier 0</b>Chaque changement sensible déclenche une alerte en secondes. Au signal de compromission, CITSO isole d'abord ; seule une signature humaine lève l'isolation.</div>
+<div class="etape" style="background:#0b5f63;color:#e6f6f7"><b style="color:#fff">Safe Harbour</b>Un abri prêt à l'avance pour reprendre la main : plans d'isolation pré-armés et répétés, contrôleurs de reprise isolés, reconstruction pas à pas. Rien n'est détruit pendant la crise.</div>
+<div class="etape" style="background:#3d4754;color:#e6ebf0"><b style="color:#fff">Sauvegardes scellées</b>Sauvegardes de la forêt d'administration et des forêts protégées, chiffrées, à l'empreinte vérifiée, hors d'atteinte d'un attaquant qui tiendrait la production.</div>
+<div class="etape" style="background:#2c425e;color:#e6ebf0"><b style="color:#fff">Contrôleurs de domaine distants</b>Des contrôleurs de domaine sur des sites séparés, répliqués sous contrôle et vérifiés avant leur date de péremption, pour reconstruire même si le site principal est perdu.</div>
+</div></div></section>
+
+<section><div class="wrap split">
+<div>
+<div class="kicker">Vos choix, guidés</div>
+<h2 style="font-size:36px;margin-bottom:18px">Tout est piloté par des assistants</h2>
+<p class="lead">Pas de ligne de commande, pas de script à écrire. À chaque étape, un assistant vous pose les bonnes questions, vous montre ce qui va changer avant de le faire, et prépare le retour arrière. Vous gardez la main sur chaque décision.</p>
+</div>
+<div class="grid2" style="margin-top:0">
+<div class="etape"><b>Votre mode</b>Audit ponctuel par un consultant, ou CITSO à demeure dans votre infrastructure.</div>
+<div class="etape"><b>Votre hébergement</b>Sur votre hyperviseur (Hyper-V, VMware, Proxmox) ou sur une appliance dédiée, abri de crise.</div>
+<div class="etape"><b>Votre rythme</b>Corrections par vagues, au rythme que vous validez ; chaque geste approuvé et réversible.</div>
+<div class="etape"><b>Votre seuil</b>Ce qui déclenche une isolation, qui peut la lever, qui signe l'irréversible : c'est vous qui décidez.</div>
+</div></div></section>
+
+<section class="dark"><div class="wrap split">
+<div>
+<div class="kicker">Le problème</div>
+<h2 style="font-size:36px;margin-bottom:18px">Un attaquant n'a pas besoin d'une faille spectaculaire</h2>
+<p class="lead">Il lui suffit d'un compte mal délégué, d'un droit oublié, d'un mot de passe de service jamais changé. Bout à bout, ces détails forment un chemin jusqu'aux administrateurs du domaine. Personne ne voit ce chemin, jusqu'au jour où il est emprunté.</p>
+</div>
+<svg viewBox="0 0 560 300" role="img" aria-label="Chemin d'attaque : un compte du support, un droit de réinitialisation de mot de passe, un compte de service avec délégation, une session d'administrateur, puis les administrateurs du domaine">
+<defs><marker id="fa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#e07a1f"/></marker></defs>
+<rect x="0" y="0" width="560" height="300" rx="14" fill="#16283f"/>
+<g font-family="Calibri,Arial" font-size="12.5">
+<rect x="20" y="40" width="150" height="62" rx="9" fill="#2c425e"/><text x="34" y="66" fill="#fff" font-weight="bold">Compte du support</text><text x="34" y="84" fill="#c9d3de">utilisateur ordinaire</text>
+<path d="M172 71 L 208 71" stroke="#e07a1f" stroke-width="2.5" marker-end="url(#fa)"/>
+<rect x="210" y="40" width="150" height="62" rx="9" fill="#d9a21b"/><text x="224" y="66" fill="#1b2533" font-weight="bold">Droit oublié</text><text x="224" y="84" fill="#1b2533">réinitialisation</text><text x="224" y="98" fill="#1b2533">de mot de passe</text>
+<path d="M362 71 L 398 71" stroke="#e07a1f" stroke-width="2.5" marker-end="url(#fa)"/>
+<rect x="400" y="40" width="140" height="62" rx="9" fill="#e07a1f"/><text x="414" y="66" fill="#fff" font-weight="bold">Compte de service</text><text x="414" y="84" fill="#fff">délégation</text><text x="414" y="98" fill="#fff">non contrainte</text>
+<path d="M470 104 C 470 150, 470 150, 470 176" stroke="#e07a1f" stroke-width="2.5" fill="none" marker-end="url(#fa)"/>
+<rect x="390" y="180" width="150" height="62" rx="9" fill="#e07a1f"/><text x="404" y="206" fill="#fff" font-weight="bold">Serveur</text><text x="404" y="224" fill="#fff">session ouverte</text><text x="404" y="238" fill="#fff">d'un administrateur</text>
+<path d="M388 211 L 352 211" stroke="#e07a1f" stroke-width="2.5" marker-end="url(#fa)"/>
+<rect x="190" y="180" width="160" height="62" rx="9" fill="#c21c2c"/><text x="204" y="206" fill="#fff" font-weight="bold">Administrateurs</text><text x="204" y="224" fill="#ffe3e6">du domaine : Tier 0</text>
+<path d="M322 202 L 322 190 L 328 196 L 334 186 L 340 196 L 346 190 L 346 202 Z" fill="#ffcc00"/>
+<text x="20" y="196" fill="#c9d3de" font-size="13">4 détails anodins,</text><text x="20" y="214" fill="#c9d3de" font-size="13">1 chemin vers le Tier 0.</text>
+<text x="20" y="272" fill="#e07a1f" font-size="13" font-weight="bold">CITSO le trace, le prouve et indique où le couper.</text>
+</g></svg>
 </div></section>
 
-<section id="modes"><div class="wrap">
-<div class="kicker">Déployer</div>
-<h2 style="font-size:40px">Deux façons de déployer, mêmes preuves</h2>
-<div class="modes">
- <div class="mode"><h3>Consultant</h3><ul><li>Installation portable, une mission par client</li><li>Campagne en quelques minutes, rapports remis sur place</li><li>Transfert chiffré vers la plateforme : paquet altéré, rejoué ou d'un autre client refusé</li><li>Clôture avec purge prouvée</li></ul></div>
- <div class="mode alt"><h3>À demeure</h3><ul><li>Plateforme dans votre infrastructure, raccordée à vos forêts</li><li>Tableau de bord et surveillance continue</li><li>Suivi du reste à faire, campagne après campagne</li><li>Forêt d'administration (Red Forest) : CITSO et vos comptes Tier 0 dans une forêt isolée, jamais jointe ; la production lui fait confiance à sens unique</li></ul></div>
+<section><div class="wrap split">
+<div>
+<div class="kicker">Pourquoi nous croire</div>
+<h2 style="font-size:36px;margin-bottom:18px">Un rapport qui dit ce qu'il n'a pas pu vérifier</h2>
+<p class="lead">La plupart des outils affichent « conforme » quand ils n'ont rien pu lire. CITSO ne le fait jamais : ce qui n'a pas été vérifié est affiché comme tel, avec la raison. Voici une vraie campagne de notre laboratoire, menée avec un simple compte de lecture.</p>
+<p class="note">Campagne réelle, laboratoire CITSO, novembre 2026 : le partage des stratégies de groupe était inaccessible à ce compte ; CITSO l'a dit au lieu de conclure.</p>
 </div>
+<svg viewBox="0 0 560 300" role="img" aria-label="Répartition des 396 verdicts d'une campagne réelle : 118 conformes vérifiés, 45 en défaut, 30 non applicables, 133 non évaluables, 70 non évalués">
+<defs><pattern id="hv1" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#5a6878"/><rect width="3" height="8" fill="#7d8a99"/></pattern>
+<pattern id="hv2" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(135)"><rect width="8" height="8" fill="#c9d3de"/><rect width="3" height="8" fill="#e6ebf0"/></pattern></defs>
+<g font-family="Calibri,Arial" font-size="14"><text x="20" y="34" fill="#0e1b2c" font-size="16" font-weight="bold">396 verdicts, une seule campagne</text><rect x="21.0" y="60" width="152.9" height="44" rx="4" fill="#0b8a8f"><title>CITSO — la forteresse de votre Active Directory</title></rect><rect x="175.9" y="60" width="57.1" height="44" rx="4" fill="#c21c2c"><title>CITSO — la forteresse de votre Active Directory</title></rect><rect x="235.0" y="60" width="37.4" height="44" rx="4" fill="#9aa6b4"><title>CITSO — la forteresse de votre Active Directory</title></rect><rect x="274.4" y="60" width="172.6" height="44" rx="4" fill="url(#hv1)"><title>CITSO — la forteresse de votre Active Directory</title></rect><rect x="449.1" y="60" width="89.9" height="44" rx="4" fill="url(#hv2)"><title>CITSO — la forteresse de votre Active Directory</title></rect><rect x="20" y="128" width="16" height="16" rx="3" fill="#0b8a8f" stroke="#9aa6b4" stroke-width="0.5"/><text x="46" y="141" fill="#1b2533">Conformes, vérifiés</text><text x="540" y="141" fill="#1b2533" text-anchor="end" font-weight="bold">118</text><rect x="20" y="158" width="16" height="16" rx="3" fill="#c21c2c" stroke="#9aa6b4" stroke-width="0.5"/><text x="46" y="171" fill="#1b2533">En défaut</text><text x="540" y="171" fill="#1b2533" text-anchor="end" font-weight="bold">45</text><rect x="20" y="188" width="16" height="16" rx="3" fill="#9aa6b4" stroke="#9aa6b4" stroke-width="0.5"/><text x="46" y="201" fill="#1b2533">Non applicables</text><text x="540" y="201" fill="#1b2533" text-anchor="end" font-weight="bold">30</text><rect x="20" y="218" width="16" height="16" rx="3" fill="url(#hv1)" stroke="#9aa6b4" stroke-width="0.5"/><text x="46" y="231" fill="#1b2533">Non évaluables (données absentes)</text><text x="540" y="231" fill="#1b2533" text-anchor="end" font-weight="bold">133</text><rect x="20" y="248" width="16" height="16" rx="3" fill="url(#hv2)" stroke="#9aa6b4" stroke-width="0.5"/><text x="46" y="261" fill="#1b2533">Non évalués (accès refusé)</text><text x="540" y="261" fill="#1b2533" text-anchor="end" font-weight="bold">70</text></g></svg>
 </div></section>
 
 <section style="background:#f6f8fb"><div class="wrap">
-<div class="kicker">Prouvé au lab, pas promis</div>
-<h2 style="font-size:40px">Des mesures, pas des slogans</h2>
-<div class="stats">
- <div class="stat"><b>396</b>verdicts par campagne, un par contrôle</div>
- <div class="stat"><b>~4 min</b>pour une campagne complète</div>
- <div class="stat hl"><b>0</b>faux vert sur les faiblesses posées</div>
- <div class="stat"><b>5/5</b>paquets de transfert piégés refusés</div>
-</div>
-<p class="note">Mesures sur notre laboratoire Active Directory volontairement vulnérable.</p>
+<div class="kicker">Surveiller</div>
+<h2 style="font-size:36px">Cinq secondes entre le changement et l'alerte</h2>
+<div class="tl5"><div class="pt5"><span class="t">0 s</span><span class="d">Un compte est ajouté aux administrateurs du domaine</span></div><div class="pt5"><span class="t">·</span><span class="d">CITSO lit le changement sur le contrôleur, avec un simple compte de lecture</span></div><div class="pt5"><span class="t">·</span><span class="d">Le changement est rapproché des règles du Tier 0</span></div><div class="pt5"><span class="t">5 s</span><span class="d">Alerte critique, avec l'objet concerné</span></div><div class="pt5"><span class="t">·</span><span class="d">Export vers votre SIEM ; rejouée tant qu'elle n'est pas reçue</span></div></div>
+<p class="note">Mesuré au laboratoire : ajout d'un compte au groupe des administrateurs du domaine.</p>
+</div></section>
+
+<section><div class="wrap">
+<div class="kicker">Pour qui</div>
+<h2 style="font-size:36px">Deux façons de travailler avec CITSO</h2>
+<div class="modes"><div class="mode"><h3>Audit ponctuel</h3><p style="margin-bottom:12px">Pour savoir où vous en êtes.</p><ul><li>Un consultant installe CITSO sur son poste, pour votre seule mission</li><li>Campagne en lecture seule, en quelques minutes</li><li>Carte, chemins d'attaque, maturité ANSSI, plan de corrections priorisé</li><li>Rien ne reste chez le consultant après la mission</li></ul></div>
+<div class="mode alt"><h3>CITSO à demeure</h3><p style="margin-bottom:12px">Pour protéger en continu.</p><ul><li>CITSO dans votre infrastructure, dans une Red Forest isolée</li><li>Surveillance du Tier 0, alertes vers votre SIEM</li><li>Corrections encadrées, suivi du reste à faire</li><li>Isolation immédiate en cas de compromission, levée par signature</li></ul></div></div>
+<p style="margin-top:34px;font-size:19px"><a href="offres.html">Voir les offres</a> · <a href="confiance.html">Lire notre doctrine</a></p>
 </div></section>
 
 <section class="cta" id="contact"><div class="wrap">
-<h2>Voyons votre AD</h2>
+<h2>Bâtissons votre forteresse</h2>
 <p>Une démonstration sur un environnement de test, puis une première campagne en lecture seule.</p>
-<a class="btn" href="mailto:contact@citso.eu">Nous écrire</a><p style="margin-top:18px;font-size:17px;color:#c9d3de">contact@citso.eu</p>
+<a class="btn" href="contact.html">Nous écrire</a>
 </div></section>
 
 <footer><div class="wrap"><span>© 2026 CITSO · solution française · lecture seule · hors ligne</span><span><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a><a href="mailto:contact@citso.eu">contact@citso.eu</a></span></div></footer>
-</body>
-</html>
+</body></html>

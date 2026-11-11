@@ -116,3 +116,11 @@ header .wrap{gap:18px}.outils{margin-left:18px}
 .eu{width:20px;height:20px;flex:0 0 auto}
 
 .fr{width:14px;height:10px;flex:0 0 auto;border-radius:1px;box-shadow:0 0 0 1px rgba(255,255,255,.25)}
+
+.tl5{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:34px;position:relative}
+.tl5:before{content:"";position:absolute;left:4%;right:4%;top:22px;height:3px;background:linear-gradient(90deg,#e07a1f,#c21c2c)}
+.pt5{position:relative;text-align:center}
+.pt5 .t{display:inline-flex;align-items:center;justify-content:center;min-width:46px;height:46px;border-radius:23px;background:#0e1b2c;color:#fff;font-family:Cambria,Georgia,serif;font-weight:700;font-size:18px;padding:0 10px;position:relative}
+.pt5 .d{display:block;margin-top:12px;font-size:16px;color:#33404f}
+.hero h1 em{color:var(--copper);font-style:normal}
+@media (max-width:900px){.tl5{grid-template-columns:1fr}.tl5:before{display:none}}
