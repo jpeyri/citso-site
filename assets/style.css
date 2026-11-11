@@ -1,8 +1,28 @@
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/plex-latin-400.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/plex-latin-ext-400.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/plex-cyrillic-400.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/plex-cyrillic-ext-400.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+@font-face{font-family:'IBM Plex Sans Arabic';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/plexar-arabic-400.woff2) format('woff2')}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/plex-latin-500.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/plex-latin-ext-500.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/plex-cyrillic-500.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/plex-cyrillic-ext-500.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+@font-face{font-family:'IBM Plex Sans Arabic';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/plexar-arabic-500.woff2) format('woff2')}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/plex-latin-600.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/plex-latin-ext-600.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/plex-cyrillic-600.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/plex-cyrillic-ext-600.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+@font-face{font-family:'IBM Plex Sans Arabic';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/plexar-arabic-600.woff2) format('woff2')}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/plex-latin-700.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/plex-latin-ext-700.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/plex-cyrillic-700.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/plex-cyrillic-ext-700.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+@font-face{font-family:'IBM Plex Sans Arabic';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/plexar-arabic-700.woff2) format('woff2')}
 
 :root{--navy:#0e1b2c;--navy2:#16283f;--ice:#e9eef4;--ink:#1b2533;--muted:#6b7686;--copper:#e07a1f;--red:#c21c2c;--amber:#d9a21b;--teal:#2e7d8c;--grey:#9aa6b4}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Calibri,"Segoe UI",Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.55}
-h1,h2,h3{font-family:Cambria,Georgia,serif;color:var(--navy);line-height:1.2}
+body{font-family:'IBM Plex Sans',Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.55}
+h1,h2,h3{font-family:'IBM Plex Sans',Arial,sans-serif;font-weight:600;letter-spacing:-.015em;color:var(--navy);line-height:1.2}
 a{color:var(--copper)}
 .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
 section{padding:96px 0}
@@ -11,7 +31,7 @@ section{padding:96px 0}
 /* header */
 header{position:sticky;top:0;z-index:10;background:rgba(14,27,44,.96);backdrop-filter:blur(6px)}
 header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-family:Cambria,Georgia,serif;font-weight:700;font-size:24px;color:#fff;letter-spacing:.04em}
+.logo{font-family:'IBM Plex Sans',Arial,sans-serif;font-weight:700;font-size:24px;color:#fff;letter-spacing:.04em}
 .logo span{color:var(--copper)}
 nav a{color:#c9d3de;text-decoration:none;margin-left:26px;font-size:16px}
 nav a:hover{color:#fff}
@@ -54,11 +74,11 @@ nav a:hover{color:#fff}
 .feat li:before{content:"";position:absolute;left:0;top:9px;width:12px;height:12px;border-radius:50%;background:var(--copper)}
 /* maturite escalier */
 .stairs{display:flex;align-items:flex-end;gap:10px;height:240px;margin-top:10px}
-.stairs div{flex:1;border-radius:8px 8px 0 0;display:flex;align-items:flex-start;justify-content:center;padding-top:10px;font-family:Cambria,Georgia,serif;font-weight:700;color:#fff;font-size:20px}
+.stairs div{flex:1;border-radius:8px 8px 0 0;display:flex;align-items:flex-start;justify-content:center;padding-top:10px;font-family:'IBM Plex Sans',Arial,sans-serif;font-weight:700;color:#fff;font-size:20px}
 /* timeline */
 .tl{display:flex;align-items:center;gap:0;margin-top:34px}
 .tl .pt{flex:0 0 auto;text-align:center;width:190px}
-.tl .pt b{display:block;font-family:Cambria,Georgia,serif;font-size:34px;color:var(--copper)}
+.tl .pt b{display:block;font-family:'IBM Plex Sans',Arial,sans-serif;font-size:34px;color:var(--copper)}
 .tl .ln{flex:1;height:3px;background:linear-gradient(90deg,var(--copper),var(--red))}
 /* modes */
 .modes{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:40px}
@@ -69,7 +89,7 @@ nav a:hover{color:#fff}
 /* chiffres */
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:42px}
 .stat{text-align:center;background:var(--ice);border-radius:14px;padding:34px 18px}
-.stat b{display:block;font-family:Cambria,Georgia,serif;font-size:52px;color:var(--navy)}
+.stat b{display:block;font-family:'IBM Plex Sans',Arial,sans-serif;font-size:52px;color:var(--navy)}
 .stat.hl{background:var(--navy);color:#fff}.stat.hl b{color:var(--copper)}
 .note{font-size:14px;color:var(--muted);margin-top:14px;font-style:italic}
 /* cta */
@@ -96,7 +116,7 @@ footer .wrap{display:flex;justify-content:space-between}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
 .etape{background:var(--ice);border-radius:14px;padding:26px}
-.etape b{display:block;font-family:Cambria,Georgia,serif;font-size:22px;color:var(--navy);margin-bottom:8px}
+.etape b{display:block;font-family:'IBM Plex Sans',Arial,sans-serif;font-size:22px;color:var(--navy);margin-bottom:8px}
 .etape .num{display:inline-flex;width:40px;height:40px;border-radius:50%;background:var(--navy);color:#fff;align-items:center;justify-content:center;font-weight:700;margin-bottom:12px}
 .encart{background:#fff4ea;border-radius:12px;padding:20px 24px;margin:26px 0;font-size:17px}
 nav a.actif{color:#fff;border-bottom:2px solid var(--copper)}
@@ -120,7 +140,11 @@ header .wrap{gap:18px}.outils{margin-left:18px}
 .tl5{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:34px;position:relative}
 .tl5:before{content:"";position:absolute;left:4%;right:4%;top:22px;height:3px;background:linear-gradient(90deg,#e07a1f,#c21c2c)}
 .pt5{position:relative;text-align:center}
-.pt5 .t{display:inline-flex;align-items:center;justify-content:center;min-width:46px;height:46px;border-radius:23px;background:#0e1b2c;color:#fff;font-family:Cambria,Georgia,serif;font-weight:700;font-size:18px;padding:0 10px;position:relative}
+.pt5 .t{display:inline-flex;align-items:center;justify-content:center;min-width:46px;height:46px;border-radius:23px;background:#0e1b2c;color:#fff;font-family:'IBM Plex Sans',Arial,sans-serif;font-weight:700;font-size:18px;padding:0 10px;position:relative}
 .pt5 .d{display:block;margin-top:12px;font-size:16px;color:#33404f}
 .hero h1 em{color:var(--copper);font-style:normal}
 @media (max-width:900px){.tl5{grid-template-columns:1fr}.tl5:before{display:none}}
+
+html[dir=rtl] body,html[dir=rtl] h1,html[dir=rtl] h2,html[dir=rtl] h3{font-family:'IBM Plex Sans Arabic','IBM Plex Sans',Arial,sans-serif;letter-spacing:0}
+.stat b,.tl .pt b{font-variant-numeric:tabular-nums;font-weight:600}
+.logo{letter-spacing:.06em}
