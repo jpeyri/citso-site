@@ -154,3 +154,4 @@ html[dir=rtl] body,html[dir=rtl] h1,html[dir=rtl] h2,html[dir=rtl] h3{font-famil
 .logo{letter-spacing:.06em}
 html[dir=rtl] svg{direction:ltr}html[dir=rtl] svg text{direction:ltr;unicode-bidi:plaintext}
 .offre p{margin:10px 0;line-height:1.6}.offre p.note{font-size:13px;color:#5a6878}.refs li{margin:8px 0}
+.hero .kicker{letter-spacing:.06em;font-size:12.5px;white-space:nowrap}
