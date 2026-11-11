@@ -114,3 +114,5 @@ header .wrap{gap:18px}.outils{margin-left:18px}
 .lang a[aria-current]{font-weight:700;color:#e07a1f}
 .ue{background:#0a1522;color:#c9d3de;font-size:14px}.ue .wrap{display:flex;align-items:center;gap:10px;height:34px}
 .eu{width:20px;height:20px;flex:0 0 auto}
+
+.fr{width:14px;height:10px;flex:0 0 auto;border-radius:1px;box-shadow:0 0 0 1px rgba(255,255,255,.25)}
