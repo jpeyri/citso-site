@@ -344,3 +344,6 @@ header{position:relative;z-index:100}.ue{position:relative;z-index:90}.lang ul{z
 
 /* logo ltr */
 .logo{direction:ltr;unicode-bidi:isolate}
+
+.deux-modes{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:26px 0 30px}
+@media (max-width:900px){.deux-modes{grid-template-columns:1fr}}
