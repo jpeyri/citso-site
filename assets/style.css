@@ -307,3 +307,5 @@ body{background:linear-gradient(rgba(7,8,11,.86),rgba(7,8,11,.93)),url(citadelle
 .page-hero p,.hero-c>.wrap>p{color:#eef1f5!important}
 .pt5 .t{background:#1c1f24;border:1px solid rgba(255,255,255,.12)}.pt5 .d{color:var(--texte)!important}
 .cadre-schema{background:#0d0f12;padding:22px}
+/* menu des langues au-dessus de tout */
+header{position:relative;z-index:100}.ue{position:relative;z-index:90}.lang ul{z-index:200;background:#15171b;border:1px solid rgba(255,255,255,.12)}.lang li a{color:#e6ebf0}.lang li a:hover{background:rgba(255,255,255,.06)}.lang li span{color:#7c8794}.lang a[aria-current]{color:#ff8f84}
