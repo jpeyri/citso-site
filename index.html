@@ -17,27 +17,58 @@
 <p>Auditer, voir, surveiller, corriger. En lecture seule, sur vos serveurs, avec une preuve derrière chaque verdict.</p>
 <a class="btn" href="contact.html">Demander une démonstration</a><a class="btn ghost" href="confiance.html">Notre philosophie</a>
 </div>
-<svg viewBox="0 0 520 420" role="img" aria-label="Illustration : une forêt Active Directory découpée en domaines, unités d'organisation et objets, colorés selon la gravité des constats">
- <rect x="10" y="10" width="500" height="400" rx="14" fill="#16283f" stroke="#2c425e"/>
- <text x="28" y="40" fill="#c9d3de" font-size="14" font-family="Calibri,Arial">forêt · corp.exemple</text>
- <rect x="28" y="54" width="300" height="338" rx="10" fill="#1f3550" stroke="#c21c2c" stroke-width="2"/>
- <text x="42" y="78" fill="#fff" font-size="13" font-family="Calibri,Arial">domaine principal</text>
- <rect class="cell" x="42" y="90" width="130" height="120" rx="8" fill="#c21c2c"/>
- <rect class="cell" x="182" y="90" width="132" height="120" rx="8" fill="#d9a21b" style="animation-delay:1s"/>
- <rect x="42" y="220" width="86" height="80" rx="8" fill="#e07a1f" class="cell" style="animation-delay:2s"/>
- <rect x="136" y="220" width="86" height="80" rx="8" fill="#2c425e" stroke="#9aa6b4" stroke-dasharray="4 4"/>
- <rect x="230" y="220" width="84" height="80" rx="8" fill="#2e7d8c"/>
- <rect x="42" y="310" width="272" height="68" rx="8" fill="url(#h)"/>
- <text x="56" y="350" fill="#c9d3de" font-size="13" font-family="Calibri,Arial">jamais audité : jamais vert</text>
- <rect x="342" y="54" width="154" height="160" rx="10" fill="url(#h)" stroke="#9aa6b4" stroke-dasharray="5 5"/>
- <text x="356" y="78" fill="#c9d3de" font-size="13" font-family="Calibri,Arial">domaine enfant</text>
- <rect x="342" y="228" width="154" height="164" rx="10" fill="#1f3550" stroke="#d9a21b" stroke-width="2"/>
- <text x="356" y="252" fill="#fff" font-size="13" font-family="Calibri,Arial">domaine filiale</text>
- <rect class="cell" x="356" y="264" width="126" height="54" rx="7" fill="#d9a21b"/>
- <rect x="356" y="326" width="60" height="52" rx="7" fill="#2e7d8c"/><rect x="422" y="326" width="60" height="52" rx="7" fill="#2c425e" stroke="#9aa6b4" stroke-dasharray="4 4"/>
- <path class="draw" d="M108 150 C 200 40, 380 40, 420 290" stroke="#fff" stroke-width="2.5" fill="none"/>
- <circle cx="420" cy="290" r="7" fill="#fff"/><circle cx="108" cy="150" r="7" fill="#fff"/>
- <defs><pattern id="h" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#1f3550"/><rect width="4" height="10" fill="#2c425e"/></pattern></defs>
+<svg viewBox="0 0 560 450" role="img" aria-label="Illustration : à gauche la Red Forest, forêt d'administration isolée où réside CITSO ; à droite la forêt de production. Une approbation à sens unique : la production fait confiance à la Red Forest, jamais l'inverse. Dans la production, un chemin d'attaque part d'une délégation dans un domaine enfant et remonte vers le Tier 0 ; CITSO le détecte.">
+ <defs>
+  <pattern id="h" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#1f3550"/><rect width="4" height="10" fill="#2c425e"/></pattern>
+  <marker id="fl" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#fff"/></marker>
+  <marker id="fc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#e07a1f"/></marker>
+ </defs>
+ <rect x="8" y="8" width="170" height="434" rx="14" fill="#3a0f17" stroke="#c21c2c" stroke-width="2.5"/>
+ <text x="22" y="36" fill="#ff8a95" font-size="15" font-weight="bold" font-family="Calibri,Arial">Red Forest</text>
+ <text x="22" y="54" fill="#f0c8cd" font-size="12" font-family="Calibri,Arial">forêt d'administration</text>
+ <text x="22" y="69" fill="#f0c8cd" font-size="12" font-family="Calibri,Arial">isolée, jamais jointe</text>
+ <rect x="22" y="86" width="142" height="72" rx="9" fill="#e07a1f"/>
+ <text x="34" y="114" fill="#fff" font-size="16" font-weight="bold" font-family="Calibri,Arial">CITSO</text>
+ <text x="34" y="134" fill="#fff" font-size="12" font-family="Calibri,Arial">audit · surveillance</text>
+ <text x="34" y="149" fill="#fff" font-size="12" font-family="Calibri,Arial">reprise</text>
+ <rect x="22" y="168" width="142" height="54" rx="9" fill="#5a1a24"/>
+ <text x="34" y="190" fill="#fff" font-size="12" font-weight="bold" font-family="Calibri,Arial">Comptes Tier 0</text>
+ <text x="34" y="207" fill="#f0c8cd" font-size="12" font-family="Calibri,Arial">admins, JIT, 2 personnes</text>
+ <rect x="22" y="232" width="142" height="44" rx="9" fill="#5a1a24"/>
+ <text x="34" y="259" fill="#fff" font-size="12" font-weight="bold" font-family="Calibri,Arial">PKI racine hors ligne</text>
+ <rect x="22" y="286" width="142" height="56" rx="9" fill="#5a1a24"/>
+ <text x="34" y="308" fill="#fff" font-size="12" font-weight="bold" font-family="Calibri,Arial">Safe Harbor</text>
+ <text x="34" y="325" fill="#f0c8cd" font-size="12" font-family="Calibri,Arial">DC de reprise isolés</text>
+ <text x="22" y="372" fill="#f0c8cd" font-size="11.5" font-family="Calibri,Arial">Aucun flux entrant</text>
+ <text x="22" y="388" fill="#f0c8cd" font-size="11.5" font-family="Calibri,Arial">depuis la production</text>
+ <rect x="206" y="8" width="346" height="434" rx="14" fill="#16283f" stroke="#2c425e"/>
+ <text x="220" y="36" fill="#c9d3de" font-size="14" font-family="Calibri,Arial">forêt de production corp.exemple</text>
+ <rect x="220" y="50" width="318" height="168" rx="10" fill="#1f3550" stroke="#c21c2c" stroke-width="2"/>
+ <text x="232" y="72" fill="#fff" font-size="13" font-family="Calibri,Arial">corp.exemple · domaine racine</text>
+ <rect x="232" y="84" width="140" height="120" rx="8" fill="#c21c2c" class="cell"/>
+ <text x="246" y="112" fill="#fff" font-size="15" font-weight="bold" font-family="Calibri,Arial">Tier 0</text>
+ <text x="246" y="131" fill="#ffe3e6" font-size="12" font-family="Calibri,Arial">Enterprise Admins</text>
+ <text x="246" y="147" fill="#ffe3e6" font-size="12" font-family="Calibri,Arial">Domain Admins · DC</text>
+ <path d="M334 190 L334 174 L342 182 L350 170 L358 182 L366 174 L366 190 Z" fill="#ffcc00"/>
+ <rect x="382" y="84" width="142" height="56" rx="8" fill="#d9a21b" class="cell" style="animation-delay:1s"/>
+ <rect x="382" y="148" width="66" height="56" rx="8" fill="#2e7d8c"/>
+ <rect x="456" y="148" width="68" height="56" rx="8" fill="#2c425e" stroke="#9aa6b4" stroke-dasharray="4 4"/>
+ <rect x="220" y="232" width="152" height="196" rx="10" fill="#1f3550" stroke="#e07a1f" stroke-width="2"/>
+ <text x="232" y="254" fill="#fff" font-size="12.5" font-family="Calibri,Arial">paris · domaine enfant</text>
+ <rect x="232" y="266" width="128" height="88" rx="8" fill="#e07a1f" class="cell" style="animation-delay:2s"/>
+ <text x="242" y="288" fill="#fff" font-size="12" font-weight="bold" font-family="Calibri,Arial">point d'entrée</text>
+ <text x="242" y="304" fill="#fff" font-size="12" font-family="Calibri,Arial">délégation</text>
+ <text x="242" y="320" fill="#fff" font-size="12" font-family="Calibri,Arial">non contrainte</text>
+ <rect x="232" y="362" width="60" height="54" rx="8" fill="#2e7d8c"/><rect x="300" y="362" width="60" height="54" rx="8" fill="#d9a21b"/>
+ <rect x="386" y="232" width="152" height="196" rx="10" fill="url(#h)" stroke="#9aa6b4" stroke-dasharray="5 5"/>
+ <text x="398" y="254" fill="#c9d3de" font-size="12.5" font-family="Calibri,Arial">filiale · domaine enfant</text>
+ <text x="398" y="330" fill="#c9d3de" font-size="12" font-family="Calibri,Arial">jamais audité :</text>
+ <text x="398" y="346" fill="#c9d3de" font-size="12" font-family="Calibri,Arial">jamais vert</text>
+ <path class="draw" d="M330 340 C 372 300, 360 240, 312 202" stroke="#fff" stroke-width="2.5" fill="none" marker-end="url(#fl)"/>
+ <circle cx="330" cy="340" r="6" fill="#fff"/>
+ <path d="M170 120 L 226 120" stroke="#e07a1f" stroke-width="3" fill="none" marker-end="url(#fc)"/>
+ <text x="180" y="112" fill="#e07a1f" font-size="10.5" font-weight="bold" font-family="Calibri,Arial">admin</text>
+ <text x="176" y="236" fill="#c9d3de" font-size="10" font-family="Calibri,Arial" transform="rotate(-90 190 236)">approbation à sens unique</text>
 </svg>
 </div></section>
 
