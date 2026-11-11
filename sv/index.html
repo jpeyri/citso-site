@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="sv"><head><link rel="icon" href="../assets/favicon.png"><link rel="alternate" hreflang="fr" href="https://citso.eu/index.html"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CITSO — åtgärda äntligen ert Active Directory utan att störa produktionen</title><meta name="description" content="CITSO:s erbjudanden: granskning av Active Directory, stöd, plattform på plats, återställning efter kris."><link rel="stylesheet" href="../assets/style.css?v=11111049"></head><body class="p-index">
+<div class="annonce"><div class="wrap"><span>Privat beta</span>Pilotprogram öppet för ett fåtal organisationer · <a href="contact.html">gå med i piloten</a></div></div><header><div class="wrap"><a href="index.html" class="logo"><img src="../assets/logo-citadelle-clair.png" alt="" width="30" height="28">CIT<span>SO</span></a><nav><a href="index.html" class="actif">Start</a><a href="solution.html">Lösningen</a><a href="confiance.html">Våra principer</a><a href="offres.html">Erbjudanden</a><a href="a-venir.html">Kommande</a><a href="a-propos.html">Om oss</a><a href="contact.html">Kontakt</a></nav><div class="outils"><a class="btn btn-nav" href="contact.html">Pilotprogram</a><details class="lang"><summary>SV <span aria-hidden="true">▾</span></summary><ul><li><a href="/index.html" lang="fr">Français</a></li><li><a href="/en/index.html" lang="en">English</a></li><li><span lang="es">Español <em>bientôt</em></span></li><li><span lang="de">Deutsch <em>bientôt</em></span></li><li><span lang="pl">Polski <em>bientôt</em></span></li><li><span lang="sl">Slovenščina <em>bientôt</em></span></li><li><span lang="ru">Русский <em>bientôt</em></span></li><li><span lang="ar">العربية <em>bientôt</em></span></li><li><a href="/sv/index.html" lang="sv" aria-current="true">Svenska</a></li><li><a href="/no/index.html" lang="nb">Norsk</a></li><li><a href="/fi/index.html" lang="fi">Suomi</a></li><li><span lang="et">Eesti <em>bientôt</em></span></li><li><span lang="lt">Lietuvių <em>bientôt</em></span></li><li><span lang="tr">Türkçe <em>bientôt</em></span></li><li><span lang="el">Ελληνικά <em>bientôt</em></span></li></ul></details></div></div></header><div class="ue"><div class="wrap"><svg class="fr" width="14" height="10" viewBox="0 0 3 2" aria-hidden="true"><rect width="1" height="2" fill="#002395"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ed2939"/></svg><svg class="eu" width="16" height="16" viewBox="-12 -12 24 24" aria-hidden="true"><path transform="translate(-0.00 -9.00) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(4.50 -7.79) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(7.79 -4.50) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(9.00 -0.00) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(7.79 4.50) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(4.50 7.79) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(-0.00 9.00) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(-4.50 7.79) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(-7.79 4.50) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(-9.00 -0.00) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(-7.79 -4.50) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(-4.50 -7.79) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/></svg><span>Utvecklat i Frankrike · Born and raised in the European Union</span></div></div>
+
+
+<section class="hero hero-c"><div class="wrap">
+<div class="badge"><span>Privat beta</span>pilotprogram öppet</div>
+<h1>Säkra ert Active Directory.<br><em>Återställ det, vad som än händer.</em></h1>
+<p>CITSO härdar er katalog utan att störa produktionen, håller den i ett citadell under ständig övervakning och bygger upp den igen om en attack tar sig igenom: återställning till en given tidpunkt och automatiserad återuppbyggnad av skogen. En fransk svit som körs helt i er egen miljö.</p>
+<div class="ctas"><a class="btn" href="contact.html">Gå med i pilotprogrammet →</a><a class="btn ghost" href="solution.html">Se hur det fungerar</a></div>
+<div class="cadre cadre-schema"><div class="barre"><i></i><i></i><i></i><span>CITSO-citadellet · era skogar under dess vakt</span><b>i egen miljö</b></div>
+<svg viewBox="0 0 1140 600" role="img" aria-label="CITSO-citadellet, en enda enhet som har allt: Red Forest och Tier 0 (orkestrerare, just-in-time-konton, PKI med offline-rot, kedjad logg), övervakningen, forensiken, replik-DC:erna, de förseglade säkerhetskopiorna, Safe Harbour, granskningen och kartan. Det omges av en gräns som fungerar som ett svart hål. De hanterade produktionsmiljöerna, till vänster och höger, är anslutna till det; en komprometterad skog kopplas från och fryses." font-family="IBM Plex Sans,Arial,sans-serif">
+<defs><marker id="hx" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#c24a45"/></marker><marker id="ht" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#3fb8bd"/></marker></defs>
+<rect x="262" y="22" width="616" height="532" rx="22" fill="none" stroke="#4a4f58" stroke-dasharray="4 7"/>
+<text x="570" y="16" fill="#97a1ad" font-size="10.5" letter-spacing="2" text-anchor="middle">GRÄNS · SVART HÅL · INGET INKOMMANDE FLÖDE</text>
+<rect x="286" y="44" width="568" height="488" rx="16" fill="#0f1114" stroke="#c24a45" stroke-width="1.5"/>
+<image href="../assets/logo-citadelle-clair-256.png" x="420" y="140" width="300" height="276" opacity="0.11"/>
+<text x="570" y="80" fill="#e9edf2" font-size="20" font-weight="700" text-anchor="middle" letter-spacing="3">CITSO</text>
+<text x="570" y="100" fill="#97a1ad" font-size="11.5" text-anchor="middle">citadellet · en enda enhet som har allt</text>
+<rect x="310" y="116" width="520" height="104" rx="10" fill="#1a1012" stroke="#c24a45"/>
+<text x="326" y="138" fill="#ff8a85" font-size="11" font-weight="600" letter-spacing="1.5">RED FOREST · TIER 0</text>
+<rect x="326" y="148" width="152" height="58" rx="8" fill="#16181c" stroke="#2e333b"/><text x="338" y="169" fill="#e9edf2" font-size="13" font-weight="600">Orkestrerare</text><text x="338" y="186" fill="#97a1ad" font-size="11">kampanjer, assistenter</text>
+<rect x="486" y="148" width="112" height="58" rx="8" fill="#16181c" stroke="#2e333b"/><text x="498" y="169" fill="#e9edf2" font-size="13" font-weight="600">Konton</text><text x="498" y="186" fill="#97a1ad" font-size="11">just-in-time</text>
+<rect x="606" y="148" width="104" height="58" rx="8" fill="#16181c" stroke="#2e333b"/><text x="618" y="169" fill="#e9edf2" font-size="13" font-weight="600">PKI</text><text x="618" y="186" fill="#97a1ad" font-size="11">offline-rot</text>
+<rect x="718" y="148" width="96" height="58" rx="8" fill="#16181c" stroke="#2e333b"/><text x="730" y="169" fill="#e9edf2" font-size="13" font-weight="600">Logg</text><text x="730" y="186" fill="#97a1ad" font-size="11">kedjad</text>
+<rect x="310" y="236" width="254" height="58" rx="8" fill="#16181c" stroke="#2e333b"/><text x="322" y="257" fill="#e9edf2" font-size="13" font-weight="600">Övervakning</text><text x="322" y="274" fill="#97a1ad" font-size="11">Tier 0 på sekunder</text>
+<rect x="576" y="236" width="254" height="58" rx="8" fill="#16181c" stroke="#2e333b"/><text x="588" y="257" fill="#e9edf2" font-size="13" font-weight="600">Forensik</text><text x="588" y="274" fill="#97a1ad" font-size="11">på en isolerad kopia</text>
+<rect x="310" y="306" width="254" height="58" rx="8" fill="#16181c" stroke="#2e333b"/><text x="322" y="327" fill="#e9edf2" font-size="13" font-weight="600">Replik-DC</text><text x="322" y="344" fill="#97a1ad" font-size="11">en per hanterad domän</text>
+<rect x="576" y="306" width="254" height="58" rx="8" fill="#16181c" stroke="#2e333b"/><text x="588" y="327" fill="#e9edf2" font-size="13" font-weight="600">Säkerhetskopior</text><text x="588" y="344" fill="#97a1ad" font-size="11">förseglade, krypterade</text>
+<rect x="310" y="376" width="254" height="58" rx="8" fill="#16181c" stroke="#2e333b"/><text x="322" y="397" fill="#e9edf2" font-size="13" font-weight="600">Safe Harbour</text><text x="322" y="414" fill="#97a1ad" font-size="11">isolera, återuppbygga</text>
+<rect x="576" y="376" width="254" height="58" rx="8" fill="#16181c" stroke="#2e333b"/><text x="588" y="397" fill="#e9edf2" font-size="13" font-weight="600">Granskning och karta</text><text x="588" y="414" fill="#97a1ad" font-size="11">vägar till Tier 0</text>
+<text x="570" y="460" fill="#e9edf2" font-size="11.5" text-anchor="middle">administratörsåtkomst: stark autentisering, dedikerad arbetsstation</text>
+<text x="570" y="478" fill="#97a1ad" font-size="11" text-anchor="middle">dedikerad hårdvara, levererad av CITSO eller av er</text>
+<text x="570" y="512" fill="#97a1ad" font-size="11" text-anchor="middle">återställning till en given tidpunkt · automatiserad återuppbyggnad</text>
+<text x="20" y="96" fill="#97a1ad" font-size="11" letter-spacing="1.5">HANTERADE MILJÖER</text>
+<rect x="20" y="110" width="190" height="70" rx="8" fill="#16181c" stroke="#2e333b"/><text x="32" y="131" fill="#e9edf2" font-size="13" font-weight="600">Europa</text><text x="32" y="148" fill="#97a1ad" font-size="11">produktionsskog</text><circle cx="36" cy="164" r="3.5" fill="#3fb8bd"/><text x="46" y="168" fill="#97a1ad" font-size="11">3 DC · övervakad</text>
+<rect x="20" y="196" width="190" height="70" rx="8" fill="#16181c" stroke="#2e333b"/><text x="32" y="217" fill="#e9edf2" font-size="13" font-weight="600">Fabriker (OT)</text><text x="32" y="234" fill="#97a1ad" font-size="11">industriskog</text><circle cx="36" cy="250" r="3.5" fill="#3fb8bd"/><text x="46" y="254" fill="#97a1ad" font-size="11">2 DC · övervakad</text>
+<rect x="20" y="282" width="190" height="70" rx="8" fill="#16181c" stroke="#2e333b"/><text x="32" y="303" fill="#e9edf2" font-size="13" font-weight="600">Test</text><text x="32" y="320" fill="#97a1ad" font-size="11">förproduktion</text><circle cx="36" cy="336" r="3.5" fill="#3fb8bd"/><text x="46" y="340" fill="#97a1ad" font-size="11">2 DC · övervakad</text>
+<text x="930" y="96" fill="#97a1ad" font-size="11" letter-spacing="1.5">ANDRA ENHETER</text>
+<rect x="930" y="110" width="190" height="70" rx="8" fill="#16181c" stroke="#2e333b"/><text x="942" y="131" fill="#e9edf2" font-size="13" font-weight="600">Huvudkontor</text><text x="942" y="148" fill="#97a1ad" font-size="11">produktionsskog</text><circle cx="946" cy="164" r="3.5" fill="#3fb8bd"/><text x="956" y="168" fill="#97a1ad" font-size="11">3 DC · övervakad</text>
+<rect x="930" y="196" width="190" height="70" rx="8" fill="#16181c" stroke="#2e333b"/><text x="942" y="217" fill="#e9edf2" font-size="13" font-weight="600">Dotterbolag</text><text x="942" y="234" fill="#97a1ad" font-size="11">fjärrplatser</text><circle cx="946" cy="250" r="3.5" fill="#3fb8bd"/><text x="956" y="254" fill="#97a1ad" font-size="11">2 DC · övervakad</text>
+<rect x="930" y="282" width="190" height="70" rx="8" fill="#16181c" stroke="#c24a45"/><text x="942" y="303" fill="#e9edf2" font-size="13" font-weight="600">Förvärv</text><text x="942" y="320" fill="#97a1ad" font-size="11">annan skog</text><text x="942" y="340" fill="#ff8a85" font-size="11" font-weight="600">komprometterad: frånkopplad, fryst</text>
+<rect x="930" y="368" width="190" height="52" rx="8" fill="#16181c" stroke="#2e333b"/><text x="942" y="389" fill="#e9edf2" font-size="13" font-weight="600">SIEM</text><text x="942" y="406" fill="#97a1ad" font-size="11">larm via HTTPS</text>
+<path d="M284 145 H 214" stroke="#3fb8bd" stroke-width="1.5" stroke-dasharray="4 4" opacity=".8" marker-end="url(#ht)"/>
+<path d="M284 231 H 214" stroke="#3fb8bd" stroke-width="1.5" stroke-dasharray="4 4" opacity=".8" marker-end="url(#ht)"/>
+<path d="M284 317 H 214" stroke="#3fb8bd" stroke-width="1.5" stroke-dasharray="4 4" opacity=".8" marker-end="url(#ht)"/>
+<path d="M856 145 H 926" stroke="#3fb8bd" stroke-width="1.5" stroke-dasharray="4 4" opacity=".8" marker-end="url(#ht)"/>
+<path d="M856 231 H 926" stroke="#3fb8bd" stroke-width="1.5" stroke-dasharray="4 4" opacity=".8" marker-end="url(#ht)"/>
+<path d="M856 394 H 926" stroke="#3fb8bd" stroke-width="1.5" stroke-dasharray="4 4" opacity=".8" marker-end="url(#ht)"/>
+<path d="M856 317 H 926" stroke="#c24a45" stroke-width="1.5" stroke-dasharray="2 5"/><path d="M885 311 l12 12 M897 311 l-12 12" stroke="#ff8a85" stroke-width="2"/>
+<text x="20" y="378" fill="#97a1ad" font-size="11">anslutning: valv för autentiseringsuppgifter,</text>
+<text x="20" y="394" fill="#97a1ad" font-size="11">enkelriktat förtroende eller VPN</text>
+<path d="M200 482 L 252 500" stroke="#c24a45" stroke-width="2" marker-end="url(#hx)"/><path d="M252 494 l10 10 M262 494 l-10 10" stroke="#ff8a85" stroke-width="2"/>
+<text x="20" y="474" fill="#ff8a85" font-size="11">attack stoppad vid gränsen</text>
+<text x="570" y="584" fill="#97a1ad" font-size="12" text-anchor="middle">Era skogar litar på citadellet, aldrig tvärtom. Vid en kris kopplar det från, fryser och bygger upp igen; hävningen kräver en signatur.</text>
+</svg>
+</div>
+</div>
+<div class="garanties"><div class="wrap"><span>✓ Härda utan att störa produktionen</span><span>✓ Återställa katalogen till en given tidpunkt</span><span>✓ Återuppbygga skogen automatiskt</span></div></div>
+</section>
+
+<section><div class="wrap">
+<div class="tete"><div class="ico"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 21V8h3V5h2v3h4V5h2v3h3v13z"/><path d="M10 21v-5h4v5"/></svg></div><div class="kicker">Vårt uppdrag</div><h2>Två löften,<br><em>hållna hela vägen.</em></h2><p class="lead">Allt i CITSO tjänar två syften: att göra katalogen svår att ta över, och att kunna återställa den intakt om någon ändå lyckas.</p></div>
+<div class="piliers">
+<div class="pilier"><div class="pk">1 · Säkra</div><h3>En härdad katalog, utan att störa produktionen</h3><ul>
+<li><b>Riskanalys före varje åtgärd</b> : CITSO identifierar vad som fortfarande är beroende av svaga inställningar och föreslår sedan en åtgärdsplan i rätt ordning.</li>
+<li><b>Åtgärder med återställning</b>, tillämpade i vågor, endast med ert godkännande, och verifierade med kontroller före och efter.</li>
+<li><b>Tier 0 i säkerhet</b> i Red Forest, en isolerad administrationsskog; era administratörer når den med stark autentisering.</li>
+<li><b>Övervakning av känsliga ändringar</b> : privilegierade grupper, delegeringar, GPO:er, PKI. En misstänkt ändring kan återkallas omedelbart.</li>
+</ul></div>
+<div class="pilier recup"><div class="pk">2 · Återställa</div><h3>Backa, eller bygga upp allt igen</h3><ul>
+<li><b>Omedelbar frånkoppling</b> vid första tecken på kompromettering: den misstänkta skogen isoleras och fryses intakt, ingenting raderas.</li>
+<li><b>Återställning till en given tidpunkt</b> bakåt i tiden, från replik-DC:erna (minst en per domän) och valvet med förseglade säkerhetskopior.</li>
+<li><b>Automatiserad återuppbyggnad</b> av skogen från citadellet om produktionen går förlorad, med dubbel signatur och CISO:ns godkännande.</li>
+<li><b>Safe Harbour</b> : ett skydd förberett i förväg, med isoleringsplaner som övas regelbundet.</li>
+</ul></div>
+</div>
+<div class="frise3"><div><b>Före attacken</b>härda, isolera Tier 0, säkerhetskopiera, replikera</div><div><b>Under</b>upptäcka på sekunder, ogiltigförklara, koppla från</div><div><b>Efter</b>återställa till en given tidpunkt, eller bygga upp igen</div></div>
+</div></section>
+
+
+<section><div class="wrap">
+<div class="tete"><div class="ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h10M4 12h16M4 18h7"/><circle cx="17" cy="6" r="2"/><circle cx="14" cy="18" r="2"/></svg></div><div class="kicker">Så kommer vi igång</div><h2>Tre steg,<br><em>inga överraskningar.</em></h2><p class="lead">Vi börjar med att se, vi åtgärdar det ni godkänner, sedan tar citadellet över för att hålla ställningarna över tid.</p></div>
+<div class="pas3">
+<div class="pas"><span class="pi"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg></span><span class="pn">01</span><b>Se</b><small>granskning med enbart läsbehörighet, karta och vägar</small></div>
+<div class="pas"><span class="pi"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h10M4 12h16M4 18h7"/><circle cx="17" cy="6" r="2"/><circle cx="14" cy="18" r="2"/></svg></span><span class="pn">02</span><b>Åtgärda</b><small>åtgärdsplan, vågor, återställning</small></div>
+<div class="pas"><span class="pi"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V8h3V5h2v3h4V5h2v3h3v13z"/><path d="M10 21v-5h4v5"/></svg></span><span class="pn">03</span><b>Hålla</b><small>citadell i egen miljö, övervakning, återställning</small></div>
+</div>
+<div class="appli"><div class="barre"><i></i><i></i><i></i><span>CITSO-konsol</span><em class="onglet actif">Katalogkarta</em><em class="onglet">Åtgärdsplan</em><em class="onglet">Citadell</em><b>enbart läsning</b></div>
+<div class="corps">
+<div class="col-etapes"><div class="t">STEG</div>
+<div class="e on"><span>01</span><div><b>Se</b><p>Kampanjen läser katalogen utan att skriva något: nära 400 kontroller, kartan över skogen ned till objektnivå, vägarna till Tier 0.</p></div></div>
+<div class="e"><span>02</span><div><b>Åtgärda</b><p>CITSO analyserar beroenden, föreslår ordningen för åtgärderna och tillämpar dem i vågor med ert godkännande, med kontroller före och efter.</p></div></div>
+<div class="e"><span>03</span><div><b>Hålla</b><p>Citadellet övervakar känsliga åtgärder, kan ogiltigförklara dem och kan återställa eller bygga upp skogen igen.</p></div></div>
+</div>
+<div class="col-vue"><img src="../assets/carte-console.png" alt="CITSO-konsol: katalogkarta (exempeldata)"></div>
+<div class="col-recap"><div class="t">DETTA FÅR NI</div>
+<div class="l"><span>Belagda bedömningar</span><b>varje kontroll</b></div>
+<div class="l"><span>Vägar till Tier 0</span><b>beräknade</b></div>
+<div class="l"><span>ANSSI-mognad</span><b>påvisad nivå</b></div>
+<div class="l"><span>Åtgärdsplan</span><b>efter prioritet</b></div>
+<div class="l"><span>Återställning</span><b>för varje åtgärd</b></div>
+<div class="l tot"><span>Data som lämnar er miljö</span><b>inga</b></div>
+</div></div></div>
+</div></section>
+
+<section><div class="wrap">
+<div class="kicker" style="text-align:left">Det här kontrollerar CITSO</div>
+<h2 style="font-size:40px;max-width:760px;margin:8px 0 10px">Hela katalogen,<br><em>från konto till förtroende.</em></h2>
+<p class="lead" style="max-width:720px;margin-bottom:34px">Kontrollerna täcker de områden där angripare hittar sina fästen, utifrån ramverken från ANSSI, CIS och MITRE ATT&amp;CK.</p>
+<div class="dom8"><div class="dom"><span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></span><b>Konton och lösenord</b><small>inaktiva, utan utgångsdatum, privilegierade</small></div><div class="dom"><span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 20c0-2.5 1.5-4.5 4-4.5"/></svg></span><b>Privilegierade grupper</b><small>Tier 0, AdminSDHolder</small></div><div class="dom"><span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17L17 7"/></svg></span><b>Delegeringar</b><small>obegränsad, begränsad, RBCD</small></div><div class="dom"><span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span><b>Farliga rättigheter</b><small>DCSync, ACL:er, ägare</small></div><div class="dom"><span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3M15 8l2 2"/></svg></span><b>Kerberos</b><small>Kerberoasting, krypteringstyper, krbtgt</small></div><div class="dom"><span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="12" rx="2"/><path d="M8 20l2-4 2 4 2-4 2 4"/><path d="M8 9h8"/></svg></span><b>Certifikat (ADCS)</b><small>mallar och utfärdare</small></div><div class="dom"><span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h5"/></svg></span><b>Grupprinciper</b><small>kopplade till domänkontrollanter, behörigheter</small></div><div class="dom"><span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17h18M5 17V9M19 17V9M3 9c3-3 15-3 18 0"/></svg></span><b>Förtroenden</b><small>riktning, SID-filtrering, selektiv autentisering</small></div></div>
+</div></section>
+
+<section style="background:#f6f8fb"><div class="wrap split">
+<div>
+<div class="kicker">Dessutom</div>
+<h2 style="font-size:34px;margin-bottom:14px">Granskningen och kartan, för att veta var man ska börja</h2>
+<p class="lead">Innan man säkrar måste man se. CITSO granskar katalogen med enbart läsbehörighet utifrån ramverken från ANSSI, CIS och MITRE ATT&amp;CK, kartlägger vägarna som leder till administratörskontona och tar fram rapporter där varje bedömning är belagd. Finns även som konsultuppdrag, utan att något installeras hos er.</p>
+<p style="margin-top:18px"><a href="offres.html">Konsultuppdrag eller i egen miljö: se erbjudandena →</a></p>
+</div>
+<div class="cadre"><div class="barre"><i></i><i></i><i></i><span>CITSO-konsol · attackvägar</span><b>enbart läsning</b></div><img src="../assets/graphe.png" alt="CITSO-konsol: graf över attackvägar till Tier 0 (exempeldata)"></div>
+</div></section>
+
+<section class="dark"><div class="wrap">
+<div class="tete"><div class="ico"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17v.5"/></svg></div><div class="kicker">Problemet</div><h2>Active Directory är nyckeln till allt,<br><em>och ransomwarens första mål.</em></h2><p class="lead">Den som tar det tar allt. CISO:er vet att deras katalog är sårbar, men den åtgärdas sällan. Av tre skäl:</p></div>
+<div class="grid3">
+<div class="etape" style="background:#1c1f24;color:#d5dae1;border-color:#2e333b"><span class="num">1</span><b style="color:#fff">År av ackumulerade inställningar</b>Bortglömda rättigheter, ärvda delegeringar, alltför kraftfulla tjänstkonton: skulden har byggts upp, och ingen har längre helhetsbilden.</div>
+<div class="etape" style="background:#1c1f24;color:#d5dae1;border-color:#2e333b"><span class="num">2</span><b style="color:#fff">Rädslan för att störa produktionen</b>Att härda katalogen kan bryta en applikation, en tjänst, en autentisering. Utan insyn i konsekvenserna föredrar man att inte röra något.</div>
+<div class="etape" style="background:#1c1f24;color:#d5dae1;border-color:#2e333b"><span class="num">3</span><b style="color:#fff">Verktyg som listar utan att åtgärda</b>Granskningar ger listor över brister. De säger inte hur man åtgärdar dem utan risk, eller hur man backar om något går sönder.</div>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<div class="tete"><div class="ico"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h10M4 12h16M4 17h7"/><circle cx="17" cy="7" r="2"/><circle cx="14" cy="17" r="2"/></svg></div><div class="kicker">Det här gör CITSO</div><h2>Så åtgärdar CITSO,<br><em>i fyra steg.</em></h2></div>
+<div class="grid2" style="margin-top:34px">
+<div class="etape"><span class="num">1</span><b>Granska och övervaka, med enbart läsbehörighet</b>Kontrollerna bygger på ramverken från ANSSI, CIS och MITRE ATT&amp;CK. Ingenting skrivs till katalogen under granskningen eller övervakningen.</div>
+<div class="etape"><span class="num">2</span><b>Visa attackvägarna</b>CITSO kartlägger vägarna som leder till administratörskontona och anger en åtgärdsordning: vad som ska brytas först.</div>
+<div class="etape"><span class="num">3</span><b>Åtgärda med ert godkännande</b>Åtgärderna utförs under lås, endast när ni godkänner dem, och var och en har sin återställning förberedd. Åtgärder som inte kan ångras är blockerade som standard.</div>
+<div class="etape"><span class="num">4</span><b>Belägga varje bedömning</b>Varje iakttagelse åtföljs av sitt belägg. Det som inte har kunnat verifieras förblir ”ej bedömt”: CITSO visar aldrig ”godkänt” som standard.</div>
+</div>
+</div></section>
+
+<section style="background:#f6f8fb"><div class="wrap">
+<div class="tete"><div class="ico"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div><div class="kicker">Varför CITSO snarare än något annat</div><h2>Aldrig grönt<br><em>utan belägg.</em></h2></div>
+<div class="tabref"><table>
+<thead><tr><th style="width:28%">Jämfört med…</th><th>CITSO:s fördel</th></tr></thead>
+<tbody>
+<tr><td><b>Gratis granskningsverktyg</b></td><td>De listar bristerna. CITSO tar er hela vägen till åtgärden, utan risk tack vare återställningen.</td></tr>
+<tr><td><b>Stora utländska leverantörer</b></td><td>Allt stannar i er miljö: inget moln, inga data som lämnar er. En fransk leverantör, och ett pris anpassat för medelstora företag.</td></tr>
+<tr><td><b>Alla</b></td><td>”Aldrig grönt utan belägg”: en punkt som inte har verifierats förblir ”ej bedömd” i stället för att räknas som godkänd som standard. Ett falskt grönt är farligare än ett rött.</td></tr>
+</tbody></table></div>
+</div></section>
+
+<section><div class="wrap">
+<div class="tete"><div class="ico"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></svg></div><div class="kicker">För vem</div><h2>Katalogansvariga<br><em>som måste stå till svars.</em></h2></div>
+<div class="grid4">
+<div class="etape"><b>Medelstora företag</b>CISO:er och ansvariga för Active Directory som måste säkra katalogen med ett litet team.</div>
+<div class="etape"><b>Reglerade aktörer</b>Verksamheter som omfattas av NIS 2, samhällsviktiga aktörer: åtgärder som ska bevisas, inte bara deklareras.</div>
+<div class="etape"><b>Offentlig sektor</b>Kommuner, myndigheter, offentliga verksamheter: ett suveränt verktyg som fungerar utan moln.</div>
+<div class="etape"><b>Konsultföretag och IT-tjänsteföretag</b>Team som granskar sina kunders kataloger och vill gå hela vägen till åtgärdsplanen.</div>
+</div>
+</div></section>
+
+
+<section><div class="wrap">
+<div class="kicker">Det vi bygger upp</div>
+<h2 style="font-size:36px;margin-bottom:10px">CITSO:s resurser, samlade på en gemensam grund</h2>
+<p class="lead" style="margin-bottom:30px">Orkestreraren, PKI:n, replik-DC:erna (minst en per hanterad domän), säkerhetskopiorna, de forensiska analyserna och larmen är samlade i administrationsskogen. Era skogar ansluts till den via ett enkelriktat förtroende eller ett VPN, beroende på er arkitektur.</p>
+<div class="panneau"><svg viewBox="0 0 1000 440" width="100%" role="img" aria-labelledby="rs1" style="font-family:IBM Plex Sans,Arial,sans-serif">
+<title id="rs1">CITSO:s resurser och tjänster, kopplade till de Active Directory-skogar som de styr och övervakar</title>
+<defs><marker id="ra" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#0b8a8f"/></marker></defs>
+<rect x="10" y="10" width="560" height="420" rx="18" fill="#0f2236"/>
+<text x="34" y="46" fill="#fff" font-size="18" font-weight="bold">CITSO-plattformen</text>
+<text x="34" y="68" fill="#9fb3c8" font-size="12.5">i Red Forest, hos er eller på platser som ni väljer</text>
+<g font-size="12.5">
+<g><rect x="34" y="90" width="512" height="70" rx="10" fill="#0b5f63"/><text x="54" y="118" fill="#fff" font-size="15" font-weight="bold">CITSO-orkestrerare</text><text x="54" y="140" fill="#d6eff0">kampanjer, godkända åtgärder, assistenter, administrationskonsol</text></g>
+<g><rect x="34" y="176" width="248" height="72" rx="10" fill="#2c425e"/><text x="52" y="204" fill="#fff" font-size="14" font-weight="bold">Replik-DC</text><text x="52" y="226" fill="#c9d3de">minst en per domän</text><text x="52" y="242" fill="#c9d3de">som hanteras, kopia i säkerhet</text></g>
+<g><rect x="298" y="176" width="248" height="72" rx="10" fill="#3d4754"/><text x="316" y="204" fill="#fff" font-size="14" font-weight="bold">Förseglade säkerhetskopior</text><text x="316" y="226" fill="#e6ebf0">krypterade, hashvärde verifierat,</text><text x="316" y="242" fill="#e6ebf0">utom räckhåll för produktionen</text></g>
+<g><rect x="34" y="264" width="248" height="72" rx="10" fill="#3a0f17"/><text x="52" y="292" fill="#fff" font-size="14" font-weight="bold">Forensiska analyser</text><text x="52" y="314" fill="#f0c8cd">insamling och granskning på en</text><text x="52" y="330" fill="#f0c8cd">isolerad kopia, utan att röra originalet</text></g>
+<g><rect x="298" y="264" width="248" height="72" rx="10" fill="#5c3a0c"/><text x="316" y="292" fill="#fff" font-size="14" font-weight="bold">Larm</text><text x="316" y="314" fill="#f3dcb8">Tier 0 inom några sekunder,</text><text x="316" y="330" fill="#f3dcb8">export till ert SIEM</text></g>
+<g><rect x="34" y="352" width="512" height="56" rx="10" fill="#0b8a8f"/><text x="54" y="378" fill="#fff" font-size="14" font-weight="bold">Safe Harbour</text><text x="54" y="398" fill="#e6f6f7">isolera, återställa avskilt, bygga upp igen</text></g>
+</g>
+<path d="M572 220 L 690 220" stroke="#0b8a8f" stroke-width="3" marker-end="url(#ra)"/>
+<text x="631" y="200" text-anchor="middle" font-size="13" font-weight="bold" fill="#14202e">förtroende</text>
+<text x="631" y="246" text-anchor="middle" font-size="13" font-weight="bold" fill="#14202e">eller VPN</text>
+<text x="631" y="266" text-anchor="middle" font-size="11" fill="#5a6878">enkelriktat</text>
+<g font-size="12.5">
+<rect x="696" y="40" width="294" height="360" rx="18" fill="#f6f8fb" stroke="#c9d1db"/>
+<text x="718" y="74" font-size="16" font-weight="bold" fill="#14202e">Era Active Directory-skogar</text>
+<text x="718" y="94" fill="#5a6878">styrda och övervakade</text>
+<g><rect x="718" y="114" width="250" height="74" rx="10" fill="#fff" stroke="#9aa6b4"/><text x="738" y="142" font-size="14" font-weight="bold" fill="#14202e">Produktionsskog</text><text x="738" y="164" fill="#5a6878">huvudkontor, dotterbolag</text></g>
+<g><rect x="718" y="204" width="250" height="74" rx="10" fill="#fff" stroke="#9aa6b4"/><text x="738" y="232" font-size="14" font-weight="bold" fill="#14202e">Annan skog</text><text x="738" y="254" fill="#5a6878">förvärv, isolerad miljö</text></g>
+<g><rect x="718" y="294" width="250" height="74" rx="10" fill="#fff" stroke="#9aa6b4" stroke-dasharray="5 4"/><text x="738" y="322" font-size="14" font-weight="bold" fill="#14202e">Skog som läggs till senare</text><text x="738" y="344" fill="#5a6878">ansluten till samma grund</text></g>
+</g>
+</svg></div>
+</div></section>
+
+
+<section class="dark"><div class="wrap">
+<div class="kicker">I egen miljö: fästningen</div>
+<h2 style="font-size:38px;margin-bottom:10px">Sex försvarslinjer för att stå emot en attack och resa sig efter en kris</h2>
+<p class="lead" style="margin-bottom:36px">Installerat hos er hindrar CITSO en angripare från att nå era mest kraftfulla konton och, om angriparen lyckas, behåller allt som behövs för att bygga upp igen.</p>
+<div class="grid3">
+<div class="etape" style="background:#3a0f17;color:#f0c8cd"><b style="color:#ff8a95">Red Forest</b>Administrationsskogen är värd för CITSO och era Tier 0-konton. Den är inte ansluten till någon produktionsskog. Det är era skogar som litar på den; motsatsen finns inte.</div>
+<div class="etape" style="background:#1f3550;color:#c9d3de"><b style="color:#ff8a85">Gränser</b>Separata administrationszoner, begränsade grupper, förtroenden med selektiv autentisering och SID-filtrering. Ett komprometterat konto i produktionsmiljön når inte upp till administrationen.</div>
+<div class="etape" style="background:#1f3550;color:#c9d3de"><b style="color:#d9a21b">Övervakning av Tier 0</b>Ändringar som berör Tier 0 rapporteras inom några sekunder. Om en signal om kompromettering dyker upp isolerar CITSO omedelbart. Isoleringen hävs först när en ansvarig har signerat.</div>
+<div class="etape" style="background:#0b5f63;color:#e6f6f7"><b style="color:#fff">Safe Harbour</b>Ett skydd förberett i förväg: isoleringsplaner som testas regelbundet, repliker som hålls avskilda, guidad återuppbyggnad. Under krisen raderas ingenting.</div>
+<div class="etape" style="background:#3d4754;color:#e6ebf0"><b style="color:#fff">Förseglade säkerhetskopior</b>Säkerhetskopiorna av administrationsskogen och de skyddade skogarna är krypterade, och deras integritet kontrolleras med hashvärden. Den som skulle kontrollera produktionsmiljön kan inte nå dem.</div>
+<div class="etape" style="background:#2c425e;color:#e6ebf0"><b style="color:#fff">Replik-DC</b>Minst en replikerande domänkontrollant per hanterad domän, i säkerhet på plattformen och kontrollerad innan den blir för gammal för att användas. Tillräckligt för att återställa till en given tidpunkt eller bygga upp allt igen.</div>
+</div></div></section>
+
+<section><div class="wrap split">
+<div>
+<div class="kicker">Era val</div>
+<h2 style="font-size:36px;margin-bottom:18px">Assistenter i varje steg</h2>
+<p class="lead">Installation, granskning, åtgärder, anslutning av en skog: allt sker via assistenter. De ställer de frågor som behövs, visar vad som kommer att ändras och förbereder återställningen innan något görs.</p>
+</div>
+<div class="grid2" style="margin-top:0">
+<div class="etape"><b>Ert upplägg</b>En enstaka granskning som utförs av en konsult, eller CITSO installerat permanent hos er.</div>
+<div class="etape"><b>Er driftmiljö</b>Er hypervisor (Hyper-V, VMware, Proxmox) reserverad för CITSO, eller en dedikerad appliance som också fungerar som skydd vid en kris.</div>
+<div class="etape"><b>Er takt</b>Åtgärderna genomförs i omgångar, i den takt som ni bestämmer.</div>
+<div class="etape"><b>Era regler</b>Ni bestämmer vad som utlöser en isolering, vem som kan häva den och vem som signerar oåterkalleliga åtgärder.</div>
+</div></div></section>
+
+<section class="dark"><div class="wrap split">
+<div>
+<div class="kicker">Så tar sig attackerna igenom</div>
+<h2 style="font-size:36px;margin-bottom:18px">Sällan genom en spektakulär sårbarhet</h2>
+<p class="lead">Oftast är det en kedja av detaljer: en bortglömd behörighet att återställa lösenord, ett tjänstkonto med för långtgående delegering, en administratörssession som lämnats öppen på en server. Var för sig inget alarmerande. Tillsammans leder de till domänadministratörerna.</p>
+</div>
+<div class="panneau"><svg viewBox="0 0 560 300" role="img" aria-label="Attackväg: ett supportkonto, en behörighet att återställa lösenord, ett tjänstkonto med delegering, en administratörssession och sedan domänadministratörerna">
+<defs><marker id="fa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#b8433f"/></marker></defs>
+<rect x="0" y="0" width="560" height="300" rx="14" fill="#16283f"/>
+<g font-family="IBM Plex Sans,Arial,sans-serif" font-size="12.5">
+<rect x="20" y="40" width="150" height="62" rx="9" fill="#2c425e"/><text x="34" y="66" fill="#fff" font-weight="bold">Supportkonto</text><text x="34" y="84" fill="#c9d3de">vanlig användare</text>
+<path d="M172 71 L 208 71" stroke="#b8433f" stroke-width="2.5" marker-end="url(#fa)"/>
+<rect x="210" y="40" width="150" height="62" rx="9" fill="#d9a21b"/><text x="224" y="66" fill="#1b2533" font-weight="bold">Bortglömd behörighet</text><text x="224" y="84" fill="#1b2533">återställning</text><text x="224" y="98" fill="#1b2533">av lösenord</text>
+<path d="M362 71 L 398 71" stroke="#b8433f" stroke-width="2.5" marker-end="url(#fa)"/>
+<rect x="400" y="40" width="140" height="62" rx="9" fill="#b8433f"/><text x="414" y="66" fill="#fff" font-weight="bold">Tjänstkonto</text><text x="414" y="84" fill="#fff">obegränsad</text><text x="414" y="98" fill="#fff">delegering</text>
+<path d="M470 104 C 470 150, 470 150, 470 176" stroke="#b8433f" stroke-width="2.5" fill="none" marker-end="url(#fa)"/>
+<rect x="390" y="180" width="150" height="62" rx="9" fill="#b8433f"/><text x="404" y="206" fill="#fff" font-weight="bold">Server</text><text x="404" y="224" fill="#fff">öppen session</text><text x="404" y="238" fill="#fff">för en administratör</text>
+<path d="M388 211 L 352 211" stroke="#b8433f" stroke-width="2.5" marker-end="url(#fa)"/>
+<rect x="190" y="180" width="160" height="62" rx="9" fill="#c21c2c"/><text x="204" y="206" fill="#fff" font-weight="bold">Administratörer</text><text x="204" y="224" fill="#ffe3e6">i domänen: Tier 0</text>
+<path d="M322 202 L 322 190 L 328 196 L 334 186 L 340 196 L 346 190 L 346 202 Z" fill="#ffcc00"/>
+<text x="20" y="196" fill="#c9d3de" font-size="13">4 harmlösa detaljer,</text><text x="20" y="214" fill="#c9d3de" font-size="13">1 väg till Tier 0.</text>
+<text x="20" y="272" fill="#b8433f" font-size="13" font-weight="bold">CITSO hittar vägen och visar var den ska brytas.</text>
+</g></svg></div>
+</div></section>
+
+<section><div class="wrap split">
+<div>
+<div class="kicker">Aldrig grönt utan belägg</div>
+<h2 style="font-size:36px;margin-bottom:18px">Det som inte kunde verifieras redovisas som sådant</h2>
+<p class="lead">En kontroll som inte har kunnat läsa de data den behöver visas inte som godkänd. Exemplet bredvid kommer från en kampanj i vårt labb, genomförd med ett vanligt läskonto.</p>
+<p class="note">Kontot hade inte åtkomst till den delade mappen för grupprinciper. De berörda kontrollerna förblev ”ej utvärderade”, med angiven orsak.</p>
+</div>
+<div class="panneau"><svg viewBox="0 0 560 300" role="img" aria-label="Fördelning av de 396 bedömningarna i en verklig kampanj: 118 godkända och verifierade, 45 underkända, 30 ej tillämpliga, 133 ej utvärderbara, 70 ej utvärderade">
+<defs><pattern id="hv1" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#5a6878"/><rect width="3" height="8" fill="#7d8a99"/></pattern>
+<pattern id="hv2" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(135)"><rect width="8" height="8" fill="#c9d3de"/><rect width="3" height="8" fill="#e6ebf0"/></pattern></defs>
+<g font-family="IBM Plex Sans,Arial,sans-serif" font-size="14"><text x="20" y="34" fill="#0e1b2c" font-size="16" font-weight="bold">396 bedömningar, en enda kampanj</text><rect x="21.0" y="60" width="152.9" height="44" rx="4" fill="#0b8a8f"><title>CITSO — åtgärda äntligen ert Active Directory utan att störa produktionen</title></rect><rect x="175.9" y="60" width="57.1" height="44" rx="4" fill="#c21c2c"><title>CITSO — åtgärda äntligen ert Active Directory utan att störa produktionen</title></rect><rect x="235.0" y="60" width="37.4" height="44" rx="4" fill="#9aa6b4"><title>CITSO — åtgärda äntligen ert Active Directory utan att störa produktionen</title></rect><rect x="274.4" y="60" width="172.6" height="44" rx="4" fill="url(#hv1)"><title>CITSO — åtgärda äntligen ert Active Directory utan att störa produktionen</title></rect><rect x="449.1" y="60" width="89.9" height="44" rx="4" fill="url(#hv2)"><title>CITSO — åtgärda äntligen ert Active Directory utan att störa produktionen</title></rect><rect x="20" y="128" width="16" height="16" rx="3" fill="#0b8a8f" stroke="#9aa6b4" stroke-width="0.5"/><text x="46" y="141" fill="#1b2533">Godkända, verifierade</text><text x="540" y="141" fill="#1b2533" text-anchor="end" font-weight="bold">118</text><rect x="20" y="158" width="16" height="16" rx="3" fill="#c21c2c" stroke="#9aa6b4" stroke-width="0.5"/><text x="46" y="171" fill="#1b2533">Underkända</text><text x="540" y="171" fill="#1b2533" text-anchor="end" font-weight="bold">45</text><rect x="20" y="188" width="16" height="16" rx="3" fill="#9aa6b4" stroke="#9aa6b4" stroke-width="0.5"/><text x="46" y="201" fill="#1b2533">Ej tillämpliga</text><text x="540" y="201" fill="#1b2533" text-anchor="end" font-weight="bold">30</text><rect x="20" y="218" width="16" height="16" rx="3" fill="url(#hv1)" stroke="#9aa6b4" stroke-width="0.5"/><text x="46" y="231" fill="#1b2533">Ej utvärderbara (data saknas)</text><text x="540" y="231" fill="#1b2533" text-anchor="end" font-weight="bold">133</text><rect x="20" y="248" width="16" height="16" rx="3" fill="url(#hv2)" stroke="#9aa6b4" stroke-width="0.5"/><text x="46" y="261" fill="#1b2533">Ej utvärderade (åtkomst nekad)</text><text x="540" y="261" fill="#1b2533" text-anchor="end" font-weight="bold">70</text></g></svg></div>
+</div></section>
+
+<section style="background:#f6f8fb"><div class="wrap">
+<div class="kicker">Övervaka</div>
+<h2 style="font-size:36px">Några sekunder mellan ändringen och larmet</h2>
+<div class="tl5"><div class="pt5"><span class="t">0 s</span><span class="d">Ett konto läggs till bland domänadministratörerna</span></div><div class="pt5"><span class="t">·</span><span class="d">CITSO läser ändringen på domänkontrollanten, med ett vanligt läskonto</span></div><div class="pt5"><span class="t">·</span><span class="d">Ändringen stäms av mot reglerna för Tier 0</span></div><div class="pt5"><span class="t">5 s</span><span class="d">Kritiskt larm, med berört objekt</span></div><div class="pt5"><span class="t">·</span><span class="d">Export till ert SIEM; skickas om tills det har tagits emot</span></div></div>
+</div></section>
+
+<section><div class="wrap">
+<div class="kicker">Två sätt att arbeta med oss</div>
+<h2 style="font-size:36px">Konsultuppdrag eller i egen miljö</h2>
+<div class="deux-modes"><div class="panneau"><svg viewBox="0 0 520 380" width="100%" role="img" aria-labelledby="dx1" style="font-family:IBM Plex Sans,Arial,sans-serif">
+<title id="dx1">Konsultuppdrag: en extern konsult kommer med CITSO på sin dator, läser ert Active Directory med enbart läsbehörighet, lämnar över rapporten och åker utan att lämna något efter sig.</title>
+<defs><marker id="dxa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#0b8a8f"/></marker></defs>
+<text x="260" y="34" fill="#14202e" font-size="22" font-weight="800" text-anchor="middle">1 · En extern konsult</text>
+<text x="260" y="58" fill="#5a6878" font-size="14" text-anchor="middle">kommer, mäter, åker</text>
+<g transform="translate(40,110)"><circle cx="50" cy="30" r="26" fill="#2c425e"/><path d="M0 130 C 0 76, 100 76, 100 130 Z" fill="#2c425e"/><rect x="22" y="100" width="76" height="46" rx="5" fill="#0f2236" stroke="#9aa6b4"/><rect x="12" y="146" width="96" height="7" rx="2" fill="#9aa6b4"/></g>
+<text x="98" y="290" fill="#14202e" font-size="13" font-weight="700" text-anchor="middle">CITSO på sin dator</text>
+<path d="M170 190 H 318" stroke="#0b8a8f" stroke-width="3" marker-end="url(#dxa)"/>
+<text x="244" y="178" fill="#0b8a8f" font-size="13" font-weight="700" text-anchor="middle">enbart läsning</text>
+<rect x="236" y="214" width="16" height="20" rx="2" fill="#fff" stroke="#b8433f"/><path d="M240 220h8M240 225h8M240 230h5" stroke="#b8433f"/>
+<path d="M318 230 C 280 260, 230 262, 200 250" stroke="#b8433f" stroke-width="2" stroke-dasharray="5 4" fill="none" marker-end="url(#dxa)"/>
+<text x="262" y="276" fill="#b8433f" font-size="12" text-anchor="middle">rapport överlämnad</text>
+<rect x="330" y="156" width="150" height="66" rx="10" fill="#fff" stroke="#c9d1db" stroke-width="1.5"/><text x="344" y="182" fill="#14202e" font-size="14" font-weight="700">Ert AD</text><rect x="344" y="192" width="28" height="18" rx="3" fill="#eef1f5" stroke="#9aa6b4"/><text x="358" y="205" fill="#5a6878" font-size="9.5" text-anchor="middle">DC</text><rect x="378" y="192" width="28" height="18" rx="3" fill="#eef1f5" stroke="#9aa6b4"/><text x="392" y="205" fill="#5a6878" font-size="9.5" text-anchor="middle">DC</text><rect x="412" y="192" width="28" height="18" rx="3" fill="#eef1f5" stroke="#9aa6b4"/><text x="426" y="205" fill="#5a6878" font-size="9.5" text-anchor="middle">DC</text>
+<rect x="20" y="318" width="480" height="48" rx="10" fill="#eef1f5"/>
+<text x="260" y="340" fill="#14202e" font-size="13.5" font-weight="700" text-anchor="middle">Ingenting installeras hos er.</text>
+<text x="260" y="358" fill="#5a6878" font-size="12.5" text-anchor="middle">Granskning, rapport, åtgärder om ni beslutar det, sedan rensning.</text>
+</svg></div><div class="panneau"><svg viewBox="0 0 520 380" width="100%" role="img" aria-labelledby="dx2" style="font-family:IBM Plex Sans,Arial,sans-serif">
+<title id="dx2">I egen miljö: en CITSO-appliance installeras hos er och ansluts till era Active Directory-miljöer, som den övervakar och kan återställa eller bygga upp igen.</title>
+<defs><marker id="dxb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#0b8a8f"/></marker></defs>
+<text x="260" y="34" fill="#14202e" font-size="22" font-weight="800" text-anchor="middle">2 · En appliance hos er</text>
+<text x="260" y="58" fill="#5a6878" font-size="14" text-anchor="middle">den stannar, övervakar och kan bygga upp allt igen</text>
+<rect x="10" y="76" width="500" height="228" rx="14" fill="#f6f8fb" stroke="#d9dde3" stroke-dasharray="5 5"/>
+<text x="24" y="96" fill="#5a6878" font-size="11" letter-spacing="1.5">ERT INFORMATIONSSYSTEM</text>
+<rect x="40" y="152" width="150" height="86" rx="10" fill="#121418" stroke="#b8433f" stroke-width="2"/>
+<image href="../assets/logo-citadelle-clair-256.png" x="56" y="168" width="34" height="32"/>
+<text x="98" y="190" fill="#fff" font-size="15" font-weight="800">CITSO</text>
+<text x="56" y="218" fill="#c9d0d8" font-size="11.5">dedikerad appliance</text>
+<circle cx="176" cy="166" r="3.5" fill="#3fb8bd"/><circle cx="176" cy="178" r="3.5" fill="#3fb8bd"/>
+<text x="115" y="262" fill="#5a6878" font-size="11.5" text-anchor="middle">ingen inkommande åtkomst</text>
+<text x="115" y="278" fill="#5a6878" font-size="11.5" text-anchor="middle">admins: stark autentisering</text>
+<rect x="340" y="100" width="150" height="66" rx="10" fill="#fff" stroke="#c9d1db" stroke-width="1.5"/><text x="354" y="126" fill="#14202e" font-size="14" font-weight="700">Produktion</text><rect x="354" y="136" width="28" height="18" rx="3" fill="#eef1f5" stroke="#9aa6b4"/><text x="368" y="149" fill="#5a6878" font-size="9.5" text-anchor="middle">DC</text><rect x="388" y="136" width="28" height="18" rx="3" fill="#eef1f5" stroke="#9aa6b4"/><text x="402" y="149" fill="#5a6878" font-size="9.5" text-anchor="middle">DC</text><rect x="422" y="136" width="28" height="18" rx="3" fill="#eef1f5" stroke="#9aa6b4"/><text x="436" y="149" fill="#5a6878" font-size="9.5" text-anchor="middle">DC</text>
+<rect x="340" y="178" width="150" height="66" rx="10" fill="#fff" stroke="#c9d1db" stroke-width="1.5"/><text x="354" y="204" fill="#14202e" font-size="14" font-weight="700">Dotterbolag</text><rect x="354" y="214" width="28" height="18" rx="3" fill="#eef1f5" stroke="#9aa6b4"/><text x="368" y="227" fill="#5a6878" font-size="9.5" text-anchor="middle">DC</text><rect x="388" y="214" width="28" height="18" rx="3" fill="#eef1f5" stroke="#9aa6b4"/><text x="402" y="227" fill="#5a6878" font-size="9.5" text-anchor="middle">DC</text><rect x="422" y="214" width="28" height="18" rx="3" fill="#eef1f5" stroke="#9aa6b4"/><text x="436" y="227" fill="#5a6878" font-size="9.5" text-anchor="middle">DC</text>
+<rect x="340" y="256" width="150" height="40" rx="10" fill="#fff" stroke="#c9d1db" stroke-width="1.5"/><text x="354" y="281" fill="#14202e" font-size="13" font-weight="700">SIEM</text>
+<path d="M192 195 C 260 195, 270 133, 336 133" stroke="#0b8a8f" stroke-width="2.5" fill="none" marker-end="url(#dxb)"/><path d="M192 195 C 260 195, 270 211, 336 211" stroke="#0b8a8f" stroke-width="2.5" fill="none" marker-end="url(#dxb)"/><path d="M192 195 C 260 195, 270 276, 336 276" stroke="#0b8a8f" stroke-width="2.5" fill="none" marker-end="url(#dxb)"/>
+<text x="262" y="186" fill="#0b8a8f" font-size="12" font-weight="700" text-anchor="middle">ansluten</text>
+<rect x="20" y="318" width="480" height="48" rx="10" fill="#fbecec"/>
+<text x="260" y="340" fill="#14202e" font-size="13.5" font-weight="700" text-anchor="middle">Den övervakar, ogiltigförklarar, isolerar och bygger upp igen.</text>
+<text x="260" y="358" fill="#5a6878" font-size="12.5" text-anchor="middle">Återställning till en given tidpunkt, automatiserad återuppbyggnad.</text>
+</svg></div></div>
+<div class="modes"><div class="mode"><h3>Konsultuppdrag</h3><p style="margin-bottom:12px">För att kartlägga läget och sedan åtgärda.</p><ul><li>En konsult kommer med CITSO på sin dator under uppdraget</li><li>Granskning med enbart läsbehörighet, attackvägar, ANSSI-mognad, åtgärdsplan</li><li>Åtgärder, om ni beslutar det, med sin återställning</li><li>När uppdraget är klart rensas data från konsultens dator</li></ul></div>
+<div class="mode alt"><h3>CITSO på plats</h3><p style="margin-bottom:12px">För att skydda långsiktigt.</p><ul><li>En dedikerad plattform hos er: citadellet</li><li>Övervakning av Tier 0 och larm till er SIEM</li><li>Kontrollerade åtgärder, ogiltigförklaring av misstänkta ändringar</li><li>Omedelbar isolering vid en kris, återställning och återuppbyggnad</li></ul></div></div>
+<p style="margin-top:34px;font-size:19px"><a href="offres.html">Se erbjudandena</a> · <a href="confiance.html">Våra principer</a></p>
+</div></section>
+
+<section class="cta" id="contact"><div class="wrap">
+<h2>Ska vi titta på er katalog tillsammans?</h2>
+<p>CITSO är i privat beta. Vi söker några pilotorganisationer: en demonstration i en testmiljö, sedan en första kampanj med enbart läsbehörighet på er katalog.</p>
+<a class="btn" href="contact.html">Gå med i pilotprogrammet</a>
+</div></section>
+
+<footer><div class="wrap"><span>© 2026 CITSO · AD-säkerhet, med belägg · fransk lösning, offline</span><span><a href="mentions-legales.html">Rättslig information</a><a href="confidentialite.html">Integritet</a><a href="mailto:contact@citso.eu">contact@citso.eu</a></span></div></footer>
+</body></html>
