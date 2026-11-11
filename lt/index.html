@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="lt"><head><link rel="icon" href="../assets/favicon.png"><link rel="alternate" hreflang="fr" href="https://citso.eu/index.html"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CITSO — pagaliau sutvarkykite savo Active Directory, nesutrikdydami gamybinės aplinkos</title><meta name="description" content="CITSO pasiūlymai: Active Directory auditas, pagalba, nuolatinė platforma, atkūrimas po krizės."><link rel="stylesheet" href="../assets/style.css?v=11111120"></head><body class="p-index">
+<div class="annonce"><div class="wrap"><span>Privati beta versija</span>Bandomoji programa atvira kelioms organizacijoms · <a href="contact.html">prisijungti prie bandomosios programos</a></div></div><header><div class="wrap"><a href="index.html" class="logo"><img src="../assets/logo-citadelle-clair.png" alt="" width="30" height="28">CIT<span>SO</span></a><nav><a href="index.html" class="actif">Pradžia</a><a href="solution.html">Sprendimas</a><a href="confiance.html">Mūsų principai</a><a href="offres.html">Pasiūlymai</a><a href="a-venir.html">Netrukus</a><a href="a-propos.html">Apie mus</a><a href="contact.html">Kontaktai</a></nav><div class="outils"><a class="btn btn-nav" href="contact.html">Bandomoji programa</a><details class="lang"><summary>LT <span aria-hidden="true">▾</span></summary><ul><li><a href="/index.html" lang="fr">Français</a></li><li><a href="/en/index.html" lang="en">English</a></li><li><a href="/es/index.html" lang="es">Español</a></li><li><a href="/de/index.html" lang="de">Deutsch</a></li><li><a href="/pl/index.html" lang="pl">Polski</a></li><li><a href="/sl/index.html" lang="sl">Slovenščina</a></li><li><a href="/ru/index.html" lang="ru">Русский</a></li><li><a href="/ar/index.html" lang="ar">العربية</a></li><li><a href="/sv/index.html" lang="sv">Svenska</a></li><li><a href="/no/index.html" lang="nb">Norsk</a></li><li><a href="/fi/index.html" lang="fi">Suomi</a></li><li><a href="/et/index.html" lang="et">Eesti</a></li><li><a href="/lt/index.html" lang="lt" aria-current="true">Lietuvių</a></li><li><a href="/tr/index.html" lang="tr">Türkçe</a></li><li><a href="/el/index.html" lang="el">Ελληνικά</a></li></ul></details></div></div></header><div class="ue"><div class="wrap"><svg class="fr" width="14" height="10" viewBox="0 0 3 2" aria-hidden="true"><rect width="1" height="2" fill="#002395"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ed2939"/></svg><svg class="eu" width="16" height="16" viewBox="-12 -12 24 24" aria-hidden="true"><path transform="translate(-0.00 -9.00) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(4.50 -7.79) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(7.79 -4.50) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(9.00 -0.00) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(7.79 4.50) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(4.50 7.79) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(-0.00 9.00) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(-4.50 7.79) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(-7.79 4.50) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(-9.00 -0.00) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(-7.79 -4.50) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(-4.50 -7.79) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/></svg><span>Sukurta Prancūzijoje · Born and raised in the European Union</span></div></div>
+
+
+<section class="hero hero-c"><div class="wrap">
+<div class="badge"><span>Privati beta versija</span>bandomoji programa atvira</div>
+<h1>Apsaugokite savo Active Directory.<br><em>Atkurkite jį, kad ir kas nutiktų.</em></h1>
+<p>CITSO sustiprina jūsų katalogą nesutrikdydama gamybinės aplinkos, saugo jį nuolat stebimoje citadelėje ir atkuria, jei ataka prasiveržia: atkūrimas į pasirinktą laiko momentą, automatizuotas miško atstatymas. Prancūziškas sprendimų rinkinys, visiškai jūsų patalpose.</p>
+<div class="ctas"><a class="btn" href="contact.html">Prisijungti prie bandomosios programos →</a><a class="btn ghost" href="solution.html">Kaip tai veikia</a></div>
+<div class="cadre cadre-schema"><div class="barre"><i></i><i></i><i></i><span>CITSO citadelė · jūsų miškai jos sargyboje</span><b>nuolat vietoje</b></div>
+<svg viewBox="0 0 1140 600" role="img" aria-label="CITSO citadelė – vienintelis subjektas, valdantis viską: Red Forest ir Tier 0 (orkestratorius, just-in-time paskyros, neprisijungusi šakninė PKI, grandininis žurnalas), stebėseną, teismo ekspertizę, DC replikas, užantspauduotas atsargines kopijas, Safe Harbour, auditą ir žemėlapį. Ją supa juodosios skylės riba. Valdomos gamybinės aplinkos kairėje ir dešinėje prijungtos prie jos; pažeistas miškas atjungiamas ir užšaldomas." font-family="IBM Plex Sans,Arial,sans-serif">
+<defs><marker id="hx" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#c24a45"/></marker><marker id="ht" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#3fb8bd"/></marker></defs>
+<rect x="262" y="22" width="616" height="532" rx="22" fill="none" stroke="#4a4f58" stroke-dasharray="4 7"/>
+<text x="570" y="16" fill="#97a1ad" font-size="10.5" letter-spacing="2" text-anchor="middle">RIBA · JUODOJI SKYLĖ · JOKIŲ ĮEINANČIŲ SRAUTŲ</text>
+<rect x="286" y="44" width="568" height="488" rx="16" fill="#0f1114" stroke="#c24a45" stroke-width="1.5"/>
+<image href="../assets/logo-citadelle-clair-256.png" x="420" y="140" width="300" height="276" opacity="0.11"/>
+<text x="570" y="80" fill="#e9edf2" font-size="20" font-weight="700" text-anchor="middle" letter-spacing="3">CITSO</text>
+<text x="570" y="100" fill="#97a1ad" font-size="11.5" text-anchor="middle">citadelė · vienintelis subjektas, valdantis viską</text>
+<rect x="310" y="116" width="520" height="104" rx="10" fill="#1a1012" stroke="#c24a45"/>
+<text x="326" y="138" fill="#ff8a85" font-size="11" font-weight="600" letter-spacing="1.5">RED FOREST · TIER 0</text>
+<rect x="326" y="148" width="152" height="58" rx="8" fill="#16181c" stroke="#2e333b"/><text x="338" y="169" fill="#e9edf2" font-size="13" font-weight="600">Orkestratorius</text><text x="338" y="186" fill="#97a1ad" font-size="11">kampanijos, asistentai</text>
+<rect x="486" y="148" width="112" height="58" rx="8" fill="#16181c" stroke="#2e333b"/><text x="498" y="169" fill="#e9edf2" font-size="13" font-weight="600">Paskyros</text><text x="498" y="186" fill="#97a1ad" font-size="11">just-in-time</text>
+<rect x="606" y="148" width="104" height="58" rx="8" fill="#16181c" stroke="#2e333b"/><text x="618" y="169" fill="#e9edf2" font-size="13" font-weight="600">PKI</text><text x="618" y="186" fill="#97a1ad" font-size="11">neprisijungusi šaknis</text>
+<rect x="718" y="148" width="96" height="58" rx="8" fill="#16181c" stroke="#2e333b"/><text x="730" y="169" fill="#e9edf2" font-size="13" font-weight="600">Žurnalas</text><text x="730" y="186" fill="#97a1ad" font-size="11">grandininis</text>
+<rect x="310" y="236" width="254" height="58" rx="8" fill="#16181c" stroke="#2e333b"/><text x="322" y="257" fill="#e9edf2" font-size="13" font-weight="600">Stebėsena</text><text x="322" y="274" fill="#97a1ad" font-size="11">Tier 0 per sekundes</text>
+<rect x="576" y="236" width="254" height="58" rx="8" fill="#16181c" stroke="#2e333b"/><text x="588" y="257" fill="#e9edf2" font-size="13" font-weight="600">Teismo ekspertizė</text><text x="588" y="274" fill="#97a1ad" font-size="11">izoliuotoje kopijoje</text>
+<rect x="310" y="306" width="254" height="58" rx="8" fill="#16181c" stroke="#2e333b"/><text x="322" y="327" fill="#e9edf2" font-size="13" font-weight="600">DC replikos</text><text x="322" y="344" fill="#97a1ad" font-size="11">po vieną kiekvienam valdomam domenui</text>
+<rect x="576" y="306" width="254" height="58" rx="8" fill="#16181c" stroke="#2e333b"/><text x="588" y="327" fill="#e9edf2" font-size="13" font-weight="600">Atsarginės kopijos</text><text x="588" y="344" fill="#97a1ad" font-size="11">užantspauduotos, užšifruotos</text>
+<rect x="310" y="376" width="254" height="58" rx="8" fill="#16181c" stroke="#2e333b"/><text x="322" y="397" fill="#e9edf2" font-size="13" font-weight="600">Safe Harbour</text><text x="322" y="414" fill="#97a1ad" font-size="11">izoliuoti, atkurti</text>
+<rect x="576" y="376" width="254" height="58" rx="8" fill="#16181c" stroke="#2e333b"/><text x="588" y="397" fill="#e9edf2" font-size="13" font-weight="600">Auditas ir žemėlapis</text><text x="588" y="414" fill="#97a1ad" font-size="11">keliai iki Tier 0</text>
+<text x="570" y="460" fill="#e9edf2" font-size="11.5" text-anchor="middle">administratorių prieiga: stiprus autentifikavimas, skirta darbo vieta</text>
+<text x="570" y="478" fill="#97a1ad" font-size="11" text-anchor="middle">skirta įranga, kurią teikia CITSO arba jūs</text>
+<text x="570" y="512" fill="#97a1ad" font-size="11" text-anchor="middle">atkūrimas į laiko momentą · automatizuotas atstatymas</text>
+<text x="20" y="96" fill="#97a1ad" font-size="11" letter-spacing="1.5">VALDOMOS APLINKOS</text>
+<rect x="20" y="110" width="190" height="70" rx="8" fill="#16181c" stroke="#2e333b"/><text x="32" y="131" fill="#e9edf2" font-size="13" font-weight="600">Europa</text><text x="32" y="148" fill="#97a1ad" font-size="11">gamybinis miškas</text><circle cx="36" cy="164" r="3.5" fill="#3fb8bd"/><text x="46" y="168" fill="#97a1ad" font-size="11">3 DC · stebimas</text>
+<rect x="20" y="196" width="190" height="70" rx="8" fill="#16181c" stroke="#2e333b"/><text x="32" y="217" fill="#e9edf2" font-size="13" font-weight="600">Gamyklos (OT)</text><text x="32" y="234" fill="#97a1ad" font-size="11">pramoninis miškas</text><circle cx="36" cy="250" r="3.5" fill="#3fb8bd"/><text x="46" y="254" fill="#97a1ad" font-size="11">2 DC · stebimas</text>
+<rect x="20" y="282" width="190" height="70" rx="8" fill="#16181c" stroke="#2e333b"/><text x="32" y="303" fill="#e9edf2" font-size="13" font-weight="600">Priėmimo testai</text><text x="32" y="320" fill="#97a1ad" font-size="11">priešgamybinė aplinka</text><circle cx="36" cy="336" r="3.5" fill="#3fb8bd"/><text x="46" y="340" fill="#97a1ad" font-size="11">2 DC · stebimas</text>
+<text x="930" y="96" fill="#97a1ad" font-size="11" letter-spacing="1.5">KITI SUBJEKTAI</text>
+<rect x="930" y="110" width="190" height="70" rx="8" fill="#16181c" stroke="#2e333b"/><text x="942" y="131" fill="#e9edf2" font-size="13" font-weight="600">Būstinė</text><text x="942" y="148" fill="#97a1ad" font-size="11">gamybinis miškas</text><circle cx="946" cy="164" r="3.5" fill="#3fb8bd"/><text x="956" y="168" fill="#97a1ad" font-size="11">3 DC · stebimas</text>
+<rect x="930" y="196" width="190" height="70" rx="8" fill="#16181c" stroke="#2e333b"/><text x="942" y="217" fill="#e9edf2" font-size="13" font-weight="600">Dukterinės įmonės</text><text x="942" y="234" fill="#97a1ad" font-size="11">nutolusios vietos</text><circle cx="946" cy="250" r="3.5" fill="#3fb8bd"/><text x="956" y="254" fill="#97a1ad" font-size="11">2 DC · stebimas</text>
+<rect x="930" y="282" width="190" height="70" rx="8" fill="#16181c" stroke="#c24a45"/><text x="942" y="303" fill="#e9edf2" font-size="13" font-weight="600">Įsigijimas</text><text x="942" y="320" fill="#97a1ad" font-size="11">kitas miškas</text><text x="942" y="340" fill="#ff8a85" font-size="11" font-weight="600">pažeistas: atjungtas, užšaldytas</text>
+<rect x="930" y="368" width="190" height="52" rx="8" fill="#16181c" stroke="#2e333b"/><text x="942" y="389" fill="#e9edf2" font-size="13" font-weight="600">SIEM</text><text x="942" y="406" fill="#97a1ad" font-size="11">įspėjimai per HTTPS</text>
+<path d="M284 145 H 214" stroke="#3fb8bd" stroke-width="1.5" stroke-dasharray="4 4" opacity=".8" marker-end="url(#ht)"/>
+<path d="M284 231 H 214" stroke="#3fb8bd" stroke-width="1.5" stroke-dasharray="4 4" opacity=".8" marker-end="url(#ht)"/>
+<path d="M284 317 H 214" stroke="#3fb8bd" stroke-width="1.5" stroke-dasharray="4 4" opacity=".8" marker-end="url(#ht)"/>
+<path d="M856 145 H 926" stroke="#3fb8bd" stroke-width="1.5" stroke-dasharray="4 4" opacity=".8" marker-end="url(#ht)"/>
+<path d="M856 231 H 926" stroke="#3fb8bd" stroke-width="1.5" stroke-dasharray="4 4" opacity=".8" marker-end="url(#ht)"/>
+<path d="M856 394 H 926" stroke="#3fb8bd" stroke-width="1.5" stroke-dasharray="4 4" opacity=".8" marker-end="url(#ht)"/>
+<path d="M856 317 H 926" stroke="#c24a45" stroke-width="1.5" stroke-dasharray="2 5"/><path d="M885 311 l12 12 M897 311 l-12 12" stroke="#ff8a85" stroke-width="2"/>
+<text x="20" y="378" fill="#97a1ad" font-size="11">prijungimas: kredencialų saugykla,</text>
+<text x="20" y="394" fill="#97a1ad" font-size="11">vienpusis pasitikėjimo ryšys arba VPN</text>
+<path d="M200 482 L 252 500" stroke="#c24a45" stroke-width="2" marker-end="url(#hx)"/><path d="M252 494 l10 10 M262 494 l-10 10" stroke="#ff8a85" stroke-width="2"/>
+<text x="20" y="474" fill="#ff8a85" font-size="11">ataka sustabdoma ties riba</text>
+<text x="570" y="584" fill="#97a1ad" font-size="12" text-anchor="middle">Jūsų miškai pasitiki citadele, bet niekada atvirkščiai. Krizės metu ji atjungia, užšaldo ir atkuria; apribojimai panaikinami tik pasirašius.</text>
+</svg>
+</div>
+</div>
+<div class="garanties"><div class="wrap"><span>✓ Sustiprinimas nesutrikdant gamybos</span><span>✓ Katalogo atkūrimas į pasirinktą laiko momentą</span><span>✓ Automatinis miško atstatymas</span></div></div>
+</section>
+
+<section><div class="wrap">
+<div class="tete"><div class="ico"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 21V8h3V5h2v3h4V5h2v3h3v13z"/><path d="M10 21v-5h4v5"/></svg></div><div class="kicker">Mūsų veikla</div><h2>Du pažadai,<br><em>tesėti nuo pradžios iki galo.</em></h2><p class="lead">Visa CITSO skirta dviem dalykams: kad katalogą būtų sunku užvaldyti ir kad jį būtų galima atkurti nepažeistą, jei kam nors vis dėlto pavyktų.</p></div>
+<div class="piliers">
+<div class="pilier"><div class="pk">1 · Apsaugoti</div><h3>Sustiprintas katalogas nesutrikdant gamybos</h3><ul>
+<li><b>Rizikos analizė prieš kiekvieną taisymą</b> : CITSO nustato, kas dar priklauso nuo silpnų nustatymų, ir pasiūlo tinkama tvarka išdėstytą veiksmų planą.</li>
+<li><b>Taisymai su atšaukimo galimybe</b>, taikomi bangomis, tik jums sutikus, ir tikrinami patikromis prieš ir po.</li>
+<li><b>Tier 0 saugioje vietoje</b> Red Forest – izoliuotame administravimo miške; jūsų administratoriai jungiasi naudodami stiprų autentifikavimą.</li>
+<li><b>Jautrių pakeitimų stebėsena</b> : privilegijuotos grupės, delegavimai, GPO, PKI. Įtartiną pakeitimą galima iškart atšaukti.</li>
+</ul></div>
+<div class="pilier recup"><div class="pk">2 · Atkurti</div><h3>Grįžti atgal arba viską atstatyti</h3><ul>
+<li><b>Neatidėliotinas atjungimas</b> vos pasirodžius pirmam pažeidimo ženklui: įtariamas miškas izoliuojamas ir užšaldomas nepakeistas, niekas neištrinama.</li>
+<li><b>Atkūrimas į pasirinktą laiko momentą</b> praeityje, iš DC replikų (bent viena kiekvienam domenui) ir užantspauduotų atsarginių kopijų saugyklos.</li>
+<li><b>Automatizuotas atstatymas</b> miško iš citadelės, jei gamybinė aplinka prarasta, su dvigubu parašu ir CISO sutikimu.</li>
+<li><b>Safe Harbour</b> : iš anksto paruošta prieglauda su reguliariai repetuojamais izoliavimo planais.</li>
+</ul></div>
+</div>
+<div class="frise3"><div><b>Prieš ataką</b>sustiprinti, izoliuoti Tier 0, kurti atsargines kopijas, replikuoti</div><div><b>Atakos metu</b>aptikti per sekundes, atšaukti, atjungti</div><div><b>Po atakos</b>atkurti į laiko momentą arba atstatyti</div></div>
+</div></section>
+
+
+<section><div class="wrap">
+<div class="tete"><div class="ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h10M4 12h16M4 18h7"/><circle cx="17" cy="6" r="2"/><circle cx="14" cy="18" r="2"/></svg></div><div class="kicker">Kaip pradedame</div><h2>Trys žingsniai,<br><em>jokių staigmenų.</em></h2><p class="lead">Pradedame nuo apžiūros, taisome tai, ką patvirtinate, o tada citadelė perima darbą ilgam laikui.</p></div>
+<div class="pas3">
+<div class="pas"><span class="pi"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg></span><span class="pn">01</span><b>Matyti</b><small>tik skaitymo auditas, žemėlapis ir keliai</small></div>
+<div class="pas"><span class="pi"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h10M4 12h16M4 18h7"/><circle cx="17" cy="6" r="2"/><circle cx="14" cy="18" r="2"/></svg></span><span class="pn">02</span><b>Ištaisyti</b><small>veiksmų planas, bangos, atšaukimas</small></div>
+<div class="pas"><span class="pi"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V8h3V5h2v3h4V5h2v3h3v13z"/><path d="M10 21v-5h4v5"/></svg></span><span class="pn">03</span><b>Išlaikyti</b><small>nuolatinė citadelė, stebėsena, atkūrimas</small></div>
+</div>
+<div class="appli"><div class="barre"><i></i><i></i><i></i><span>CITSO konsolė</span><em class="onglet actif">Katalogo žemėlapis</em><em class="onglet">Veiksmų planas</em><em class="onglet">Citadelė</em><b>tik skaitymas</b></div>
+<div class="corps">
+<div class="col-etapes"><div class="t">ŽINGSNIAI</div>
+<div class="e on"><span>01</span><div><b>Matyti</b><p>Kampanija skaito katalogą nieko nerašydama: beveik 400 patikrų, miško žemėlapis iki objekto, keliai iki Tier 0.</p></div></div>
+<div class="e"><span>02</span><div><b>Ištaisyti</b><p>CITSO analizuoja priklausomybes, pasiūlo taisymų eiliškumą ir taiko juos bangomis jums sutikus, su patikromis prieš ir po.</p></div></div>
+<div class="e"><span>03</span><div><b>Išlaikyti</b><p>Citadelė stebi jautrias operacijas, gali jas atšaukti ir moka atkurti arba atstatyti mišką.</p></div></div>
+</div>
+<div class="col-vue"><img src="../assets/carte-console.png" alt="CITSO konsolė: katalogo žemėlapis (pavyzdiniai duomenys)"></div>
+<div class="col-recap"><div class="t">KĄ GAUNATE</div>
+<div class="l"><span>Įrodyti verdiktai</span><b>kiekviena patikra</b></div>
+<div class="l"><span>Keliai iki Tier 0</span><b>apskaičiuoti</b></div>
+<div class="l"><span>ANSSI branda</span><b>įrodytas lygis</b></div>
+<div class="l"><span>Taisymų planas</span><b>pagal prioritetą</b></div>
+<div class="l"><span>Atšaukimas</span><b>kiekvienam veiksmui</b></div>
+<div class="l tot"><span>Išeinantys duomenys</span><b>jokių</b></div>
+</div></div></div>
+</div></section>
+
+<section><div class="wrap">
+<div class="kicker" style="text-align:left">Ką tikrina CITSO</div>
+<h2 style="font-size:40px;max-width:760px;margin:8px 0 10px">Visą katalogą,<br><em>nuo paskyros iki pasitikėjimo ryšio.</em></h2>
+<p class="lead" style="max-width:720px;margin-bottom:34px">Patikros apima sritis, kuriose užpuolikai randa atramos taškų, pagal ANSSI, CIS ir MITRE ATT&amp;CK gaires.</p>
+<div class="dom8"><div class="dom"><span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></span><b>Paskyros ir slaptažodžiai</b><small>neaktyvios, be galiojimo pabaigos, privilegijuotos</small></div><div class="dom"><span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 20c0-2.5 1.5-4.5 4-4.5"/></svg></span><b>Privilegijuotos grupės</b><small>Tier 0, AdminSDHolder</small></div><div class="dom"><span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17L17 7"/></svg></span><b>Delegavimai</b><small>neapribotas, apribotas, RBCD</small></div><div class="dom"><span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span><b>Pavojingos teisės</b><small>DCSync, ACL, savininkai</small></div><div class="dom"><span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3M15 8l2 2"/></svg></span><b>Kerberos</b><small>Kerberoasting, šifravimas, krbtgt</small></div><div class="dom"><span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="12" rx="2"/><path d="M8 20l2-4 2 4 2-4 2 4"/><path d="M8 9h8"/></svg></span><b>Sertifikatai (ADCS)</b><small>šablonai ir sertifikavimo institucijos</small></div><div class="dom"><span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h5"/></svg></span><b>Grupės strategijos</b><small>susietos su valdikliais, teisės</small></div><div class="dom"><span><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17h18M5 17V9M19 17V9M3 9c3-3 15-3 18 0"/></svg></span><b>Pasitikėjimo ryšiai</b><small>kryptis, SID filtravimas, atrankumas</small></div></div>
+</div></section>
+
+<section style="background:#f6f8fb"><div class="wrap split">
+<div>
+<div class="kicker">Papildomai</div>
+<h2 style="font-size:34px;margin-bottom:14px">Auditas ir žemėlapis, kad žinotumėte, nuo ko pradėti</h2>
+<p class="lead">Prieš apsaugant reikia matyti. CITSO audituoja katalogą tik skaitymo režimu pagal ANSSI, CIS ir MITRE ATT&amp;CK gaires, nubraižo kelius iki administravimo paskyrų ir parengia ataskaitas, kuriose kiekvienas verdiktas yra įrodytas. Taip pat prieinama kaip konsultavimo užduotis, nieko neįdiegiant pas jus.</p>
+<p style="margin-top:18px"><a href="offres.html">Konsultavimas ar nuolatinis diegimas: peržiūrėti pasiūlymus →</a></p>
+</div>
+<div class="cadre"><div class="barre"><i></i><i></i><i></i><span>CITSO konsolė · atakų keliai</span><b>tik skaitymas</b></div><img src="../assets/graphe.png" alt="CITSO konsolė: atakų kelių iki Tier 0 grafas (pavyzdiniai duomenys)"></div>
+</div></section>
+
+<section class="dark"><div class="wrap">
+<div class="tete"><div class="ico"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17v.5"/></svg></div><div class="kicker">Problema</div><h2>Active Directory yra visko raktas,<br><em>ir pirmasis išpirkos reikalaujančių programų taikinys.</em></h2><p class="lead">Jei užpuolikas jį užvaldo, jis užvaldo viską. CISO žino, kad jų katalogas pažeidžiamas, tačiau jis retai sutvarkomas. Dėl trijų priežasčių:</p></div>
+<div class="grid3">
+<div class="etape" style="background:#1c1f24;color:#d5dae1;border-color:#2e333b"><span class="num">1</span><b style="color:#fff">Metų metus kaupti nustatymai</b>Pamirštos teisės, paveldėti delegavimai, per galingos tarnybinės paskyros: susikaupė skola, ir niekas nebeturi bendro vaizdo.</div>
+<div class="etape" style="background:#1c1f24;color:#d5dae1;border-color:#2e333b"><span class="num">2</span><b style="color:#fff">Baimė sutrikdyti gamybą</b>Katalogo sustiprinimas gali sugadinti programą, paslaugą ar autentifikavimą. Nematant poveikio, geriau nieko neliesti.</div>
+<div class="etape" style="background:#1c1f24;color:#d5dae1;border-color:#2e333b"><span class="num">3</span><b style="color:#fff">Įrankiai, kurie išvardija, bet netaiso</b>Auditai pateikia trūkumų sąrašus. Jie nepasako, kaip taisyti be rizikos ar kaip grįžti atgal, jei kas nors sugenda.</div>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<div class="tete"><div class="ico"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h10M4 12h16M4 17h7"/><circle cx="17" cy="7" r="2"/><circle cx="14" cy="17" r="2"/></svg></div><div class="kicker">Ką daro CITSO</div><h2>Kaip CITSO taiso,<br><em>keturiais etapais.</em></h2></div>
+<div class="grid2" style="margin-top:34px">
+<div class="etape"><span class="num">1</span><b>Audituoti ir stebėti tik skaitymo režimu</b>Patikros grindžiamos ANSSI, CIS ir MITRE ATT&amp;CK gairėmis. Audito ir stebėsenos metu į katalogą nieko nerašoma.</div>
+<div class="etape"><span class="num">2</span><b>Parodyti atakų kelius</b>CITSO nubraižo kelius iki administravimo paskyrų ir nurodo taisymų eiliškumą: ką reikia nutraukti pirmiausia.</div>
+<div class="etape"><span class="num">3</span><b>Taisyti jums sutikus</b>Taisymai atliekami užrakinus, tik jums juos patvirtinus, ir kiekvienam numatytas atšaukimas. Negrįžtami veiksmai pagal numatymą blokuojami.</div>
+<div class="etape"><span class="num">4</span><b>Įrodyti kiekvieną verdiktą</b>Prie kiekvieno radinio pridedamas jo įrodymas. Tai, ko nepavyko patikrinti, lieka „neįvertinta“: CITSO niekada pagal numatymą nerodo „atitinka“.</div>
+</div>
+</div></section>
+
+<section style="background:#f6f8fb"><div class="wrap">
+<div class="tete"><div class="ico"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div><div class="kicker">Kodėl CITSO, o ne kitas</div><h2>Niekada žalios spalvos<br><em>be įrodymo.</em></h2></div>
+<div class="tabref"><table>
+<thead><tr><th style="width:28%">Palyginti su…</th><th>CITSO pranašumas</th></tr></thead>
+<tbody>
+<tr><td><b>Nemokami audito įrankiai</b></td><td>Jie išvardija trūkumus. CITSO nuveda iki taisymo, be rizikos dėl atšaukimo galimybės.</td></tr>
+<tr><td><b>Didieji užsienio gamintojai</b></td><td>Viskas lieka pas jus: jokio debesies, jokie duomenys neišeina. Prancūzų gamintojas ir vidutinei įmonei pritaikyta kaina.</td></tr>
+<tr><td><b>Visi</b></td><td>„Niekada žalios spalvos be įrodymo“: nepatikrintas punktas lieka „neįvertintas“, užuot pagal numatymą buvęs laikomas atitinkančiu. Klaidinga žalia pavojingesnė už raudoną.</td></tr>
+</tbody></table></div>
+</div></section>
+
+<section><div class="wrap">
+<div class="tete"><div class="ico"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></svg></div><div class="kicker">Kam</div><h2>Už katalogą atsakingi asmenys,<br><em>kurie turi atsiskaityti.</em></h2></div>
+<div class="grid4">
+<div class="etape"><b>Vidutinės įmonės</b>CISO ir Active Directory atsakingi asmenys, kuriems katalogą tenka apsaugoti su nedidele komanda.</div>
+<div class="etape"><b>Reguliuojami operatoriai</b>NIS 2 taikomi subjektai, ypatingos svarbos operatoriai: priemonės, kurias reikia įrodyti, o ne tik deklaruoti.</div>
+<div class="etape"><b>Viešasis sektorius</b>Savivaldybės, įstaigos, administracijos: suverenus įrankis, veikiantis be debesies.</div>
+<div class="etape"><b>Konsultacinės ir IT paslaugų įmonės</b>Komandos, kurios audituoja savo klientų katalogus ir nori pasiekti taisymų planą.</div>
+</div>
+</div></section>
+
+
+<section><div class="wrap">
+<div class="kicker">Ką mes įdiegiame</div>
+<h2 style="font-size:36px;margin-bottom:10px">CITSO ištekliai, sujungti viename pagrinde</h2>
+<p class="lead" style="margin-bottom:30px">Orkestratorius, PKI, DC replikos (bent viena kiekvienam valdomam domenui), atsarginės kopijos, teismo ekspertizės analizės ir įspėjimai sutelkti administravimo miške. Jūsų miškai prie jo prijungiami vienpusiu pasitikėjimo ryšiu arba VPN, priklausomai nuo jūsų architektūros.</p>
+<div class="panneau"><svg viewBox="0 0 1000 440" width="100%" role="img" aria-labelledby="rs1" style="font-family:IBM Plex Sans,Arial,sans-serif">
+<title id="rs1">CITSO ištekliai ir paslaugos, susieti su Active Directory miškais, kuriuos jie valdo ir stebi</title>
+<defs><marker id="ra" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#0b8a8f"/></marker></defs>
+<rect x="10" y="10" width="560" height="420" rx="18" fill="#0f2236"/>
+<text x="34" y="46" fill="#fff" font-size="18" font-weight="bold">CITSO platforma</text>
+<text x="34" y="68" fill="#9fb3c8" font-size="12.5">Red Forest miške, jūsų patalpose arba jūsų pasirinktose vietose</text>
+<g font-size="12.5">
+<g><rect x="34" y="90" width="512" height="70" rx="10" fill="#0b5f63"/><text x="54" y="118" fill="#fff" font-size="15" font-weight="bold">CITSO orkestratorius</text><text x="54" y="140" fill="#d6eff0">kampanijos, patvirtinti taisymai, asistentai, administravimo konsolė</text></g>
+<g><rect x="34" y="176" width="248" height="72" rx="10" fill="#2c425e"/><text x="52" y="204" fill="#fff" font-size="14" font-weight="bold">DC replikos</text><text x="52" y="226" fill="#c9d3de">bent viena kiekvienam valdomam</text><text x="52" y="242" fill="#c9d3de">domenui, kopija saugioje vietoje</text></g>
+<g><rect x="298" y="176" width="248" height="72" rx="10" fill="#3d4754"/><text x="316" y="204" fill="#fff" font-size="14" font-weight="bold">Užplombuotos atsarginės kopijos</text><text x="316" y="226" fill="#e6ebf0">užšifruotos, maiša patikrinta,</text><text x="316" y="242" fill="#e6ebf0">nepasiekiamos iš gamybinės aplinkos</text></g>
+<g><rect x="34" y="264" width="248" height="72" rx="10" fill="#3a0f17"/><text x="52" y="292" fill="#fff" font-size="14" font-weight="bold">Kriminalistinė analizė</text><text x="52" y="314" fill="#f0c8cd">duomenų rinkimas ir tyrimas</text><text x="52" y="330" fill="#f0c8cd">izoliuotoje kopijoje, neliečiant originalo</text></g>
+<g><rect x="298" y="264" width="248" height="72" rx="10" fill="#5c3a0c"/><text x="316" y="292" fill="#fff" font-size="14" font-weight="bold">Įspėjimai</text><text x="316" y="314" fill="#f3dcb8">Tier 0 per kelias sekundes,</text><text x="316" y="330" fill="#f3dcb8">eksportas į jūsų SIEM</text></g>
+<g><rect x="34" y="352" width="512" height="56" rx="10" fill="#0b8a8f"/><text x="54" y="378" fill="#fff" font-size="14" font-weight="bold">Safe Harbour</text><text x="54" y="398" fill="#e6f6f7">izoliuoti, atkurti atskirai, atstatyti</text></g>
+</g>
+<path d="M572 220 L 690 220" stroke="#0b8a8f" stroke-width="3" marker-end="url(#ra)"/>
+<text x="631" y="200" text-anchor="middle" font-size="13" font-weight="bold" fill="#14202e">pasitikėjimo ryšys</text>
+<text x="631" y="246" text-anchor="middle" font-size="13" font-weight="bold" fill="#14202e">arba VPN</text>
+<text x="631" y="266" text-anchor="middle" font-size="11" fill="#5a6878">vienkryptis</text>
+<g font-size="12.5">
+<rect x="696" y="40" width="294" height="360" rx="18" fill="#f6f8fb" stroke="#c9d1db"/>
+<text x="718" y="74" font-size="16" font-weight="bold" fill="#14202e">Jūsų Active Directory miškai</text>
+<text x="718" y="94" fill="#5a6878">valdomi ir stebimi</text>
+<g><rect x="718" y="114" width="250" height="74" rx="10" fill="#fff" stroke="#9aa6b4"/><text x="738" y="142" font-size="14" font-weight="bold" fill="#14202e">Gamybinis miškas</text><text x="738" y="164" fill="#5a6878">būstinė, dukterinės įmonės</text></g>
+<g><rect x="718" y="204" width="250" height="74" rx="10" fill="#fff" stroke="#9aa6b4"/><text x="738" y="232" font-size="14" font-weight="bold" fill="#14202e">Kitas miškas</text><text x="738" y="254" fill="#5a6878">įsigijimas, izoliuota aplinka</text></g>
+<g><rect x="718" y="294" width="250" height="74" rx="10" fill="#fff" stroke="#9aa6b4" stroke-dasharray="5 4"/><text x="738" y="322" font-size="14" font-weight="bold" fill="#14202e">Vėliau pridėtas miškas</text><text x="738" y="344" fill="#5a6878">prijungtas prie to paties pagrindo</text></g>
+</g>
+</svg></div>
+</div></section>
+
+
+<section class="dark"><div class="wrap">
+<div class="kicker">Nuolatinis diegimas: tvirtovė</div>
+<h2 style="font-size:38px;margin-bottom:10px">Šešios gynybos linijos, kad atlaikytumėte ataką ir atsigautumėte po krizės</h2>
+<p class="lead" style="margin-bottom:36px">Įdiegta pas jus, CITSO neleidžia užpuolikui pasiekti galingiausių jūsų paskyrų, o jei jam pavyksta, išsaugo viską, ko reikia atstatymui.</p>
+<div class="grid3">
+<div class="etape" style="background:#3a0f17;color:#f0c8cd"><b style="color:#ff8a95">Red Forest</b>Administravimo miške veikia CITSO ir jūsų Tier 0 paskyros. Jis neprijungtas prie jokio gamybinio miško. Jūsų miškai pasitiki juo; atvirkštinio ryšio nėra.</div>
+<div class="etape" style="background:#1f3550;color:#c9d3de"><b style="color:#ff8a85">Ribos</b>Atskirtos administravimo zonos, apribotos grupės, pasitikėjimo ryšiai su atrankiniu autentifikavimu ir SID filtravimu. Gamybinėje aplinkoje kompromituota paskyra nepasiekia administravimo lygmens.</div>
+<div class="etape" style="background:#1f3550;color:#c9d3de"><b style="color:#d9a21b">Tier 0 stebėsena</b>Apie Tier 0 lygmenį paliečiančius pakeitimus pranešama per kelias sekundes. Pasirodžius kompromitavimo požymiui, CITSO iš karto izoliuoja. Izoliacija panaikinama tik atsakingam asmeniui pasirašius.</div>
+<div class="etape" style="background:#0b5f63;color:#e6f6f7"><b style="color:#fff">Safe Harbour</b>Iš anksto paruošta prieglauda: reguliariai bandomi izoliavimo planai, atskirai laikomos replikos, vedamas atstatymas. Krizės metu niekas neištrinama.</div>
+<div class="etape" style="background:#3d4754;color:#e6ebf0"><b style="color:#fff">Užplombuotos atsarginės kopijos</b>Administravimo miško ir saugomų miškų atsarginės kopijos užšifruojamos, o jų vientisumas tikrinamas pagal maišą. Asmuo, perėmęs gamybinės aplinkos kontrolę, jų pasiekti negali.</div>
+<div class="etape" style="background:#2c425e;color:#e6ebf0"><b style="color:#fff">DC replikos</b>Bent vienas replikos valdiklis kiekvienam valdomam domenui, saugiai laikomas platformoje ir patikrinamas, kol dar nepaseno. To pakanka atkurti į pasirinktą laiko momentą arba viską atstatyti.</div>
+</div></div></section>
+
+<section><div class="wrap split">
+<div>
+<div class="kicker">Jūsų pasirinkimai</div>
+<h2 style="font-size:36px;margin-bottom:18px">Asistentai kiekviename etape</h2>
+<p class="lead">Diegimas, auditas, taisymai, miško prijungimas: viskas atliekama su asistentais. Jie užduoda reikalingus klausimus, parodo, kas pasikeis, ir prieš veikdami paruošia atšaukimą.</p>
+</div>
+<div class="grid2" style="margin-top:0">
+<div class="etape"><b>Jūsų modelis</b>Konsultanto atliekamas vienkartinis auditas arba ilgam jūsų aplinkoje įdiegtas CITSO.</div>
+<div class="etape"><b>Jūsų talpinimas</b>Jūsų CITSO skirtas hipervizorius (Hyper-V, VMware, Proxmox) arba atskiras įrenginys, kuris krizės atveju tampa ir prieglauda.</div>
+<div class="etape"><b>Jūsų tempas</b>Taisymai vykdomi bangomis, jūsų nustatytu tempu.</div>
+<div class="etape"><b>Jūsų taisyklės</b>Jūs nustatote, kas sukelia izoliavimą, kas gali jį panaikinti ir kas pasirašo negrįžtamas operacijas.</div>
+</div></div></section>
+
+<section class="dark"><div class="wrap split">
+<div>
+<div class="kicker">Kaip prasiveržia atakos</div>
+<h2 style="font-size:36px;margin-bottom:18px">Retai per įspūdingą spragą</h2>
+<p class="lead">Dažniausiai tai smulkmenų grandinė: pamiršta teisė iš naujo nustatyti slaptažodį, per plačiai deleguota tarnybos paskyra, serveryje palikta atvira administratoriaus sesija. Atskirai jos nekelia nerimo. Sudėtos kartu, jos veda prie domeno administratorių.</p>
+</div>
+<div class="panneau"><svg viewBox="0 0 560 300" role="img" aria-label="Atakos kelias: pagalbos tarnybos paskyra, teisė iš naujo nustatyti slaptažodį, tarnybos paskyra su delegavimu, administratoriaus sesija ir galiausiai domeno administratoriai">
+<defs><marker id="fa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#b8433f"/></marker></defs>
+<rect x="0" y="0" width="560" height="300" rx="14" fill="#16283f"/>
+<g font-family="IBM Plex Sans,Arial,sans-serif" font-size="12.5">
+<rect x="20" y="40" width="150" height="62" rx="9" fill="#2c425e"/><text x="34" y="66" fill="#fff" font-weight="bold">Pagalbos tarnybos paskyra</text><text x="34" y="84" fill="#c9d3de">paprastas naudotojas</text>
+<path d="M172 71 L 208 71" stroke="#b8433f" stroke-width="2.5" marker-end="url(#fa)"/>
+<rect x="210" y="40" width="150" height="62" rx="9" fill="#d9a21b"/><text x="224" y="66" fill="#1b2533" font-weight="bold">Pamiršta teisė</text><text x="224" y="84" fill="#1b2533">slaptažodžio</text><text x="224" y="98" fill="#1b2533">nustatymas iš naujo</text>
+<path d="M362 71 L 398 71" stroke="#b8433f" stroke-width="2.5" marker-end="url(#fa)"/>
+<rect x="400" y="40" width="140" height="62" rx="9" fill="#b8433f"/><text x="414" y="66" fill="#fff" font-weight="bold">Tarnybos paskyra</text><text x="414" y="84" fill="#fff">neapribotas</text><text x="414" y="98" fill="#fff">delegavimas</text>
+<path d="M470 104 C 470 150, 470 150, 470 176" stroke="#b8433f" stroke-width="2.5" fill="none" marker-end="url(#fa)"/>
+<rect x="390" y="180" width="150" height="62" rx="9" fill="#b8433f"/><text x="404" y="206" fill="#fff" font-weight="bold">Serveris</text><text x="404" y="224" fill="#fff">atvira administratoriaus</text><text x="404" y="238" fill="#fff">sesija</text>
+<path d="M388 211 L 352 211" stroke="#b8433f" stroke-width="2.5" marker-end="url(#fa)"/>
+<rect x="190" y="180" width="160" height="62" rx="9" fill="#c21c2c"/><text x="204" y="206" fill="#fff" font-weight="bold">Domeno</text><text x="204" y="224" fill="#ffe3e6">administratoriai: Tier 0</text>
+<path d="M322 202 L 322 190 L 328 196 L 334 186 L 340 196 L 346 190 L 346 202 Z" fill="#ffcc00"/>
+<text x="20" y="196" fill="#c9d3de" font-size="13">4 nekaltos smulkmenos,</text><text x="20" y="214" fill="#c9d3de" font-size="13">1 kelias iki Tier 0.</text>
+<text x="20" y="272" fill="#b8433f" font-size="13" font-weight="bold">CITSO aptinka šį kelią ir parodo, kur jį nutraukti.</text>
+</g></svg></div>
+</div></section>
+
+<section><div class="wrap split">
+<div>
+<div class="kicker">Niekada žalios spalvos be įrodymo</div>
+<h2 style="font-size:36px;margin-bottom:18px">Tai, ko nepavyko patikrinti, taip ir pažymima</h2>
+<p class="lead">Patikra, kuri negalėjo perskaityti reikiamų duomenų, nerodoma kaip atitinkanti. Šalia pateiktas pavyzdys paimtas iš mūsų laboratorijos kampanijos, atliktos su įprasta skaitymo paskyra.</p>
+<p class="note">Ši paskyra neturėjo prieigos prie grupės strategijų bendrinamo aplanko. Susijusios patikros liko „neįvertintos“, nurodant priežastį.</p>
+</div>
+<div class="panneau"><svg viewBox="0 0 560 300" role="img" aria-label="Tikros kampanijos 396 verdiktų pasiskirstymas: 118 atitinka ir patikrinti, 45 neatitinka, 30 netaikomi, 133 neįvertinami, 70 neįvertinti">
+<defs><pattern id="hv1" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#5a6878"/><rect width="3" height="8" fill="#7d8a99"/></pattern>
+<pattern id="hv2" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(135)"><rect width="8" height="8" fill="#c9d3de"/><rect width="3" height="8" fill="#e6ebf0"/></pattern></defs>
+<g font-family="IBM Plex Sans,Arial,sans-serif" font-size="14"><text x="20" y="34" fill="#0e1b2c" font-size="16" font-weight="bold">396 verdiktai, viena kampanija</text><rect x="21.0" y="60" width="152.9" height="44" rx="4" fill="#0b8a8f"><title>CITSO — pagaliau sutvarkykite savo Active Directory, nesutrikdydami gamybinės aplinkos</title></rect><rect x="175.9" y="60" width="57.1" height="44" rx="4" fill="#c21c2c"><title>CITSO — pagaliau sutvarkykite savo Active Directory, nesutrikdydami gamybinės aplinkos</title></rect><rect x="235.0" y="60" width="37.4" height="44" rx="4" fill="#9aa6b4"><title>CITSO — pagaliau sutvarkykite savo Active Directory, nesutrikdydami gamybinės aplinkos</title></rect><rect x="274.4" y="60" width="172.6" height="44" rx="4" fill="url(#hv1)"><title>CITSO — pagaliau sutvarkykite savo Active Directory, nesutrikdydami gamybinės aplinkos</title></rect><rect x="449.1" y="60" width="89.9" height="44" rx="4" fill="url(#hv2)"><title>CITSO — pagaliau sutvarkykite savo Active Directory, nesutrikdydami gamybinės aplinkos</title></rect><rect x="20" y="128" width="16" height="16" rx="3" fill="#0b8a8f" stroke="#9aa6b4" stroke-width="0.5"/><text x="46" y="141" fill="#1b2533">Atitinka, patikrinta</text><text x="540" y="141" fill="#1b2533" text-anchor="end" font-weight="bold">118</text><rect x="20" y="158" width="16" height="16" rx="3" fill="#c21c2c" stroke="#9aa6b4" stroke-width="0.5"/><text x="46" y="171" fill="#1b2533">Neatitinka</text><text x="540" y="171" fill="#1b2533" text-anchor="end" font-weight="bold">45</text><rect x="20" y="188" width="16" height="16" rx="3" fill="#9aa6b4" stroke="#9aa6b4" stroke-width="0.5"/><text x="46" y="201" fill="#1b2533">Netaikoma</text><text x="540" y="201" fill="#1b2533" text-anchor="end" font-weight="bold">30</text><rect x="20" y="218" width="16" height="16" rx="3" fill="url(#hv1)" stroke="#9aa6b4" stroke-width="0.5"/><text x="46" y="231" fill="#1b2533">Neįvertinama (duomenų nėra)</text><text x="540" y="231" fill="#1b2533" text-anchor="end" font-weight="bold">133</text><rect x="20" y="248" width="16" height="16" rx="3" fill="url(#hv2)" stroke="#9aa6b4" stroke-width="0.5"/><text x="46" y="261" fill="#1b2533">Neįvertinta (prieiga uždrausta)</text><text x="540" y="261" fill="#1b2533" text-anchor="end" font-weight="bold">70</text></g></svg></div>
+</div></section>
+
+<section style="background:#f6f8fb"><div class="wrap">
+<div class="kicker">Stebėti</div>
+<h2 style="font-size:36px">Kelios sekundės tarp pakeitimo ir įspėjimo</h2>
+<div class="tl5"><div class="pt5"><span class="t">0 s</span><span class="d">Paskyra įtraukiama į domeno administratorių grupę</span></div><div class="pt5"><span class="t">·</span><span class="d">CITSO reads the change on the domain controller, read-only</span></div><div class="pt5"><span class="t">·</span><span class="d">Pakeitimas palyginamas su Tier 0 taisyklėmis</span></div><div class="pt5"><span class="t">5 s</span><span class="d">Kritinis įspėjimas su susijusiu objektu</span></div><div class="pt5"><span class="t">·</span><span class="d">Eksportas į jūsų SIEM; siunčiama pakartotinai, kol bus gauta</span></div></div>
+</div></section>
+
+<section><div class="wrap">
+<div class="kicker">Du būdai dirbti su mumis</div>
+<h2 style="font-size:36px">Konsultavimas ar nuolatinis diegimas</h2>
+<div class="deux-modes"><div class="panneau"><svg viewBox="0 0 520 380" width="100%" role="img" aria-labelledby="dx1" style="font-family:IBM Plex Sans,Arial,sans-serif">
+<title id="dx1">Konsultavimas: išorinis konsultantas atvyksta su CITSO savo kompiuteryje, perskaito jūsų Active Directory tik skaitymo režimu, perduoda ataskaitą ir išvyksta nieko nepalikęs.</title>
+<defs><marker id="dxa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#0b8a8f"/></marker></defs>
+<text x="260" y="34" fill="#14202e" font-size="22" font-weight="800" text-anchor="middle">1 · Išorinis konsultantas</text>
+<text x="260" y="58" fill="#5a6878" font-size="14" text-anchor="middle">atvyksta, išmatuoja, išvyksta</text>
+<g transform="translate(40,110)"><circle cx="50" cy="30" r="26" fill="#2c425e"/><path d="M0 130 C 0 76, 100 76, 100 130 Z" fill="#2c425e"/><rect x="22" y="100" width="76" height="46" rx="5" fill="#0f2236" stroke="#9aa6b4"/><rect x="12" y="146" width="96" height="7" rx="2" fill="#9aa6b4"/></g>
+<text x="98" y="290" fill="#14202e" font-size="13" font-weight="700" text-anchor="middle">CITSO jo kompiuteryje</text>
+<path d="M170 190 H 318" stroke="#0b8a8f" stroke-width="3" marker-end="url(#dxa)"/>
+<text x="244" y="178" fill="#0b8a8f" font-size="13" font-weight="700" text-anchor="middle">tik skaitymas</text>
+<rect x="236" y="214" width="16" height="20" rx="2" fill="#fff" stroke="#b8433f"/><path d="M240 220h8M240 225h8M240 230h5" stroke="#b8433f"/>
+<path d="M318 230 C 280 260, 230 262, 200 250" stroke="#b8433f" stroke-width="2" stroke-dasharray="5 4" fill="none" marker-end="url(#dxa)"/>
+<text x="262" y="276" fill="#b8433f" font-size="12" text-anchor="middle">ataskaita perduota</text>
+<rect x="330" y="156" width="150" height="66" rx="10" fill="#fff" stroke="#c9d1db" stroke-width="1.5"/><text x="344" y="182" fill="#14202e" font-size="14" font-weight="700">Jūsų AD</text><rect x="344" y="192" width="28" height="18" rx="3" fill="#eef1f5" stroke="#9aa6b4"/><text x="358" y="205" fill="#5a6878" font-size="9.5" text-anchor="middle">DC</text><rect x="378" y="192" width="28" height="18" rx="3" fill="#eef1f5" stroke="#9aa6b4"/><text x="392" y="205" fill="#5a6878" font-size="9.5" text-anchor="middle">DC</text><rect x="412" y="192" width="28" height="18" rx="3" fill="#eef1f5" stroke="#9aa6b4"/><text x="426" y="205" fill="#5a6878" font-size="9.5" text-anchor="middle">DC</text>
+<rect x="20" y="318" width="480" height="48" rx="10" fill="#eef1f5"/>
+<text x="260" y="340" fill="#14202e" font-size="13.5" font-weight="700" text-anchor="middle">Pas jus niekas neįdiegiama.</text>
+<text x="260" y="358" fill="#5a6878" font-size="12.5" text-anchor="middle">Auditas, ataskaita, taisymai, jei nuspręsite, tada išvalymas.</text>
+</svg></div><div class="panneau"><svg viewBox="0 0 520 380" width="100%" role="img" aria-labelledby="dx2" style="font-family:IBM Plex Sans,Arial,sans-serif">
+<title id="dx2">Nuolatinis diegimas: CITSO įrenginys įdiegiamas pas jus ir prijungiamas prie jūsų Active Directory aplinkų, kurias jis stebi ir moka atkurti ar atstatyti.</title>
+<defs><marker id="dxb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#0b8a8f"/></marker></defs>
+<text x="260" y="34" fill="#14202e" font-size="22" font-weight="800" text-anchor="middle">2 · Įrenginys pas jus</text>
+<text x="260" y="58" fill="#5a6878" font-size="14" text-anchor="middle">jis lieka, stebi ir moka viską atstatyti</text>
+<rect x="10" y="76" width="500" height="228" rx="14" fill="#f6f8fb" stroke="#d9dde3" stroke-dasharray="5 5"/>
+<text x="24" y="96" fill="#5a6878" font-size="11" letter-spacing="1.5">JŪSŲ INFORMACINĖ SISTEMA</text>
+<rect x="40" y="152" width="150" height="86" rx="10" fill="#121418" stroke="#b8433f" stroke-width="2"/>
+<image href="../assets/logo-citadelle-clair-256.png" x="56" y="168" width="34" height="32"/>
+<text x="98" y="190" fill="#fff" font-size="15" font-weight="800">CITSO</text>
+<text x="56" y="218" fill="#c9d0d8" font-size="11.5">skirtas įrenginys</text>
+<circle cx="176" cy="166" r="3.5" fill="#3fb8bd"/><circle cx="176" cy="178" r="3.5" fill="#3fb8bd"/>
+<text x="115" y="262" fill="#5a6878" font-size="11.5" text-anchor="middle">jokios įeinančios prieigos</text>
+<text x="115" y="278" fill="#5a6878" font-size="11.5" text-anchor="middle">administratoriai: stiprus autentifikavimas</text>
+<rect x="340" y="100" width="150" height="66" rx="10" fill="#fff" stroke="#c9d1db" stroke-width="1.5"/><text x="354" y="126" fill="#14202e" font-size="14" font-weight="700">Gamyba</text><rect x="354" y="136" width="28" height="18" rx="3" fill="#eef1f5" stroke="#9aa6b4"/><text x="368" y="149" fill="#5a6878" font-size="9.5" text-anchor="middle">DC</text><rect x="388" y="136" width="28" height="18" rx="3" fill="#eef1f5" stroke="#9aa6b4"/><text x="402" y="149" fill="#5a6878" font-size="9.5" text-anchor="middle">DC</text><rect x="422" y="136" width="28" height="18" rx="3" fill="#eef1f5" stroke="#9aa6b4"/><text x="436" y="149" fill="#5a6878" font-size="9.5" text-anchor="middle">DC</text>
+<rect x="340" y="178" width="150" height="66" rx="10" fill="#fff" stroke="#c9d1db" stroke-width="1.5"/><text x="354" y="204" fill="#14202e" font-size="14" font-weight="700">Dukterinė įmonė</text><rect x="354" y="214" width="28" height="18" rx="3" fill="#eef1f5" stroke="#9aa6b4"/><text x="368" y="227" fill="#5a6878" font-size="9.5" text-anchor="middle">DC</text><rect x="388" y="214" width="28" height="18" rx="3" fill="#eef1f5" stroke="#9aa6b4"/><text x="402" y="227" fill="#5a6878" font-size="9.5" text-anchor="middle">DC</text><rect x="422" y="214" width="28" height="18" rx="3" fill="#eef1f5" stroke="#9aa6b4"/><text x="436" y="227" fill="#5a6878" font-size="9.5" text-anchor="middle">DC</text>
+<rect x="340" y="256" width="150" height="40" rx="10" fill="#fff" stroke="#c9d1db" stroke-width="1.5"/><text x="354" y="281" fill="#14202e" font-size="13" font-weight="700">SIEM</text>
+<path d="M192 195 C 260 195, 270 133, 336 133" stroke="#0b8a8f" stroke-width="2.5" fill="none" marker-end="url(#dxb)"/><path d="M192 195 C 260 195, 270 211, 336 211" stroke="#0b8a8f" stroke-width="2.5" fill="none" marker-end="url(#dxb)"/><path d="M192 195 C 260 195, 270 276, 336 276" stroke="#0b8a8f" stroke-width="2.5" fill="none" marker-end="url(#dxb)"/>
+<text x="262" y="186" fill="#0b8a8f" font-size="12" font-weight="700" text-anchor="middle">prijungta</text>
+<rect x="20" y="318" width="480" height="48" rx="10" fill="#fbecec"/>
+<text x="260" y="340" fill="#14202e" font-size="13.5" font-weight="700" text-anchor="middle">Jis stebi, atšaukia, izoliuoja ir atstato.</text>
+<text x="260" y="358" fill="#5a6878" font-size="12.5" text-anchor="middle">Atkūrimas į pasirinktą laiko momentą, automatizuotas atstatymas.</text>
+</svg></div></div>
+<div class="modes"><div class="mode"><h3>Konsultavimas</h3><p style="margin-bottom:12px">Būklei įvertinti, o paskui taisyti.</p><ul><li>Konsultantas atvyksta su CITSO savo kompiuteryje užduoties laikotarpiui</li><li>Tik skaitymo auditas, atakų keliai, ANSSI branda, taisymų planas</li><li>Taisymai, jei nuspręsite, su atšaukimo galimybe</li><li>Pabaigoje duomenys išvalomi iš konsultanto kompiuterio</li></ul></div>
+<div class="mode alt"><h3>CITSO nuolat jūsų aplinkoje</h3><p style="margin-bottom:12px">Ilgalaikei apsaugai.</p><ul><li>Skirta platforma pas jus: citadelė</li><li>Tier 0 stebėsena ir įspėjimai į jūsų SIEM</li><li>Prižiūrimi taisymai, įtartinų pakeitimų atšaukimas</li><li>Neatidėliotinas izoliavimas krizės atveju, atkūrimas ir atstatymas</li></ul></div></div>
+<p style="margin-top:34px;font-size:19px"><a href="offres.html">Peržiūrėti pasiūlymus</a> · <a href="confiance.html">Mūsų principai</a></p>
+</div></section>
+
+<section class="cta" id="contact"><div class="wrap">
+<h2>Gal peržiūrėkime jūsų katalogą kartu?</h2>
+<p>CITSO yra privačios beta versijos etape. Ieškome kelių bandomųjų organizacijų: demonstracija bandomojoje aplinkoje, po to pirmoji tik skaitymo kampanija jūsų kataloge.</p>
+<a class="btn" href="contact.html">Prisijungti prie bandomosios programos</a>
+</div></section>
+
+<footer><div class="wrap"><span>© 2026 CITSO · AD saugumas, paremtas įrodymais · prancūziškas sprendimas, neprisijungus</span><span><a href="mentions-legales.html">Teisinė informacija</a><a href="confidentialite.html">Privatumas</a><a href="mailto:contact@citso.eu">contact@citso.eu</a></span></div></footer>
+</body></html>
