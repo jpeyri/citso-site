@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en"><head><link rel="icon" href="../assets/favicon.png"><link rel="alternate" hreflang="fr" href="https://citso.eu/architecture.html"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>The solution in detail — CITSO</title><meta name="description" content="CITSO architecture: Red Forest, specifications, deployment, sizing and prerequisites."><link rel="stylesheet" href="../assets/style.css?v=11120112"></head><body class="p-architecture">
+<div class="annonce"><div class="wrap"><span>Private beta</span>Pilot programme open to a few organisations · <a href="contact.html">join the pilot</a></div></div><header><div class="wrap"><a href="index.html" class="logo"><img src="../assets/logo-citadelle-clair.png" alt="" width="30" height="28">CIT<span>SO</span></a><nav><a href="index.html">Home</a><a href="solution.html">The solution</a><a href="confiance.html">Our principles</a><a href="offres.html">Services</a><a href="a-venir.html">Coming next</a><a href="a-propos.html">About</a><a href="contact.html">Contact</a></nav><div class="outils"><a class="btn btn-nav" href="contact.html">Pilot programme</a><details class="lang"><summary>EN <span aria-hidden="true">▾</span></summary><ul><li><a href="/architecture.html" lang="fr">Français</a></li><li><a href="/en/architecture.html" lang="en" aria-current="true">English</a></li><li><a href="/es/index.html" lang="es">Español</a></li><li><a href="/de/index.html" lang="de">Deutsch</a></li><li><a href="/pl/index.html" lang="pl">Polski</a></li><li><a href="/sl/index.html" lang="sl">Slovenščina</a></li><li><a href="/ru/index.html" lang="ru">Русский</a></li><li><a href="/ar/index.html" lang="ar">العربية</a></li><li><a href="/sv/index.html" lang="sv">Svenska</a></li><li><a href="/no/index.html" lang="nb">Norsk</a></li><li><a href="/fi/index.html" lang="fi">Suomi</a></li><li><a href="/et/index.html" lang="et">Eesti</a></li><li><a href="/lt/index.html" lang="lt">Lietuvių</a></li><li><a href="/tr/index.html" lang="tr">Türkçe</a></li><li><a href="/el/index.html" lang="el">Ελληνικά</a></li></ul></details></div></div></header><div class="ue"><div class="wrap"><svg class="fr" width="14" height="10" viewBox="0 0 3 2" aria-hidden="true"><rect width="1" height="2" fill="#002395"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ed2939"/></svg><svg class="eu" width="16" height="16" viewBox="-12 -12 24 24" aria-hidden="true"><path transform="translate(-0.00 -9.00) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(4.50 -7.79) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(7.79 -4.50) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(9.00 -0.00) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(7.79 4.50) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(4.50 7.79) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(-0.00 9.00) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(-4.50 7.79) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(-7.79 4.50) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(-9.00 -0.00) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(-7.79 -4.50) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/><path transform="translate(-4.50 -7.79) scale(0.32)" d="M0-5L1.18-1.62L4.76-1.55L1.9 0.62L2.94 4.05L0 2L-2.94 4.05L-1.9 0.62L-4.76-1.55L-1.18-1.62Z" fill="#e0b84a"/></svg><span>Designed in France · Born and raised in the European Union</span></div></div>
+
+<section class="page-hero"><div class="wrap"><div class="kicker">The solution in detail</div><h1>Architecture and specifications</h1><p>For technical teams: how CITSO is built, what the Red Forest does, and what you need to install it.</p></div></section>
+<section><div class="wrap">
+<div class="tete"><div class="ico"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 21V8h3V5h2v3h4V5h2v3h3v13z"/><path d="M10 21v-5h4v5"/></svg></div><div class="kicker">What we do</div><h2>Two promises,<br><em>kept end to end.</em></h2><p class="lead">Everything in CITSO serves two goals: make the directory hard to take, and be able to recover it intact if someone manages to anyway.</p></div>
+<div class="piliers">
+<div class="pilier"><div class="pk">1 · Secure</div><h3>A hardened directory, without breaking production</h3><ul>
+<li><b>Risk analysis before any fix</b> : CITSO finds what still depends on weak settings, then proposes an action plan in the right order.</li>
+<li><b>Fixes with rollback</b>, applied in waves, only with your approval, and verified by checks before and after.</li>
+<li><b>Tier 0 kept safe</b> in the Red Forest, an isolated administration forest; your administrators access it with strong authentication.</li>
+<li><b>Monitoring of sensitive changes</b> : privileged groups, delegations, GPOs, PKI. A suspicious change can be reverted immediately.</li>
+</ul></div>
+<div class="pilier recup"><div class="pk">2 · Recover</div><h3>Roll back, or rebuild everything</h3><ul>
+<li><b>Immediate cut-off</b> at the first sign of compromise: the suspect forest is isolated and frozen intact; nothing is erased.</li>
+<li><b>Point-in-time restore</b> from the replica DCs (at least one per domain) and the sealed backup vault.</li>
+<li><b>Automated rebuild</b> of the forest from the citadel if production is lost, with two signatures and CISO approval.</li>
+<li><b>Safe Harbour</b> : a shelter prepared in advance, with isolation plans rehearsed regularly.</li>
+</ul></div>
+</div>
+<div class="frise3"><div><b>Before the attack</b>harden, isolate Tier 0, back up, replicate</div><div><b>During</b>detect in seconds, invalidate, cut off</div><div><b>After</b>restore to a point in time, or rebuild</div></div>
+</div></section>
+<section class="dark"><div class="wrap">
+<div class="tete"><div class="ico"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17v.5"/></svg></div><div class="kicker">The problem</div><h2>Active Directory is the key to everything,<br><em>and ransomware's first target.</em></h2><p class="lead">Whoever takes it takes everything. CISOs know their directory is fragile, yet it rarely gets fixed. For three reasons:</p></div>
+<div class="grid3">
+<div class="etape" style="background:#1c1f24;color:#d5dae1;border-color:#2e333b"><span class="num">1</span><b style="color:#fff">Years of accumulated settings</b>Forgotten rights, inherited delegations, over-powerful service accounts: the debt has built up, and no one has the full picture any more.</div>
+<div class="etape" style="background:#1c1f24;color:#d5dae1;border-color:#2e333b"><span class="num">2</span><b style="color:#fff">Fear of breaking production</b>Hardening the directory can break an application, a service, an authentication flow. Without visibility on the impact, people prefer not to touch it.</div>
+<div class="etape" style="background:#1c1f24;color:#d5dae1;border-color:#2e333b"><span class="num">3</span><b style="color:#fff">Tools that list without fixing</b>Audits produce lists of weaknesses. They don't say how to fix them safely, or how to roll back if something breaks.</div>
+</div>
+</div></section>
+<section><div class="wrap">
+<div class="tete"><div class="ico"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h10M4 12h16M4 17h7"/><circle cx="17" cy="7" r="2"/><circle cx="14" cy="17" r="2"/></svg></div><div class="kicker">What CITSO does</div><h2>How CITSO fixes,<br><em>in four steps.</em></h2></div>
+<div class="grid2" style="margin-top:34px">
+<div class="etape"><span class="num">1</span><b>Audit and monitor, read-only</b>Checks are based on the ANSSI, CIS and MITRE ATT&amp;CK frameworks. Nothing is written to the directory during the audit or during monitoring.</div>
+<div class="etape"><span class="num">2</span><b>Show the attack paths</b>CITSO maps the paths that lead to administrator accounts and gives a fix order: what to cut first.</div>
+<div class="etape"><span class="num">3</span><b>Fix with your approval</b>Fixes run under lock, only when you approve them, and each one has its rollback ready. Actions that cannot be undone are blocked by default.</div>
+<div class="etape"><span class="num">4</span><b>Prove every verdict</b>Every finding comes with its evidence. Anything that could not be checked stays "not assessed": CITSO never shows "compliant" by default.</div>
+</div>
+</div></section>
+<section class="dark"><div class="wrap split">
+<div>
+<div class="kicker">How attacks get through</div>
+<h2 style="font-size:36px;margin-bottom:18px">Rarely through a spectacular flaw</h2>
+<p class="lead">Most often, it is a chain of details: a forgotten reset permission, an over-delegated service account, an administrator session left open on a server. Taken one at a time, nothing alarming. Put together, they lead to the domain administrators.</p>
+</div>
+<div class="panneau"><svg viewBox="0 0 560 300" role="img" aria-label="Attack path: a help desk account, a password reset permission, a service account with delegation, an administrator session, then the domain administrators">
+<defs><marker id="fa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#b8433f"/></marker></defs>
+<rect x="0" y="0" width="560" height="300" rx="14" fill="#16283f"/>
+<g font-family="IBM Plex Sans,Arial,sans-serif" font-size="12.5">
+<rect x="20" y="40" width="150" height="62" rx="9" fill="#2c425e"/><text x="34" y="66" fill="#fff" font-weight="bold">Help desk account</text><text x="34" y="84" fill="#c9d3de">standard user</text>
+<path d="M172 71 L 208 71" stroke="#b8433f" stroke-width="2.5" marker-end="url(#fa)"/>
+<rect x="210" y="40" width="150" height="62" rx="9" fill="#d9a21b"/><text x="224" y="66" fill="#1b2533" font-weight="bold">Forgotten permission</text><text x="224" y="84" fill="#1b2533">password</text><text x="224" y="98" fill="#1b2533">reset</text>
+<path d="M362 71 L 398 71" stroke="#b8433f" stroke-width="2.5" marker-end="url(#fa)"/>
+<rect x="400" y="40" width="140" height="62" rx="9" fill="#b8433f"/><text x="414" y="66" fill="#fff" font-weight="bold">Service account</text><text x="414" y="84" fill="#fff">unconstrained</text><text x="414" y="98" fill="#fff">delegation</text>
+<path d="M470 104 C 470 150, 470 150, 470 176" stroke="#b8433f" stroke-width="2.5" fill="none" marker-end="url(#fa)"/>
+<rect x="390" y="180" width="150" height="62" rx="9" fill="#b8433f"/><text x="404" y="206" fill="#fff" font-weight="bold">Server</text><text x="404" y="224" fill="#fff">open session</text><text x="404" y="238" fill="#fff">of an administrator</text>
+<path d="M388 211 L 352 211" stroke="#b8433f" stroke-width="2.5" marker-end="url(#fa)"/>
+<rect x="190" y="180" width="160" height="62" rx="9" fill="#c21c2c"/><text x="204" y="206" fill="#fff" font-weight="bold">Domain</text><text x="204" y="224" fill="#ffe3e6">Admins: Tier 0</text>
+<path d="M322 202 L 322 190 L 328 196 L 334 186 L 340 196 L 346 190 L 346 202 Z" fill="#ffcc00"/>
+<text x="20" y="196" fill="#c9d3de" font-size="13">4 harmless details,</text><text x="20" y="214" fill="#c9d3de" font-size="13">1 path to Tier 0.</text>
+<text x="20" y="272" fill="#b8433f" font-size="13" font-weight="bold">CITSO identifies this path and shows where to cut it.</text>
+</g></svg></div>
+</div></section>
+<section style="background:#f6f8fb"><div class="wrap">
+<div class="kicker">Monitor</div>
+<h2 style="font-size:36px">A few seconds between the change and the alert</h2>
+<div class="tl5"><div class="pt5"><span class="t">0 s</span><span class="d">An account is added to Domain Admins</span></div><div class="pt5"><span class="t">·</span><span class="d">CITSO reads the change on the domain controller, read-only</span></div><div class="pt5"><span class="t">·</span><span class="d">The change is matched against the Tier 0 rules</span></div><div class="pt5"><span class="t">5 s</span><span class="d">Critical alert, with the object concerned</span></div><div class="pt5"><span class="t">·</span><span class="d">Exported to your SIEM; resent until it is received</span></div></div>
+</div></section>
+
+<section><div class="wrap">
+<div class="grid3">
+<div class="etape"><span class="num">1</span><b>Audit</b>Nearly 400 checks based on the ANSSI, CIS and MITRE ATT&amp;CK frameworks. A full campaign takes a few minutes, read-only, and every verdict comes with its evidence.</div>
+<div class="etape"><span class="num">2</span><b>Understand</b>The directory map, from forest down to object, coloured by severity. Attack paths to Tier 0. Maturity according to the levels published by ANSSI.</div>
+<div class="etape"><span class="num">3</span><b>Monitor</b>Sensitive changes to Tier 0 (privileged groups, delegations, managed service accounts, policies linked to the domain controllers) trigger an alert within seconds.</div>
+<div class="etape"><span class="num">4</span><b>Remediate</b>A catalogue of remediations, each with its plan, its approval and its rollback. Outstanding work is tracked from one campaign to the next.</div>
+<div class="etape"><span class="num">5</span><b>Protect</b>The Red Forest isolates your administrative accounts. Boundaries between zones, sealed backups and remote domain controllers complete the fortress.</div>
+<div class="etape"><span class="num">6</span><b>Regain control</b>After a compromise, Safe Harbour lets you isolate, restore in a separate environment and rebuild, step by step, with a guided assistant.</div>
+</div>
+<h2 style="font-size:34px;margin-top:70px;margin-bottom:10px">Why the directory</h2>
+<p class="lead" style="margin-bottom:22px">An attacker gets in through the network, takes over identities, then reaches the data. The directory is the unavoidable middle step: that is where CITSO stops them.</p>
+<div class="panneau"><svg viewBox="0 0 1000 300" width="100%" role="img" aria-labelledby="et1" style="font-family:IBM Plex Sans,Arial,sans-serif">
+<title id="et1">An attack goes through three stages: the network, then systems and identities, then data. Without CITSO it reaches the data. With CITSO it is stopped at the identity stage.</title>
+<defs><marker id="ea" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#c21c2c"/></marker></defs>
+<g font-size="13" font-weight="bold" text-anchor="middle" fill="#14202e">
+<rect x="150" y="10" width="270" height="40" rx="8" fill="#eef1f5"/><text x="285" y="35">1 · NETWORK</text>
+<rect x="430" y="10" width="270" height="40" rx="8" fill="#f3dcb8"/><text x="565" y="35">2 · SYSTEMS AND IDENTITIES</text>
+<rect x="710" y="10" width="280" height="40" rx="8" fill="#f0c8cd"/><text x="850" y="35">3 · DATA</text>
+</g>
+<g font-size="12" text-anchor="middle" fill="#5a6878"><text x="285" y="72">a problem</text><text x="565" y="72">a critical situation</text><text x="850" y="72">a disaster</text></g>
+<text x="10" y="132" font-size="14" font-weight="bold" fill="#14202e">Without CITSO</text>
+<rect x="150" y="104" width="840" height="48" rx="8" fill="#fbe9eb"/>
+<path d="M160 128 H 930" stroke="#c21c2c" stroke-width="4" marker-end="url(#ea)"/>
+<g transform="translate(958,128)"><title>Data reached</title><path d="M0-16 L5-5 L16-6 L8 2 L13 14 L0 7 L-13 14 L-8 2 L-16-6 L-5-5Z" fill="#c21c2c"/></g>
+<text x="10" y="222" font-size="14" font-weight="bold" fill="#14202e">With CITSO</text>
+<rect x="150" y="194" width="840" height="48" rx="8" fill="#e6f6f7"/>
+<path d="M160 218 H 520" stroke="#c21c2c" stroke-width="4" marker-end="url(#ea)"/>
+<rect x="530" y="200" width="10" height="36" rx="2" fill="#0b8a8f"/>
+<text x="552" y="214" font-size="12.5" font-weight="bold" fill="#0b5f63">stopped here</text><text x="552" y="231" font-size="11.5" fill="#0b5f63">identities and directory protected</text>
+<text x="850" y="223" font-size="12.5" text-anchor="middle" fill="#0b5f63">data out of reach</text>
+<text x="150" y="282" font-size="12" fill="#5a6878">Almost every serious attack goes through the directory at stage 2. That is where CITSO focuses its defence.</text>
+</svg></div>
+<h2 style="font-size:34px;margin-top:70px;margin-bottom:10px">The Red Forest: what is it for?</h2>
+<p class="lead" style="margin-bottom:14px">In a typical Active Directory, the accounts that administer the domain controllers live in the middle of production: on the same workstations, in the same domains as the users. An attacker who gains a foothold in production sooner or later runs into them, and with them takes everything.</p>
+<p class="lead" style="margin-bottom:24px">The Red Forest takes these accounts out of production. It is a separate administration forest, never joined to your forests: your forests trust it through a one-way trust; the reverse does not exist. Administrators enter it with strong authentication and administer production from it, and only from it.</p>
+<div class="panneau"><svg viewBox="0 0 1000 430" width="100%" role="img" aria-labelledby="rf1" style="font-family:IBM Plex Sans,Arial,sans-serif">
+<title id="rf1">The Red Forest: the accounts that control production live in a separate administration forest. Production trusts them through a one-way trust; administrators enter with strong authentication and administer production from that forest. An attacker in production cannot climb back up to them.</title>
+<defs><marker id="rfa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#0b8a8f"/></marker>
+<marker id="rfx" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#b8433f"/></marker></defs>
+<rect x="20" y="40" width="340" height="300" rx="16" fill="#121418" stroke="#b8433f" stroke-width="2"/>
+<text x="40" y="74" fill="#ff8a85" font-size="13" font-weight="700" letter-spacing="1.5">RED FOREST</text>
+<text x="40" y="96" fill="#fff" font-size="17" font-weight="700">The administration forest</text>
+<text x="40" y="116" fill="#b9c2cc" font-size="12.5">never joined to production</text>
+<rect x="40" y="134" width="300" height="44" rx="8" fill="#1c1f24" stroke="#2e333b"/><text x="56" y="153" fill="#fff" font-size="13.5" font-weight="600">Tier 0 accounts</text><text x="56" y="169" fill="#9aa6b4" font-size="11.5">the ones that control your domain controllers</text><rect x="40" y="186" width="300" height="44" rx="8" fill="#1c1f24" stroke="#2e333b"/><text x="56" y="205" fill="#fff" font-size="13.5" font-weight="600">CITSO</text><text x="56" y="221" fill="#9aa6b4" font-size="11.5">orchestrator, monitoring, rollback</text><rect x="40" y="238" width="300" height="44" rx="8" fill="#1c1f24" stroke="#2e333b"/><text x="56" y="257" fill="#fff" font-size="13.5" font-weight="600">PKI and chained log</text><text x="56" y="273" fill="#9aa6b4" font-size="11.5">offline root, every action traced</text>
+<text x="40" y="314" fill="#e0b84a" font-size="12.5" font-weight="600">entry: strong authentication, two people</text>
+<text x="40" y="330" fill="#e0b84a" font-size="12.5" font-weight="600">for anything irreversible</text>
+<rect x="650" y="40" width="330" height="300" rx="16" fill="#fff" stroke="#c9d1db" stroke-width="1.5"/>
+<text x="670" y="74" fill="#5a6878" font-size="13" font-weight="700" letter-spacing="1.5">PRODUCTION</text>
+<text x="670" y="96" fill="#14202e" font-size="17" font-weight="700">Your Active Directory forests</text>
+<text x="670" y="116" fill="#5a6878" font-size="12.5">users, workstations, servers, applications</text>
+<rect x="670" y="140" width="84" height="40" rx="6" fill="#eef1f5" stroke="#9aa6b4"/><text x="712" y="165" fill="#14202e" font-size="12" text-anchor="middle">DC</text><rect x="770" y="140" width="84" height="40" rx="6" fill="#eef1f5" stroke="#9aa6b4"/><text x="812" y="165" fill="#14202e" font-size="12" text-anchor="middle">DC</text><rect x="870" y="140" width="84" height="40" rx="6" fill="#eef1f5" stroke="#9aa6b4"/><text x="912" y="165" fill="#14202e" font-size="12" text-anchor="middle">DC</text>
+<text x="670" y="210" fill="#14202e" font-size="12.5">no account able to take control</text>
+<text x="670" y="228" fill="#14202e" font-size="12.5">of the domain controllers lives here</text>
+<path d="M646 120 C 560 96, 450 96, 364 120" stroke="#0b8a8f" stroke-width="3" fill="none" marker-end="url(#rfa)"/>
+<text x="505" y="84" fill="#0b8a8f" font-size="12.5" font-weight="700" text-anchor="middle">one-way trust</text>
+<text x="505" y="100" fill="#5a6878" font-size="11.5" text-anchor="middle">production trusts the Red Forest</text>
+<path d="M364 210 C 450 230, 560 230, 646 210" stroke="#0b8a8f" stroke-width="3" fill="none" stroke-dasharray="6 5" marker-end="url(#rfa)"/>
+<text x="505" y="250" fill="#0b8a8f" font-size="12.5" font-weight="700" text-anchor="middle">administrators manage production</text>
+<text x="505" y="266" fill="#5a6878" font-size="11.5" text-anchor="middle">from the Red Forest, and only from there</text>
+<g transform="translate(860,250)"><circle cx="14" cy="10" r="9" fill="#b8433f"/><path d="M0 46 C 0 26, 28 26, 28 46 Z" fill="#b8433f"/></g>
+<text x="840" y="318" fill="#b8433f" font-size="11.5" font-weight="600">attacker in production</text>
+<path d="M850 290 C 700 330, 520 340, 384 300" stroke="#b8433f" stroke-width="2.5" fill="none" stroke-dasharray="3 5" marker-end="url(#rfx)"/>
+<path d="M372 291 l16 16 M388 291 l-16 16" stroke="#b8433f" stroke-width="3"/>
+<text x="560" y="350" fill="#b8433f" font-size="12" font-weight="600" text-anchor="middle">cannot climb back: the reverse of the trust does not exist</text>
+<rect x="20" y="370" width="960" height="50" rx="10" fill="#eef1f5"/>
+<text x="40" y="392" fill="#14202e" font-size="13" font-weight="700">CITSO uses these privileged accounts precisely because they control production:</text>
+<text x="40" y="410" fill="#5a6878" font-size="12.5">that is what lets it see everything, revert a suspicious change, cut off a compromised forest and rebuild it.</text>
+</svg></div>
+<div class="encart" style="margin-top:26px"><b>Why CITSO uses these privileged accounts.</b> Because they are the ones that control production. With them CITSO sees everything, including object permissions, and can revert a suspicious change, cut off a compromised forest and rebuild it. Placing them in the Red Forest, behind strong authentication and two signatures for anything irreversible, is what makes this power acceptable.</div>
+<h2 style="font-size:34px;margin-top:64px;margin-bottom:10px">What CITSO actually brings</h2>
+<p class="lead" style="margin-bottom:26px">The technical building blocks of the on-premises platform.</p>
+<div class="grid3">
+<div class="etape"><b>Managed service accounts</b>CITSO runs with managed service accounts (gMSA, dMSA): passwords managed by the domain controllers, rotated automatically, never known to a human. One account per purpose: audit, backup, SIEM forwarding.</div>
+<div class="etape"><b>End-to-end encryption</b>LDAPS and AES Kerberos connections to your domain controllers, encrypted credential vault, encrypted backups sealed by hash, encrypted transfers between the platform and consulting laptops.</div>
+<div class="etape"><b>VPN connection</b>Forests at remote sites or subsidiaries connect to the platform over VPN when a direct trust is not possible. Traffic always starts from the platform; nothing comes in.</div>
+<div class="etape"><b>Dynamic control</b>Sensitive Tier 0 changes (privileged groups, delegations, DC GPOs, PKI, AdminSDHolder) are reported within seconds and can be invalidated on the spot.</div>
+<div class="etape"><b>Granular or full rollback</b>Granular: every fix or change can be undone object by object, attribute by attribute. Full: point-in-time forest restore from the replica DCs and the vault, or automated rebuild.</div>
+<div class="etape"><b>Centralised console</b>One console for all your managed forests, up to ten: status and maturity, map and attack paths, action plan, just-in-time elevation, PKI, chained log and two-signature ceremonies.</div>
+</div>
+<div class="feat"><div class="shot"><img src="../assets/carte-console.png" alt="Map of AD in the CITSO console (sample data)"></div><ul><li>Navigation from forest down to object</li><li>Layers: open findings, remediation progress, paths to Tier 0, unaudited zones</li><li>The most serious finding is two clicks away</li></ul></div>
+<div class="feat rev"><ul><li>A level is only validated if all its points have been verified</li><li>A single unverified point leaves the level “not demonstrated”</li><li>CITSO score out of 100 and trend from one campaign to the next</li></ul><div><div class="panneau"><svg viewBox="0 0 560 330" width="100%" role="img" aria-labelledby="mt1" style="font-family:IBM Plex Sans,Arial,sans-serif;max-width:560px">
+<title id="mt1">ANSSI maturity and CITSO score (sample data)</title>
+<defs><pattern id="mh" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#eef1f5"/><line x1="0" y1="0" x2="0" y2="8" stroke="#9aa6b4" stroke-width="2"/></pattern></defs>
+<rect x="0" y="0" width="560" height="330" rx="14" fill="#fff" stroke="#dde3ea"/>
+<text x="24" y="36" font-size="15" font-weight="bold" fill="#14202e">ANSSI maturity levels</text>
+<text x="24" y="56" font-size="12" fill="#5a6878">A level is only validated if all its points are verified and compliant</text>
+<g font-size="12">
+<g><title>Level 1: achieved, 6 of 6 points compliant</title><rect x="24" y="230" width="62" height="40" rx="4" fill="#0b8a8f"/><text x="55" y="290" text-anchor="middle" fill="#14202e" font-weight="bold">1</text><text x="55" y="222" text-anchor="middle" fill="#14202e">achieved</text></g>
+<g><title>Level 2: not achieved, 2 of 4 points compliant</title><rect x="92" y="190" width="62" height="80" rx="4" fill="#c21c2c"/><text x="123" y="290" text-anchor="middle" fill="#14202e" font-weight="bold">2</text><text x="123" y="182" text-anchor="middle" fill="#14202e">not achieved</text></g>
+<g><title>Level 3: not demonstrated, one point could not be verified</title><rect x="160" y="150" width="62" height="120" rx="4" fill="url(#mh)" stroke="#9aa6b4"/><text x="191" y="290" text-anchor="middle" fill="#14202e" font-weight="bold">3</text><text x="191" y="142" text-anchor="middle" fill="#14202e">not demonstrated</text></g>
+<g><title>Level 4: not yet evaluated</title><rect x="228" y="110" width="62" height="160" rx="4" fill="#eef1f5" stroke="#c9d1db" stroke-dasharray="4 4"/><text x="259" y="290" text-anchor="middle" fill="#5a6878" font-weight="bold">4</text></g>
+<g><title>Level 5: not yet evaluated</title><rect x="296" y="70" width="62" height="200" rx="4" fill="#eef1f5" stroke="#c9d1db" stroke-dasharray="4 4"/><text x="327" y="290" text-anchor="middle" fill="#5a6878" font-weight="bold">5</text></g>
+</g>
+<line x1="20" y1="270" x2="362" y2="270" stroke="#9aa6b4"/>
+<g transform="translate(462,170)"><title>CITSO score: 72 out of 100, +6 since the previous campaign</title>
+<circle r="62" fill="none" stroke="#eef1f5" stroke-width="14"/>
+<circle r="62" fill="none" stroke="#0b8a8f" stroke-width="14" stroke-linecap="round" stroke-dasharray="280.5 389.6" transform="rotate(-90)"/>
+<text y="10" text-anchor="middle" font-size="34" font-weight="bold" fill="#14202e">72</text><text y="30" text-anchor="middle" font-size="12" fill="#5a6878">out of 100</text>
+<text y="-82" text-anchor="middle" font-size="13" font-weight="bold" fill="#14202e">CITSO score</text>
+<text y="94" text-anchor="middle" font-size="12" fill="#14202e">+6 since the last campaign</text></g>
+<text x="24" y="316" font-size="11" fill="#5a6878">Sample data</text>
+</svg></div></div></div>
+<h2 style="font-size:34px;margin-top:70px;margin-bottom:6px">Two ways to deploy</h2>
+<h3 style="font-size:24px;margin-top:28px;margin-bottom:6px">With a consultant</h3>
+<p class="lead" style="margin-bottom:18px">The consultant is only there to analyse, produce the reports and, if you decide so, apply fixes. Nothing permanent is installed on your side: they come with CITSO on their laptop and leave nothing behind.</p>
+<div class="panneau"><svg viewBox="0 0 1000 380" width="100%" role="img" aria-labelledby="mc2" style="font-family:IBM Plex Sans,Arial,sans-serif">
+<title id="mc2">The consultant brings CITSO on their laptop. They analyse the directory read-only, produce the reports, then, if you decide so, apply approved fixes with their rollback. They leave nothing behind.</title>
+<defs><marker id="c2a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#0b8a8f"/></marker>
+<marker id="c2b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#b8433f"/></marker></defs>
+<g transform="translate(40,70)"><circle cx="40" cy="26" r="22" fill="#2c425e"/><path d="M0 110 C 0 64, 80 64, 80 110 Z" fill="#2c425e"/>
+<rect x="18" y="86" width="64" height="40" rx="4" fill="#0f2236" stroke="#9aa6b4"/><rect x="10" y="126" width="80" height="6" rx="2" fill="#9aa6b4"/></g>
+<text x="20" y="232" font-size="15" font-weight="bold" fill="#14202e">The consultant</text>
+<text x="20" y="252" font-size="12" fill="#5a6878">CITSO on their laptop, never joined</text>
+<text x="20" y="268" font-size="12" fill="#5a6878">to your domain, one client at a time</text>
+<rect x="250" y="40" width="210" height="64" rx="10" fill="#0f2236"/><text x="268" y="66" fill="#fff" font-size="14" font-weight="bold">1 · Analyse</text><text x="268" y="86" fill="#c9d3de" font-size="11.5">read-only, ~400 checks</text>
+<rect x="250" y="122" width="210" height="64" rx="10" fill="#2c425e"/><text x="268" y="148" fill="#fff" font-size="14" font-weight="bold">2 · Report</text><text x="268" y="168" fill="#c9d3de" font-size="11.5">interactive, Word, PDF, debrief</text>
+<rect x="250" y="204" width="210" height="64" rx="10" fill="#fff" stroke="#b8433f" stroke-width="2" stroke-dasharray="6 4"/><text x="268" y="230" fill="#8a3030" font-size="14" font-weight="bold">3 · Fix, if you want</text><text x="268" y="250" fill="#5a6878" font-size="11.5">approved, with rollback</text>
+<path d="M140 120 C 190 120, 200 72, 246 72" stroke="#9aa6b4" stroke-width="2" fill="none"/>
+<path d="M462 72 H 640" stroke="#0b8a8f" stroke-width="3" marker-end="url(#c2a)"/><text x="470" y="62" fill="#0b5f63" font-size="11.5" font-weight="bold">reads the directory</text>
+<path d="M462 154 H 560" stroke="#9aa6b4" stroke-width="2" stroke-dasharray="4 4"/><text x="470" y="146" fill="#5a6878" font-size="11.5">reports handed over on site</text>
+<path d="M462 236 H 640" stroke="#b8433f" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#c2b)"/><text x="470" y="228" fill="#8a3030" font-size="11.5" font-weight="bold">fixes, wave by wave</text>
+<rect x="650" y="30" width="330" height="250" rx="14" fill="#f6f8fb" stroke="#c9d1db"/>
+<text x="670" y="60" font-size="15" font-weight="bold" fill="#14202e">Your Active Directory</text>
+<g font-size="11.5"><rect x="670" y="76" width="90" height="36" rx="6" fill="#fff" stroke="#9aa6b4"/><text x="715" y="99" text-anchor="middle" fill="#14202e">DC</text>
+<rect x="770" y="76" width="90" height="36" rx="6" fill="#fff" stroke="#9aa6b4"/><text x="815" y="99" text-anchor="middle" fill="#14202e">DC</text>
+<rect x="870" y="76" width="90" height="36" rx="6" fill="#fff" stroke="#9aa6b4"/><text x="915" y="99" text-anchor="middle" fill="#14202e">GPO</text></g>
+<text x="670" y="140" font-size="12" fill="#0b5f63" font-weight="bold">during analysis: nothing is written</text>
+<text x="670" y="158" font-size="11.5" fill="#5a6878">no agent installed, extended read rights</text>
+<text x="670" y="190" font-size="12" fill="#8a3030" font-weight="bold">during remediation: only</text>
+<text x="670" y="208" font-size="12" fill="#8a3030" font-weight="bold">what you have approved</text>
+<text x="670" y="226" font-size="11.5" fill="#5a6878">every action logged, rollback ready</text>
+<text x="670" y="260" font-size="11.5" fill="#5a6878">at the end: data purged, verified</text>
+<rect x="0" y="300" width="1000" height="60" rx="10" fill="#eef1f5"/>
+<text x="20" y="326" font-size="13" font-weight="bold" fill="#14202e">The consultant comes, measures and leaves.</text>
+<text x="20" y="345" font-size="12" fill="#5a6878">Nothing permanent is installed on your side: no platform, no privileged account left behind.</text>
+</svg></div>
+<h3 style="font-size:24px;margin-top:54px;margin-bottom:6px">In-house</h3>
+<p class="lead" style="margin-bottom:18px">You install the equivalent of a nuclear submarine in your IT: a platform on dedicated hardware, supplied by CITSO or by you, that is a black hole for the network. Nothing can reach it from production; your administrators access it only with strong authentication. It controls every high-level operation on your forests, and everything restarts from it in a crisis.</p>
+<div class="panneau"><svg viewBox="0 0 1000 680" width="100%" role="img" aria-labelledby="sm1" style="font-family:IBM Plex Sans,Arial,sans-serif">
+<title id="sm1">The on-premises installation: a nuclear submarine in your information system. On dedicated hardware, supplied by CITSO or by you, it is a black hole for the network: no inbound traffic from production. Administrators access it only with strong authentication, from a dedicated workstation. It controls every high-level operation on your Active Directory forests and restores them in a crisis.</title>
+<defs><radialGradient id="tn" cx="50%" cy="50%" r="60%"><stop offset="0" stop-color="#000"/><stop offset=".7" stop-color="#05070a"/><stop offset="1" stop-color="#1b2028"/></radialGradient><marker id="sa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#3fb8bd"/></marker><marker id="sx" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#c21c2c"/></marker><marker id="sg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#e0b84a"/></marker></defs>
+<rect x="0" y="0" width="1000" height="600" rx="18" fill="#dfe5ec"/>
+<text x="22" y="32" fill="#3d4754" font-size="13" font-weight="bold" letter-spacing="1">YOUR INFORMATION SYSTEM</text>
+<ellipse cx="380" cy="318" rx="350" ry="208" fill="url(#tn)"/>
+<text x="476" y="176" fill="#b9c2cc" font-size="12.5" font-weight="bold" letter-spacing="2">BLACK HOLE</text>
+<text x="476" y="193" fill="#9aa6b4" font-size="11">invisible from production,</text><text x="476" y="208" fill="#9aa6b4" font-size="11">no inbound traffic</text>
+<path d="M90 330 C 90 250, 160 220, 260 220 L 560 220 C 640 220, 690 270, 690 330 C 690 390, 640 440, 560 440 L 260 440 C 160 440, 90 410, 90 330 Z" fill="#1c232c" stroke="#e0b84a" stroke-width="2.5"/>
+<path d="M300 220 L 320 168 L 440 168 L 460 220 Z" fill="#1c232c" stroke="#e0b84a" stroke-width="2.5"/>
+<text x="380" y="192" fill="#e0b84a" font-size="13" font-weight="bold" text-anchor="middle">CITSO</text>
+<text x="380" y="208" fill="#b9c2cc" font-size="10.5" text-anchor="middle">command post</text>
+<path d="M690 330 l26 -26 v52 z" fill="#1c232c" stroke="#e0b84a" stroke-width="2"/>
+<rect x="150" y="236" width="170" height="44" rx="7" fill="#8a3030"/><text x="160" y="254" fill="#fff" font-size="12.5" font-weight="bold">CITSO orchestrator</text><text x="160" y="270" fill="#dfe6ee" font-size="10.5">campaigns, alerts, assistants</text>
+<rect x="330" y="236" width="170" height="44" rx="7" fill="#2c425e"/><text x="340" y="254" fill="#fff" font-size="12.5" font-weight="bold">PKI</text><text x="340" y="270" fill="#dfe6ee" font-size="10.5">offline root, issuing CA</text>
+<rect x="510" y="236" width="150" height="44" rx="7" fill="#3a0f17"/><text x="520" y="254" fill="#fff" font-size="12.5" font-weight="bold">Red Forest</text><text x="520" y="270" fill="#dfe6ee" font-size="10.5">Tier 0, chained log</text>
+<rect x="150" y="288" width="250" height="44" rx="7" fill="#0b5f63"/><text x="160" y="306" fill="#fff" font-size="12.5" font-weight="bold">Replica DCs</text><text x="160" y="322" fill="#d6eff0" font-size="10.5">at least one per managed domain</text>
+<rect x="410" y="288" width="250" height="44" rx="7" fill="#3d4754"/><text x="420" y="306" fill="#fff" font-size="12.5" font-weight="bold">Backup vault</text><text x="420" y="322" fill="#dfe6ee" font-size="10.5">sealed, encrypted, all forests</text>
+<rect x="150" y="340" width="170" height="44" rx="7" fill="#4a1520"/><text x="160" y="358" fill="#fff" font-size="12.5" font-weight="bold">Forensics</text><text x="160" y="374" fill="#f0c8cd" font-size="10.5">analysis on an isolated copy</text>
+<rect x="330" y="340" width="170" height="44" rx="7" fill="#5c3a0c"/><text x="340" y="358" fill="#fff" font-size="12.5" font-weight="bold">Monitoring</text><text x="340" y="374" fill="#f3dcb8" font-size="10.5">Tier 0 in a few seconds</text>
+<rect x="510" y="340" width="150" height="44" rx="7" fill="#1f3550"/><text x="520" y="358" fill="#fff" font-size="12.5" font-weight="bold">Safe Harbour</text><text x="520" y="374" fill="#dfe6ee" font-size="10.5">isolate, rebuild</text>
+<text x="390" y="408" fill="#e0b84a" font-size="11.5" font-weight="bold" text-anchor="middle">DEDICATED HARDWARE</text>
+<text x="390" y="424" fill="#b9c2cc" font-size="11" text-anchor="middle">appliance supplied by CITSO, or a server supplied by you and reserved for CITSO</text>
+<g transform="translate(150,536)"><circle cx="16" cy="12" r="10" fill="#14202e"/><path d="M0 50 C 0 26, 32 26, 32 50 Z" fill="#14202e"/></g>
+<g transform="translate(192,536)"><circle cx="16" cy="12" r="10" fill="#14202e"/><path d="M0 50 C 0 26, 32 26, 32 50 Z" fill="#14202e"/></g>
+<rect x="234" y="552" width="34" height="22" rx="3" fill="#e0b84a"/><rect x="240" y="558" width="10" height="8" rx="1" fill="#14202e"/>
+<path d="M200 532 C 200 500, 230 470, 250 446" stroke="#e0b84a" stroke-width="3" fill="none" marker-end="url(#sg)"/>
+<text x="282" y="552" fill="#14202e" font-size="12.5" font-weight="bold">Your administrators: strong authentication only</text>
+<text x="282" y="570" fill="#3d4754" font-size="11.5">smart card or FIDO2 key, from a dedicated admin workstation;</text>
+<text x="282" y="586" fill="#3d4754" font-size="11.5">two people for any irreversible action</text>
+<path d="M18 200 L 110 268" stroke="#c21c2c" stroke-width="3" marker-end="url(#sx)"/><path d="M106 262 l14 14 M120 262 l-14 14" stroke="#ff8a95" stroke-width="3"/>
+<text x="14" y="170" fill="#8a1a24" font-size="12" font-weight="bold">from production:</text><text x="14" y="186" fill="#8a1a24" font-size="12" font-weight="bold">refused</text>
+<text x="760" y="70" fill="#14202e" font-size="13.5" font-weight="bold">Your Active Directory forests</text>
+<text x="760" y="88" fill="#5a6878" font-size="11.5">up to 10, in production</text>
+<rect x="760" y="104" width="222" height="78" rx="10" fill="#fff" stroke="#9aa6b4"/>
+<text x="774" y="126" fill="#14202e" font-size="13" font-weight="bold">Headquarters</text>
+<rect x="774" y="138" width="34" height="22" rx="3" fill="#f3f5f8" stroke="#9aa6b4"/><text x="791" y="153" fill="#3d4754" font-size="10" text-anchor="middle">DC</text>
+<rect x="816" y="138" width="34" height="22" rx="3" fill="#f3f5f8" stroke="#9aa6b4"/><text x="833" y="153" fill="#3d4754" font-size="10" text-anchor="middle">DC</text>
+<rect x="858" y="138" width="34" height="22" rx="3" fill="#f3f5f8" stroke="#9aa6b4"/><text x="875" y="153" fill="#3d4754" font-size="10" text-anchor="middle">DC</text>
+<path d="M716 330 C 735 330, 740 143, 756 143" stroke="#3fb8bd" stroke-width="2.5" fill="none" marker-end="url(#sa)"/>
+<rect x="760" y="196" width="222" height="78" rx="10" fill="#fff" stroke="#9aa6b4"/>
+<text x="774" y="218" fill="#14202e" font-size="13" font-weight="bold">Subsidiaries</text>
+<rect x="774" y="230" width="34" height="22" rx="3" fill="#f3f5f8" stroke="#9aa6b4"/><text x="791" y="245" fill="#3d4754" font-size="10" text-anchor="middle">DC</text>
+<rect x="816" y="230" width="34" height="22" rx="3" fill="#f3f5f8" stroke="#9aa6b4"/><text x="833" y="245" fill="#3d4754" font-size="10" text-anchor="middle">DC</text>
+<path d="M716 330 C 735 330, 740 235, 756 235" stroke="#3fb8bd" stroke-width="2.5" fill="none" marker-end="url(#sa)"/>
+<rect x="760" y="288" width="222" height="78" rx="10" fill="#fff" stroke="#9aa6b4"/>
+<text x="774" y="310" fill="#14202e" font-size="13" font-weight="bold">Acquisition</text>
+<rect x="774" y="322" width="34" height="22" rx="3" fill="#f3f5f8" stroke="#9aa6b4"/><text x="791" y="337" fill="#3d4754" font-size="10" text-anchor="middle">DC</text>
+<rect x="816" y="322" width="34" height="22" rx="3" fill="#f3f5f8" stroke="#9aa6b4"/><text x="833" y="337" fill="#3d4754" font-size="10" text-anchor="middle">DC</text>
+<path d="M716 330 C 735 330, 740 327, 756 327" stroke="#3fb8bd" stroke-width="2.5" fill="none" marker-end="url(#sa)"/>
+<rect x="760" y="384" width="222" height="122" rx="10" fill="#0f2236"/>
+<text x="774" y="406" fill="#3fb8bd" font-size="12.5" font-weight="bold">It controls the</text>
+<text x="774" y="422" fill="#3fb8bd" font-size="12.5" font-weight="bold">high-level operations:</text>
+<text x="774" y="442" fill="#dfe6ee" font-size="11.5">privileged groups, delegations</text>
+<text x="774" y="458" fill="#dfe6ee" font-size="11.5">DC GPOs, PKI</text>
+<text x="774" y="474" fill="#dfe6ee" font-size="11.5">trusts, AdminSDHolder</text>
+<text x="774" y="490" fill="#dfe6ee" font-size="11.5">and can invalidate them at once</text>
+<text x="760" y="530" fill="#3d4754" font-size="11.5">outbound traffic only:</text><text x="760" y="562" fill="#3d4754" font-size="11.5">alerts to your SIEM</text>
+<text x="760" y="546" fill="#3d4754" font-size="11.5">LDAP, Kerberos, SMB, logs;</text>
+<rect x="0" y="610" width="1000" height="62" rx="12" fill="#121418"/>
+<text x="20" y="636" fill="#fff" font-size="13.5" font-weight="bold">A nuclear submarine in your IT: autonomous, silent, invisible, and always ready to strike back.</text>
+<text x="20" y="656" fill="#b9c2cc" font-size="12">In a crisis it cuts off the compromised forest, freezes it intact and rebuilds it from its replicas and its vault; release requires a signature.</text>
+</svg></div>
+<h3 style="font-size:24px;margin-top:54px;margin-bottom:6px">Sizing the platform</h3>
+<p class="lead" style="margin-bottom:18px">The platform always runs a CITSO orchestrator, a PKI and the Red Forest domain controllers. On top of that comes at least one replica DC per managed domain: its size therefore depends on the number of forests and domains (up to ten forests) and on the object volume of each.</p>
+<svg viewBox="0 0 1000 300" width="100%" role="img" aria-labelledby="cp1" style="font-family:IBM Plex Sans,Arial,sans-serif"><title id="cp1">Platform composition: always a CITSO orchestrator, a PKI and the Red Forest domain controllers; then at least one replica DC per managed domain. Example: two forests and five domains give at least five replica DCs.</title><rect x="0" y="0" width="1000" height="300" rx="16" fill="#0f1114"/><text x="22" y="34" fill="#e0b84a" font-size="12.5" font-weight="bold" letter-spacing="1">ALWAYS PRESENT</text><rect x="22" y="48" width="300" height="54" rx="9" fill="#8a3030"/><text x="36" y="71" fill="#fff" font-size="13.5" font-weight="bold">CITSO orchestrator</text><text x="36" y="89" fill="#e6ebf0" font-size="11.5">4 to 8 vCPU, 8 to 64 GB depending on volume</text><rect x="22" y="110" width="300" height="54" rx="9" fill="#2c425e"/><text x="36" y="133" fill="#fff" font-size="13.5" font-weight="bold">Red Forest PKI</text><text x="36" y="151" fill="#e6ebf0" font-size="11.5">offline root, issuing authority</text><rect x="22" y="172" width="300" height="54" rx="9" fill="#3a0f17"/><text x="36" y="195" fill="#fff" font-size="13.5" font-weight="bold">Red Forest DCs</text><text x="36" y="213" fill="#e6ebf0" font-size="11.5">1 or 2 dedicated controllers</text><text x="22" y="258" fill="#9aa6b4" font-size="11.5">+ sealed backup vault, sized</text><text x="22" y="275" fill="#9aa6b4" font-size="11.5">by directory size and retention</text><text x="350" y="160" fill="#e6ebf0" font-size="34" font-weight="bold">+</text><text x="390" y="34" fill="#3fb8bd" font-size="12.5" font-weight="bold" letter-spacing="1">PER MANAGED DOMAIN: AT LEAST ONE REPLICA DC</text><text x="390" y="56" fill="#b9c2cc" font-size="11.5">example: two forests, five domains</text><rect x="390" y="68" width="590" height="96" rx="10" fill="none" stroke="#3d4754" stroke-dasharray="4 4"/><text x="404" y="88" fill="#e6ebf0" font-size="12" font-weight="bold">Headquarters forest</text><rect x="404" y="100" width="70" height="44" rx="7" fill="#0b5f63"/><text x="439" y="119" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">Replica DC</text><text x="439" y="134" fill="#d6eff0" font-size="10" text-anchor="middle">root</text><rect x="482" y="100" width="70" height="44" rx="7" fill="#0b5f63"/><text x="517" y="119" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">Replica DC</text><text x="517" y="134" fill="#d6eff0" font-size="10" text-anchor="middle">paris</text><rect x="560" y="100" width="70" height="44" rx="7" fill="#0b5f63"/><text x="595" y="119" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">Replica DC</text><text x="595" y="134" fill="#d6eff0" font-size="10" text-anchor="middle">lyon</text><rect x="660" y="80" width="2" height="76" fill="#3d4754"/><text x="676" y="88" fill="#e6ebf0" font-size="12" font-weight="bold">A subsidiary&#39;s forest</text><rect x="676" y="100" width="70" height="44" rx="7" fill="#0b5f63"/><text x="711" y="119" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">Replica DC</text><text x="711" y="134" fill="#d6eff0" font-size="10" text-anchor="middle">root</text><rect x="754" y="100" width="70" height="44" rx="7" fill="#0b5f63"/><text x="789" y="119" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">Replica DC</text><text x="789" y="134" fill="#d6eff0" font-size="10" text-anchor="middle">plant</text><text x="390" y="196" fill="#e6ebf0" font-size="13" font-weight="bold">= at least 5 replica DCs on the platform</text><text x="390" y="218" fill="#b9c2cc" font-size="11.5">Each replica holds an up-to-date copy of its domain, safe on the platform:</text><text x="390" y="236" fill="#b9c2cc" font-size="11.5">this is the basis for point-in-time restore and rebuild.</text></svg>
+<p class="lead" style="margin:28px 0 14px">Indicative guidelines for the orchestrator and the Red Forest, by object volume:</p>
+<div class="panneau"><svg viewBox="0 0 900 200" width="100%" role="img" aria-labelledby="dm1" style="font-family:IBM Plex Sans,Arial,sans-serif;max-width:900px"><title id="dm1">Indicative platform sizing by object volume of the managed forests: S under 1,000 objects, 4 vCPU and 8 GB, 1 dedicated DC; M 1,000 to 10,000, 4 vCPU and 16 GB, 1 DC; L 10,000 to 100,000, 8 vCPU and 32 GB, 2 DCs; XL over 100,000, 8 vCPU and 64 GB, 2 DCs.</title><text x="230" y="14" font-size="11.5" fill="#5a6878">orchestrator</text><text x="700" y="14" font-size="11.5" fill="#5a6878">Red Forest DCs</text><text x="10" y="42" font-size="15" font-weight="bold" fill="#14202e">S</text><text x="50" y="42" font-size="12.5" fill="#5a6878">&lt; 1,000 objects</text><rect x="230" y="26" width="40" height="24" rx="4" fill="#2c425e"/><text x="280" y="43" font-size="12.5" font-weight="bold" fill="#14202e">4 vCPU · 8 GB</text><text x="700" y="42" font-size="12.5" fill="#14202e">1 dedicated DC</text><text x="10" y="84" font-size="15" font-weight="bold" fill="#14202e">M</text><text x="50" y="84" font-size="12.5" fill="#5a6878">1,000 – 10,000 objects</text><rect x="230" y="68" width="80" height="24" rx="4" fill="#2c425e"/><text x="320" y="85" font-size="12.5" font-weight="bold" fill="#14202e">4 vCPU · 16 GB</text><text x="700" y="84" font-size="12.5" fill="#14202e">1 dedicated DC</text><text x="10" y="126" font-size="15" font-weight="bold" fill="#14202e">L</text><text x="50" y="126" font-size="12.5" fill="#5a6878">10,000 – 100,000 objects</text><rect x="230" y="110" width="160" height="24" rx="4" fill="#2c425e"/><text x="400" y="127" font-size="12.5" font-weight="bold" fill="#14202e">8 vCPU · 32 GB</text><text x="700" y="126" font-size="12.5" fill="#14202e">2 dedicated DCs</text><text x="10" y="168" font-size="15" font-weight="bold" fill="#14202e">XL</text><text x="50" y="168" font-size="12.5" fill="#5a6878">&gt; 100,000 objects</text><rect x="230" y="152" width="320" height="24" rx="4" fill="#2c425e"/><text x="560" y="169" font-size="12.5" font-weight="bold" fill="#14202e">8 vCPU · 64 GB</text><text x="700" y="168" font-size="12.5" fill="#14202e">2 dedicated DCs</text></svg></div>
+<p class="note" style="margin-top:10px">Orchestrator on Windows Server 2025, 50 to 100 GB of disk excluding backups. Each replica DC is sized like a production domain controller of the same size. The vault depends on directory size and retention period. Final sizing is agreed with you.</p>
+<h2 style="font-size:28px;margin-top:60px">What you need</h2>
+<div class="prose"><ul><li>A Windows workstation or server with PowerShell 5.1. For a one-off audit, it does not need to be domain-joined.</li><li>An account with the extended read rights needed to see everything, including object permissions (ACLs) and event logs; CITSO uses it read-only and never writes.</li><li>Network access to the domain controllers: LDAP (389/636), Kerberos (88), and SMB (445) to read Group Policy.</li></ul></div>
+</div></section>
+<section><div class="wrap"><p class="note"><a href="solution.html">← Back to The solution</a></p></div></section>
+
+<footer><div class="wrap"><span>© 2026 CITSO · Active Directory security, backed by evidence · French solution, offline</span><span><a href="mentions-legales.html">Legal notice</a><a href="confidentialite.html">Privacy</a><a href="mailto:contact@citso.eu">contact@citso.eu</a></span></div></footer>
+</body></html>

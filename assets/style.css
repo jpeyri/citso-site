@@ -347,3 +347,15 @@ header{position:relative;z-index:100}.ue{position:relative;z-index:90}.lang ul{z
 
 .deux-modes{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:26px 0 30px}
 @media (max-width:900px){.deux-modes{grid-template-columns:1fr}}
+
+/* bande photo + liens détail (12/11) */
+.photo-bande{position:relative;padding:0;overflow:hidden;background:#000}
+.photo-bande img{display:block;width:100%;height:420px;object-fit:cover;opacity:.72}
+.photo-bande .wrap{position:absolute;left:0;right:0;bottom:34px}
+.photo-bande p{max-width:720px;color:#fff;font-size:22px;line-height:1.45;text-shadow:0 2px 12px rgba(0,0,0,.8);margin:0}
+.liens-detail{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+@media (max-width:1000px){.liens-detail{grid-template-columns:1fr 1fr}}
+.liens-detail a{display:block;padding:18px 20px;border:1px solid rgba(255,255,255,.14);border-radius:10px;text-decoration:none;color:inherit;font-size:15px;line-height:1.45}
+.liens-detail a b{display:block;font-size:17px;margin-bottom:6px;color:#d65c58}
+.liens-detail a:hover{border-color:#b8433f}
+@media (max-width:700px){.photo-bande img{height:300px}.photo-bande p{font-size:18px}}
