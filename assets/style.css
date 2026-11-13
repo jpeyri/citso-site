@@ -359,3 +359,48 @@ header{position:relative;z-index:100}.ue{position:relative;z-index:90}.lang ul{z
 .liens-detail a b{display:block;font-size:17px;margin-bottom:6px;color:#d65c58}
 .liens-detail a:hover{border-color:#b8433f}
 @media (max-width:700px){.photo-bande img{height:300px}.photo-bande p{font-size:18px}}
+
+/* ===== Accueil : simplicité + dynamisme (13/11/2026) — mots tournants, trust bar, chiffres, onglets, révélations ===== */
+html{scroll-behavior:smooth}
+
+/* Mots tournants du hero : les trois relèves s'empilent et se succèdent (fondu pur, sans translation : évite les fantômes de composition sur texte ombré) */
+.rotatif{display:inline-grid;text-align:left}
+.rotatif span{grid-area:1/1;opacity:0;animation:mot-tourne 12s linear infinite}
+.rotatif span:nth-child(1){animation-delay:0s}
+.rotatif span:nth-child(2){animation-delay:4s}
+.rotatif span:nth-child(3){animation-delay:8s}
+@keyframes mot-tourne{0%{opacity:0}4%,25%{opacity:1}29%,100%{opacity:0}}
+
+/* Trust bar sous les boutons du hero */
+.trust{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 26px;margin-top:32px;font-size:13.5px;letter-spacing:.05em;color:#8fa0b3}
+.trust span:before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--copper);margin-right:9px;vertical-align:1px}
+
+/* Bande de chiffres (réutilise .stats/.stat définis plus haut) */
+.bande-chiffres{padding:56px 0 10px}
+.bande-chiffres .stats{margin-top:0}
+.stat strong{display:block;font-size:15.5px;color:var(--ink);margin-top:2px}
+.stat small{display:block;font-size:13.5px;color:var(--muted);margin-top:6px;line-height:1.45}
+
+/* Onglets des quatre temps */
+.onglets{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px}
+.onglets button{font:inherit;font-weight:700;font-size:15.5px;padding:11px 20px;border-radius:999px;border:1.5px solid #d4dae2;background:#fff;color:var(--navy);cursor:pointer}
+.onglets button:hover{border-color:var(--copper)}
+.onglets button[aria-selected="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+.onglets button:focus-visible,[role="tabpanel"] .etape a:focus-visible{outline:3px solid var(--copper);outline-offset:2px}
+[role="tabpanel"] .etape{max-width:840px}
+[role="tabpanel"] ul{margin:12px 0 18px;padding-left:20px}
+[role="tabpanel"] li{margin-bottom:8px}
+[role="tabpanel"] .etape a{font-weight:700;text-decoration:none;color:var(--copper)}
+
+/* Révélations au scroll (uniquement si JS actif) */
+html.js .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+html.js .reveal.visible{opacity:1;transform:none}
+
+/* Mouvement réduit : tout reste lisible, rien ne bouge ni ne clignote */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rotatif{display:inline}
+  .rotatif span{animation:none;opacity:1;transform:none}
+  .rotatif span:not(:first-child){display:none}
+  html.js .reveal{opacity:1;transform:none;transition:none}
+}
