@@ -5,20 +5,6 @@
   'use strict';
   var reduit = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* --- Mots tournants du hero : rotation pilotée en JS, une seule phrase visible à la fois --- */
-  var phrases = Array.prototype.slice.call(document.querySelectorAll('.rotatif span'));
-  if (phrases.length) {
-    var indice = 0;
-    phrases[0].classList.add('actif');
-    if (phrases.length > 1 && !reduit) {
-      setInterval(function () {
-        phrases[indice].classList.remove('actif');
-        indice = (indice + 1) % phrases.length;
-        phrases[indice].classList.add('actif');
-      }, 4000);
-    }
-  }
-
   /* --- Onglets accessibles : voir / corriger / tenir / récupérer --- */
   var onglets = Array.prototype.slice.call(document.querySelectorAll('.onglets [role="tab"]'));
   function activer(onglet) {
