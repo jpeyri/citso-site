@@ -448,3 +448,19 @@ body{
  background-repeat:no-repeat,repeat,repeat,repeat,no-repeat;
 }
 @media (max-width:700px){body{background-attachment:scroll}}
+
+/* ===== v11130111 : fond citadelle-brume fixe plein ecran, priorite reprise ===== */
+body{
+ background-color:var(--fond)!important;
+ background-image:
+  linear-gradient(rgba(7,8,11,.86),rgba(7,8,11,.92)),
+  radial-gradient(1100px 520px at 50% -120px,rgba(184,67,63,.20),transparent 70%),
+  linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px),
+  url('citadelle-brume.jpg')!important;
+ background-size:auto,auto,64px 64px,64px 64px,cover!important;
+ background-position:0 0,0 0,0 0,0 0,center 28%!important;
+ background-attachment:scroll,scroll,scroll,scroll,fixed!important;
+ background-repeat:no-repeat,repeat,repeat,repeat,no-repeat!important;
+}
+@media (max-width:700px){body{background-attachment:scroll!important}}
