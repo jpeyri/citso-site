@@ -475,3 +475,15 @@ body{
 .carte-prix li{padding:13px 0;border-top:1px solid rgba(255,255,255,.07);line-height:1.5}
 .carte-prix li b{color:#fff}
 .carte-mise{border-color:rgba(224,138,79,.45);box-shadow:0 0 40px rgba(194,74,69,.12)}
+
+/* ===== Souveraineté / Cloud Act (v11130116) ===== */
+.souverainete{background:#0a1420;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);padding:88px 0}
+.souverainete .kicker{color:#e08a4f}
+.souverainete h2{color:#fff;font-size:36px;margin:0 0 10px}
+.souverainete .chapeau{color:#9fadc0;font-size:19px;max-width:760px;margin:0 0 40px}
+.grille-souv{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.souv{border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:22px 18px;background:rgba(255,255,255,.03)}
+.souv b{display:block;color:#fff;font-size:16.5px;margin-bottom:8px}
+.souv span{display:block;color:#9fadc0;font-size:14.5px;line-height:1.5}
+@media (max-width:1000px){.grille-souv{grid-template-columns:1fr 1fr}}
+@media (max-width:700px){.grille-souv{grid-template-columns:1fr}}
