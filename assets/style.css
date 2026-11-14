@@ -411,3 +411,15 @@ html.js .reveal.visible{opacity:1;transform:none}
 .frise li:last-child:after{display:none}
 @media (max-width:1000px){.frise{grid-template-columns:1fr 1fr}}
 @media (max-width:700px){.frise{grid-template-columns:1fr}.frise li:after{display:none}}
+
+/* ===== Forteresse (v11130109) ===== */
+.forteresse{background:#0c0e12;padding:88px 0}
+.forteresse .kicker{color:#e08a4f}
+.forteresse h2{color:#fff;font-size:36px;margin:0 0 10px}
+.forteresse .chapeau{color:#9fadc0;font-size:19px;max-width:700px;margin:0 0 38px}
+.flux{stroke-dasharray:7 11;animation:flux 2.4s linear infinite}
+@keyframes flux{to{stroke-dashoffset:-72}}
+.crises-note{margin-top:36px;color:#9fadc0;font-size:15.5px}
+.crises-note a{color:#e08a4f;text-decoration:none;border-bottom:1px solid rgba(224,138,79,.4)}
+.crises-note a:hover{border-bottom-color:#e08a4f}
+@media (prefers-reduced-motion:reduce){.flux{animation:none}}
