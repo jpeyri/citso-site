@@ -363,18 +363,6 @@ header{position:relative;z-index:100}.ue{position:relative;z-index:90}.lang ul{z
 /* ===== Accueil : simplicité + dynamisme (13/11/2026) — mots tournants, trust bar, chiffres, onglets, révélations ===== */
 html{scroll-behavior:smooth}
 
-/* Mots tournants du hero : empilement statique, visibilité pilotée en JS (bullet-proof tous moteurs).
-   Sans JS : seule la première phrase s'affiche. Mouvement réduit : pas de rotation. */
-.rotatif{display:inline-grid;text-align:left}
-.rotatif span{grid-area:1/1;transition:opacity .5s linear}
-.rotatif span:not(:first-child){display:none}
-html.js .rotatif span{display:block;opacity:0}
-html.js .rotatif span.actif{opacity:1}
-
-/* Console CITSO en vitrine dans le hero */
-.cadre-console{max-width:940px;margin:30px auto 0}
-.legende-console{max-width:760px;margin:16px auto 0;font-size:15.5px;color:#9aa8b6;text-align:center}
-
 /* Trust bar sous les boutons du hero */
 .trust{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 26px;margin-top:32px;font-size:13.5px;letter-spacing:.05em;color:#8fa0b3}
 .trust span:before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--copper);margin-right:9px;vertical-align:1px}
@@ -403,9 +391,5 @@ html.js .reveal.visible{opacity:1;transform:none}
 /* Mouvement réduit : tout reste lisible, rien ne bouge ni ne clignote */
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .rotatif span{transition:none}
-  html.js .rotatif{display:inline}
-  html.js .rotatif span{display:inline;opacity:1}
-  html.js .rotatif span:not(:first-child){display:none}
   html.js .reveal{opacity:1;transform:none;transition:none}
 }
