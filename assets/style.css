@@ -393,3 +393,21 @@ html.js .reveal.visible{opacity:1;transform:none}
   html{scroll-behavior:auto}
   html.js .reveal{opacity:1;transform:none;transition:none}
 }
+
+/* ===== Restructuration accueil (v11130108) ===== */
+.cadre-schema{margin:0 auto 38px;max-width:1000px}
+.bande-chiffres{padding:60px 0 20px}
+
+/* Frise d'attaque */
+.frise-attaque{background:var(--navy2);color:#e6ebf0;padding:88px 0}
+.frise-attaque .kicker{color:#e08a4f}
+.frise-attaque h2{color:#fff;font-size:36px;margin:0 0 10px}
+.frise-attaque .chapeau{color:#9fadc0;font-size:19px;max-width:660px;margin:0 0 42px}
+.frise{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.frise li{position:relative;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:22px 18px;background:rgba(255,255,255,.03)}
+.frise li b{display:block;color:#fff;font-size:16.5px;margin-bottom:8px}
+.frise li span{display:block;color:#9fadc0;font-size:14.5px;line-height:1.5}
+.frise li:after{content:"";position:absolute;top:50%;right:-15px;width:12px;height:2px;background:#c24a45}
+.frise li:last-child:after{display:none}
+@media (max-width:1000px){.frise{grid-template-columns:1fr 1fr}}
+@media (max-width:700px){.frise{grid-template-columns:1fr}.frise li:after{display:none}}
