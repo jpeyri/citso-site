@@ -423,3 +423,28 @@ html.js .reveal.visible{opacity:1;transform:none}
 .crises-note a{color:#e08a4f;text-decoration:none;border-bottom:1px solid rgba(224,138,79,.4)}
 .crises-note a:hover{border-bottom-color:#e08a4f}
 @media (prefers-reduced-motion:reduce){.flux{animation:none}}
+
+/* ===== v11130110 : couleurs des cartes + fond citadelle fixe plein écran ===== */
+/* Cartes du thème sombre : chiffres et libellés lisibles */
+.stat b,.stat strong{color:#fff!important}
+.stat small{color:#a9b4c2!important}
+.stat.hl b{color:var(--copper)!important}
+.stat{border-color:rgba(255,255,255,.16)!important}
+/* Bandes de rythme rendues au thème (le bloc octo les forçait transparentes) */
+.forteresse{background:#0c0e12!important}
+.frise-attaque{background:#101722!important}
+/* Fond : citadelle dans la brume, plein écran, FIXE, voile sombre + halo + grille par-dessus */
+body{
+ background-color:var(--fond);
+ background-image:
+  linear-gradient(rgba(7,8,11,.87),rgba(7,8,11,.93)),
+  radial-gradient(1100px 520px at 50% -120px,rgba(184,67,63,.20),transparent 70%),
+  linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px),
+  url('citadelle-brume.jpg');
+ background-size:auto,auto,64px 64px,64px 64px,cover;
+ background-position:0 0,0 0,0 0,0 0,center 28%;
+ background-attachment:scroll,scroll,scroll,scroll,fixed;
+ background-repeat:no-repeat,repeat,repeat,repeat,no-repeat;
+}
+@media (max-width:700px){body{background-attachment:scroll}}
