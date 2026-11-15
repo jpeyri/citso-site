@@ -487,3 +487,28 @@ body{
 .souv span{display:block;color:#9fadc0;font-size:14.5px;line-height:1.5}
 @media (max-width:1000px){.grille-souv{grid-template-columns:1fr 1fr}}
 @media (max-width:700px){.grille-souv{grid-template-columns:1fr}}
+
+/* ===== Octolinks-inspired : comparateur, FAQ, calculateur (v11130120) ===== */
+.tableau-compare{overflow-x:auto;border-radius:14px;border:1px solid var(--bord)}
+.tableau-compare table{width:100%;border-collapse:collapse;font-size:14.5px}
+.tableau-compare th{padding:16px 14px;text-align:left;color:#fff;background:rgba(7,8,11,.6);font-size:15px}
+.tableau-compare th.col-citso{color:#e08a4f;font-weight:800}
+.tableau-compare td{padding:14px;border-top:1px solid rgba(255,255,255,.07);line-height:1.5;color:var(--texte)}
+.tableau-compare td.citso-oui{color:#5fd0d4;font-weight:600}
+.tableau-compare tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+.tableau-compare td:first-child{color:#fff;font-weight:700}
+@media (max-width:700px){.tableau-compare{font-size:13px}.tableau-compare td{padding:10px 8px}}
+
+/* FAQ accordions */
+.faq details{border:1px solid var(--bord);border-radius:10px;margin-bottom:10px;background:var(--carte)}
+.faq summary{cursor:pointer;padding:16px 20px;font-weight:700;color:#fff;font-size:16px;list-style:none;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:20px;color:#e08a4f;font-weight:400}
+.faq details[open] summary:after{content:"3"}
+.faq details p{padding:0 20px 16px;color:var(--texte);line-height:1.6;font-size:15px;margin:0}
+
+/* Calculateur */
+.calculateur label{display:block;font-size:15px;color:var(--texte);margin-bottom:8px}
+.calculateur label b{color:#fff;font-size:18px}
+.calculateur input[type=range]{width:100%;height:6px;border-radius:3px;background:rgba(255,255,255,.1);outline:none;-webkit-appearance:none}
+.calculateur input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:var(--copper);cursor:pointer;border:2px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.3)}
